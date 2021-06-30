@@ -1,16 +1,15 @@
-import React, {useEffect, useState} from "react";
-import data from '../mockData.js/data.json'
+import React, { useEffect, useState } from "react";
+import data from "../mockData.js/data.json";
 
-export default function Row({title}) {
+export default function Row({ title }) {
+  const [movies, setMovies] = useState([]);
 
-  const [movies, setMovies] = useState([])
+  useEffect(() => {}, []);
 
-  useEffect(() => {
-
-            }, [])
-
-  console.log(data)
-  return (<div><h2>{title}</h2>
-      
-    </div>)
+  console.log(data);
+  return (
+    <div>
+      <h2>{title}</h2>
+    </div>
+  );
 }
