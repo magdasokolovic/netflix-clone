@@ -1,6 +1,6 @@
 import "./App.css";
 
-import {Link, Route, Router, Switch} from "react-router-dom";
+import { Link, Route, Router, Switch } from "react-router-dom";
 
 import Episode from "./pages/Episode.overview";
 import Home from "./pages/Home";
