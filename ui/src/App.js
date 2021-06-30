@@ -13,7 +13,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="container">
 
         <Row title="Netflix Originals" />
         <Row title="Trending Now" />
