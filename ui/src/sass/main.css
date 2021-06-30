@@ -62,4 +62,46 @@ body {
   max-width: 1660px;
   margin: 0 auto;
 }
+
+.row {
+  margin-left: 20px;
+}
+
+.row .row__posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px;
+}
+
+.row .row__posters:-webkit-scrollbar {
+  display: none;
+}
+
+.row .row__poster {
+  max-height: 100px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 10px;
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+}
+
+.row .row__poster:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+}
+
+.row .row__poster-large {
+  max-height: 250px;
+}
+
+.row .row__poster-large:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
 /*# sourceMappingURL=main.css.map */

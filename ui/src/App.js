@@ -15,8 +15,10 @@ function App() {
     <BrowserRouter>
       <div className="container">
 
-        <Row title="Netflix Originals" />
+        <Row title="NETFLIX ORIGINALS" isLargeRow />
         <Row title="Trending Now" />
+        <Row title="Top rated" />
+
 
         <Switch>
           <Route path="/serie">
