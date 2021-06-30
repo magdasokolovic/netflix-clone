@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+  }
+  body {
+      background-color: $background-color;
+      color: $font-color;
+      line-height: 1.7;
+  }
+  
+  .container {
+    max-width: 1660px;
+    margin: 0 auto;
+  }
