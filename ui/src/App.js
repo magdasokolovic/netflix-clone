@@ -1,9 +1,12 @@
 import "./App.css";
-import { Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import Serie from "./pages/Serie.overview";
-import Season from "./pages/Season.overview";
+
+import {Link, Route, Router, Switch} from "react-router-dom";
+
 import Episode from "./pages/Episode.overview";
+import Home from "./pages/Home";
+import Season from "./pages/Season.overview";
+import Serie from "./pages/Serie.overview";
+
 function App() {
   return (
     <div className="App">
