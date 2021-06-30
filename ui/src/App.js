@@ -1,40 +1,33 @@
 
-import { BrowserRouter, Switch, Route} from "react-router-dom";
-import Row from './components/Row'
-import Home from "./pages/Home";
-import Serie from "./pages/Serie.overview";
-import Season from "./pages/Season.overview";
-import Episode from "./pages/Episode.overview";
 import './sass/main.scss'
+
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+
+import Row from './components/Row'
+import Episode from "./pages/Episode.overview";
+import Home from "./pages/Home";
+import Season from "./pages/Season.overview";
+import Serie from "./pages/Serie.overview";
 
 // import data from './mockData.js/data.json'
 
 function App() {
 
-  return (
-    <BrowserRouter>
-      <div className="container">
+  return (<BrowserRouter><div className = "container">
 
-        <Row title="Netflix Originals" />
-        <Row title="Trending Now" />
+          <Row title = "Netflix Originals" /><Row title = "Trending Now" />
 
-        <Switch>
-          <Route path="/serie">
-            <Serie />
+          <Switch><Route path = "/serie"><Serie />
           </Route>
-          <Route path="/season">
-            <Season />
-          </Route>
-          <Route path="/ep">
-            <Episode />
-          </Route>
+          <Route path="/season ">
+           < Season /></Route>
+          <Route path="/ep ">
+                       < Episode /></Route>
           <Route path="/">
-            <Home />
-          </Route>
+                                    < Home /></Route>
         </Switch>
-      </div>
-    </BrowserRouter>
-  );
+          </div>
+    </BrowserRouter>);
 }
 
 export default App;
