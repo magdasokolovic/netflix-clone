@@ -1,0 +1,1321 @@
+[{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59bfc"
+  },
+  "languages": [
+    "sv"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Nobels Last Will",
+        "overview": "Annika Bengtzon is at the Nobelfeast in Stadshuset in Stockholm. An uninvited guest shoots one of the nobelpricewinners and the Nobel Committée spokeswoman Caroline von Behring, and then disappears. Annika Bengtzon is drawn in to the drama - as a witness.",
+        "image": "https://image.tmdb.org/t/p/w500/5aKMTrp1hsZCPoCiwWUIFTJq6wN.jpg"
+      },
+      {
+        "name": "Prime Time",
+        "overview": "A tv-crew is shooting a tv-series on an isolated castle. After a farewell-party on the castle, the programhost Michelle Carlsson is found shot. Annika Bengtzon get the assignment to watch and write about the murder, when she finds out that one of her best friends was in the castle on the night of the murder, and that she is the main suspect. Bengtzon now has to solve the mystery, and rid her friend of the accusation.",
+        "image": "https://image.tmdb.org/t/p/w500/45rwZ4xmpHrUjHh9AnrcudbP2d0.jpg"
+      },
+      {
+        "name": "Studio Sex",
+        "overview": "A young woman is found dead in a park. It turns out, that the dead woman worked at the stripclub Studio Sex and that a high-up politician visited the club on the night of her murder. Annika Bengtzon gets to write about the murder, and that stirs up memories from her own past ... something she would rather have forgotten.",
+        "image": "https://image.tmdb.org/t/p/w500/seU2Adh7rmBv6ayL4Si0knjPLaW.jpg"
+      },
+      {
+        "name": "The Red Wolf",
+        "overview": "A murder of a journalist/reporter in the north of Sweden, is connected to an act of terrorism committed many years earlier. Annika Bengtzon starts a hunt, that leads her into a spiral of terrorism and the remains of a sixties leftwing activistgroup, with connections to the government.",
+        "image": "https://image.tmdb.org/t/p/w500/ovdlAUocRyeskAPb16sNWic9r4E.jpg"
+      },
+      {
+        "name": "Lifetime",
+        "overview": "A young woman is the suspect in the murder of her husband, who was a policeman. Annika Bengtzon suspect that corruption is behind the murder, and sets out on a hunt for the real murderer, and puts her own life in danger at the same time.",
+        "image": "https://image.tmdb.org/t/p/w500/6XyFpiBnfmbHWQ7fYSluw20pQ5G.jpg"
+      },
+      {
+        "name": "A Place in the Sun",
+        "overview": "A swedish family gets killed while on holiday on the sunny coast of Spain. Annika Bengtzon travels to Spain, to report about the case, and discovers that the oldest daughter is missing. Annika discovers a connection to a drug-route between Marocco and Sweden.",
+        "image": "https://image.tmdb.org/t/p/w500/yRMXRKtHbacze0HPfwnnSiG0Nee.jpg"
+      }
+    ]
+  ],
+  "name": "Annika Bengtzon: Crime Reporter",
+  "overview": "Annika Bengtzon is a journalist and working mother of two struggling to keep her marriage alive. Fearless in her search for the truth, she won't take no for an answer from anyone: not from prestigious academicians, or drug dealers or from colleagues inside her own profession. Her passion for getting the story may bring her into dangerous situations, but it ultimately allows her to peer into the heart of every crime. Annika's not afraid to square off with hardened criminals, but her toughest challenge seems to be trying to balance the job with her sometimes tumultuous private life. ",
+  "number_of_seasons": 1,
+  "image": "https://image.tmdb.org/t/p/w500/ujUhuT2e0GJK7bMkkqtjqfVOy3h.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59bfd"
+  },
+  "languages": [
+    "ja"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "The Visitor",
+        "overview": "A \"Brain\" is discovered in a region of Japan and an disposal mission is ordered. It ended in a huge massacre. A new elite unit is then called to deal with this threat. It's the unit \"5121\", consisting of young men and women. A new mysterious rookie also happens to lend a helping hand.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Going My Way",
+        "overview": "The new recruit is fueling discussions and debates within the unit \"5121\". Cold and haughty, the young May Shibimaru does not seem to reach unanimity. However, she will be the victim of the Casanova of the barracks, Takayuki Setoguchi. He will however be trapped by his female colleagues, because of a micro hidden under a desk.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Fire Works",
+        "overview": "It's finally summer vacation. Unfortunately for our young warriors, they do not have the right to take time off. Yet they will celebrate a sad anniversary of the death of Akane, a former fighter who died in combat. Hayami remembers this sad event and is going to meet the beautiful May, which also assists at the ceremony.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Duelist",
+        "overview": "A new mecha, controlled by two pilotes is arriving at the barracks. Now, discussions are underway to determine who will control this new power. According to statistics, the pilots should be Takayuki and May.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Thursday's Child",
+        "overview": "On the occasion of the 17th cultural festival of the academy of Shoukei, the \"5121\" unit is preparing a specatcle puppet show of \"Hansel and Gretel\". The choice of roles is causing some tensions within the team.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "I Guess Everything Reminds You of Something",
+        "overview": "The atmosphere worsened since the death of a team member during a previous mission. Hayami and Mai seem to get better results in terms of the timing of their mecha, but their relationship becomes dull.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "In the Forest of Nights",
+        "overview": "The mecha of Hayami and Mai does not respond and can not be found on the radar. They find themselves completely isolated from the rest of the unit and in enemy territory.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "With Your Musket, Fife, and Drum",
+        "overview": "The months pass quickly and we are already in April. The relationship between Hayami and Mai is still unclear and their journey is getting close to Christmas.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "A Day in the Life",
+        "overview": "Hayami finally seems to be motivated to speak a little more and he starts to seek advice from his friends about his relationship with May. Trying to confess to May, Hayami hears a discussion between the girls about their relationship. The dishonesty of May ruines his confidence that he has won and leaves him disappointed.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Once Upon a Dime",
+        "overview": "It's a happy day for Tanabe! She stumbles across a wallet full of money and finds herself elected as the princess for the next piece of the Academy.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "A Good Reward for Their Labour",
+        "overview": "Following a TV report, Hayami and Mai are found to speak of their mutual testimonials. Their relationship is more frustrating for those around them as they are close, but distant at the same time. May is still struggling to forget her previous love and discharges its emerging feelings.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Gun Parade March",
+        "overview": "It's Christmas again and Mai finally decides to reveal her feelings for Hayami.",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ]
+  ],
+  "name": "Gunparade March",
+  "overview": "During WW2 a strange new alien, the Genjuu (幻獣), appeared who's sole purpose is to kill off Humanity. Whenever they appear the Genjuu give off a strange odor that is acid to a human and killed off a lot of the warriors sent to fight it. Flash foward 50 years. Hayami Atsushi is a pilot of the 5121. The number of adults killed off in the war has forced the government to form the High School Defense force, where children of a certain age and skill are fostered in dorms to fight off the aliens. They use new mecha (HWTs) and special anti alien suits made by the Shibamura group. One day they get a new transfer student. A hot shot mecha pilot who seems to be made out of ice and is a pro at killing the Genjuu. She introduces herself as Shibamura Mai.\n\nWho is this Mai? Why did she come to the 5121? Why does she hate the Genjuu so much.\n\nSource: Forbin at MIKOMI",
+  "number_of_seasons": 1,
+  "image": "https://image.tmdb.org/t/p/w500/1FTw8b8HOc6aIM28ZqyvNjXLBDV.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59bfe"
+  },
+  "languages": [
+    "ja"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Episode 1",
+        "overview": "Conscientious and hardworking Ryuichi Kanzaki teams up with maverick detective Kenji Kurogi to solve violent crimes on the streets of Ikebukuro. Polar opposites in every way, from their personalities to their values and even their methods, the two partners are constantly butting heads on every case. What’s more, these mismatched buddies are hiding a huge secret from everyone: they’re actually half-brothers!",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 3",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 4",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 5",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 6",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ]
+  ],
+  "name": "Risky Two People",
+  "overview": "Conscientious and hardworking Ryuichi Kanzaki teams up with maverick detective Kenji Kurogi to solve violent crimes on the streets of Ikebukuro. Polar opposites in every way, from their personalities to their values and even their methods, the two partners are constantly butting heads on every case. What’s more, these mismatched buddies are hiding a huge secret from everyone: they’re actually half-brothers!",
+  "number_of_seasons": 1,
+  "image": "https://image.tmdb.org/t/p/w500/xI5XOzKr4LtXbJMtLF9DsZ2Lc6B.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59bff"
+  },
+  "languages": [
+    "zh"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Episode 1",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 3",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 4",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 5",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 6",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 7",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 8",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 9",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 10",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 11",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 12",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 13",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 14",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 15",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 16",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 17",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 18",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 19",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 20",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 21",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 22",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 23",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 24",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ]
+  ],
+  "name": "Reset In July",
+  "overview": "",
+  "number_of_seasons": 1,
+  "image": "https://image.tmdb.org/t/p/w500null",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59c00"
+  },
+  "languages": [
+    "ko"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Episode 1",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 3",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 4",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 5",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 6",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 7",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 8",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 9",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 10",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ]
+  ],
+  "name": "The Virus",
+  "overview": "Lee Myung-hyun and his disease control task force investigate a mutant virus that has a 100% fatality rate and kills the infected within three days. Not only must they find an antidote, they must also stop the epidemic from spreading and killing all of mankind.",
+  "number_of_seasons": 1,
+  "image": "https://image.tmdb.org/t/p/w500/aJfDjoTYHolHm37Byh35lonl731.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59c01"
+  },
+  "languages": [
+    "en"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Part 1",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500/y3SAQrayKggDjpUWZmheZ17X3tO.jpg"
+      },
+      {
+        "name": "Part 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500/p25y6UIRbgv0BA6utGTsPsNwGXi.jpg"
+      }
+    ]
+  ],
+  "name": "Cross of Fire",
+  "overview": "Cross of Fire is a 1989 American television mini-series based on the horrific rape and murder of Madge Oberholtzer by D.C. Stephenson, a highly successful leader of the Indiana branch of the Ku Klux Klan. It was originally shown in two parts. In syndication, it is shown as a television movie.",
+  "number_of_seasons": 1,
+  "image": "https://image.tmdb.org/t/p/w500/j8qUB6RuW1W6kcLek3qjoPp0UhK.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59c02"
+  },
+  "languages": [
+    "en"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Chapter 1: The Mandalorian",
+        "overview": "A Mandalorian bounty hunter tracks a target for a well-paying client.",
+        "image": "https://image.tmdb.org/t/p/w500/gz1hIpFhZB8tjsdYQQt9MGgPhI.jpg"
+      },
+      {
+        "name": "Chapter 2: The Child",
+        "overview": "Target in-hand, the Mandalorian must now contend with scavengers.",
+        "image": "https://image.tmdb.org/t/p/w500/kOpbxaH4nt5H1fArQQ1IzG9NzBw.jpg"
+      },
+      {
+        "name": "Chapter 3: The Sin",
+        "overview": "The battered Mandalorian returns to his client for reward.",
+        "image": "https://image.tmdb.org/t/p/w500/5wGkymV2D9P9ZGI2wP0PefIwFol.jpg"
+      },
+      {
+        "name": "Chapter 4: Sanctuary",
+        "overview": "The Mandalorian teams up with an ex-soldier to protect a village from raiders.",
+        "image": "https://image.tmdb.org/t/p/w500/dV9stIOdbyDUN1tRLjpiQS4TJjc.jpg"
+      },
+      {
+        "name": "Chapter 5: The Gunslinger",
+        "overview": "The Mandalorian helps a rookie bounty hunter who is in over his head.",
+        "image": "https://image.tmdb.org/t/p/w500/o6enRShRThpenWqtaC5lXNsEa8w.jpg"
+      },
+      {
+        "name": "Chapter 6: The Prisoner",
+        "overview": "The Mandalorian joins a crew of mercenaries on a dangerous mission.",
+        "image": "https://image.tmdb.org/t/p/w500/v1hsZV0I0O66j6mPQMYqTSNC23z.jpg"
+      },
+      {
+        "name": "Chapter 7: The Reckoning",
+        "overview": "An old rival extends an invitation for The Mandalorian to make peace.",
+        "image": "https://image.tmdb.org/t/p/w500/m483Gihn8vAt0cW5RXe5YRtchIQ.jpg"
+      },
+      {
+        "name": "Chapter 8: Redemption",
+        "overview": "The Mandalorian comes face-to-face with an unexpected enemy.",
+        "image": "https://image.tmdb.org/t/p/w500/v36aZwxTsPAvqsssLPVno3VFvg5.jpg"
+      }
+    ],
+    [
+      {
+        "name": "Chapter 9: The Marshal",
+        "overview": "The Mandalorian is drawn to the Outer Rim in search of others of his kind.",
+        "image": "https://image.tmdb.org/t/p/w500/n6oeOfj8jMPbXZ2E2QTVXYt5cvO.jpg"
+      },
+      {
+        "name": "Chapter 10: The Passenger",
+        "overview": "The Mandalorian must ferry a passenger with precious cargo on a risky journey.",
+        "image": "https://image.tmdb.org/t/p/w500/kAuS7h8qVLokHcKpSwZMum4PhC2.jpg"
+      },
+      {
+        "name": "Chapter 11: The Heiress",
+        "overview": "The Mandalorian braves high seas and meets unexpected allies.",
+        "image": "https://image.tmdb.org/t/p/w500/gnZOQajf33N3BzRouIZU3NM45TY.jpg"
+      },
+      {
+        "name": "Chapter 12: The Siege",
+        "overview": "The Mandalorian rejoins old allies for a new mission.",
+        "image": "https://image.tmdb.org/t/p/w500/j31rD97OZj5ji5HEyJXAwzE1ahP.jpg"
+      },
+      {
+        "name": "Chapter 13: The Jedi",
+        "overview": "The Mandalorian journeys to a world ruled by a cruel magistrate who has made a powerful enemy.",
+        "image": "https://image.tmdb.org/t/p/w500/42QoiVzHnBKAxHT4DpYIKkRTG3N.jpg"
+      },
+      {
+        "name": "Chapter 14: The Tragedy",
+        "overview": "The Mandalorian and Child travel to an ancient site.",
+        "image": "https://image.tmdb.org/t/p/w500/blQEEDPa5JW2rhOCov0yIGYo0CA.jpg"
+      },
+      {
+        "name": "Chapter 15: The Believer",
+        "overview": "To move against the Empire, the Mandalorian needs the help of an old enemy.",
+        "image": "https://image.tmdb.org/t/p/w500/bTzhzNSVFugIyc8pHutmLCJdgv5.jpg"
+      },
+      {
+        "name": "Chapter 16: The Rescue",
+        "overview": "The Mandalorian and his allies attempt a daring rescue.",
+        "image": "https://image.tmdb.org/t/p/w500/non7AnwMaloVU0OtenLqKyq8Zg3.jpg"
+      }
+    ]
+  ],
+  "name": "The Mandalorian",
+  "overview": "After the fall of the Galactic Empire, lawlessness has spread throughout the galaxy. A lone gunfighter makes his way through the outer reaches, earning his keep as a bounty hunter.",
+  "number_of_seasons": 2,
+  "image": "https://image.tmdb.org/t/p/w500/sWgBv7LV2PRoQgkxwlibdGXKz1S.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a45f7783073ad59c03"
+  },
+  "languages": [
+    "he"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Episode 1",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 3",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 4",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 5",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 6",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 7",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 8",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 9",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 10",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 11",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 12",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 13",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 14",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 15",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 16",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 17",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 18",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 19",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 20",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 21",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 22",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 23",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 24",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ],
+    [
+      {
+        "name": "Episode 1",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 3",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 4",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 5",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 6",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 7",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 8",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 9",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 10",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 11",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 12",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 13",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 14",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 15",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 16",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 17",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 18",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 19",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 20",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 21",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 22",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 23",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 24",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 25",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ],
+    [
+      {
+        "name": "Episode 1",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 2",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 3",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 4",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 5",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 6",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 7",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 8",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 9",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 10",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 11",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 12",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 13",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 14",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 15",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 16",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 17",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 18",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 19",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 20",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 21",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 22",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 23",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      },
+      {
+        "name": "Episode 24",
+        "overview": "",
+        "image": "https://image.tmdb.org/t/p/w500null"
+      }
+    ]
+  ],
+  "name": "Dumb",
+  "overview": "Shiri is 30 years old actress waiting for her big break, which doesn't seem to come because she looks too young. An unexpected opportunity comes when she is recruited by the police as a secret agent in a high-school where drugs are suspected to be distributed.",
+  "number_of_seasons": 3,
+  "image": "https://image.tmdb.org/t/p/w500/2RzTOjALYWZ8nZOwRYPchZag1V3.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a55f7783073ad59c04"
+  },
+  "languages": [
+    "en"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "The Resurrection",
+        "overview": "Jefferson Pierce is a man wrestling with a secret. As the father of Anissa and Jennifer, and principal of a charter high school that also serves as a safe-haven for young people in a neighborhood overrun by gang violence, he is a hero in his community. Nine years ago, Pierce was a hero of a different sort. Gifted with the superhuman power to harness and control electricity, he used those powers to keep his hometown streets safe as the masked vigilante Black Lightning, but he left the Superhero days behind. Almost a decade later, Pierce’s crime-fighting days are long behind him…or so he thought.",
+        "image": "https://image.tmdb.org/t/p/w500/zJTAERUTt97rzVVFzqvt1qAvF2n.jpg"
+      },
+      {
+        "name": "Lawanda: The Book of Hope",
+        "overview": "As the community struggles with the violence surrounding them, a glimmer of hope appears: Is Black Lightning back? Lynn Stewart, noticing the changes in the community, is also left wondering. While Jefferson Pierce struggles with his decision, Gambi urges him to take up the mantle once more and return to life as Black Lightning. Anissa and Jennifer try to deal with the aftermath of their jolting experience.",
+        "image": "https://image.tmdb.org/t/p/w500/hyK67Sr1Z9F2vRLyhnZeuzmkpRY.jpg"
+      },
+      {
+        "name": "Lawanda: The Book of Burial",
+        "overview": "As Jefferson Pierce tries to determine if the community can survive without the help of Black Lightning, Anissa starts to come into her own. Meanwhile, Jefferson and Lynn try and figure out their new dynamic. Finally, Jennifer reveals to her parents that she has been grappling with something big.",
+        "image": "https://image.tmdb.org/t/p/w500/6HZmOCmpG6WTVLOsLB1fRUqWBWz.jpg"
+      },
+      {
+        "name": "Black Jesus",
+        "overview": "Black Lightning is recruited to rally against The 100 gang. Anissa investigates the new drug hitting the streets. Meanwhile, familiar faces begin to reappear.",
+        "image": "https://image.tmdb.org/t/p/w500/qWSZxZUczOHiL7a3Fc4XMT60BhT.jpg"
+      },
+      {
+        "name": "And Then the Devil Brought the Plague: The Book of Green Light",
+        "overview": "An unexpected phone call unearths the long-buried need for Jefferson to investigate the murder of his father. Meanwhile, Annisa wrestles with the fact that her actions have dire consequences. Lastly, Jennifer learns the importance of controlling her temper – in all situations.",
+        "image": "https://image.tmdb.org/t/p/w500/w41yqEqNxjdlYYDHofG024cWVm9.jpg"
+      },
+      {
+        "name": "Three Sevens: The Book of Thunder",
+        "overview": "Jefferson is on the hunt for his father's killer, while Anissa uses her new powers to rectify a wrong after a protest fails. Jennifer grapples with some difficult choices. Elsewhere, Gambi begs for help from Lynn.",
+        "image": "https://image.tmdb.org/t/p/w500/uY0u9Uasn7lFDTNe3NEeAA6WgSa.jpg"
+      },
+      {
+        "name": "Equinox: The Book of Fate",
+        "overview": "Black Lightning’s pursuit for Tobias continues. Anissa continues to find herself in the new normal.",
+        "image": "https://image.tmdb.org/t/p/w500/yqvDSDgpYN05zkk8N1IVc8mK3QN.jpg"
+      },
+      {
+        "name": "The Book of Revelations",
+        "overview": "Black Lightning works with Anissa to help find information to clear Black Lightning’s name. Jennifer begins interning for Lynn. Meanwhile, Gambi finds himself in a precarious situation.",
+        "image": "https://image.tmdb.org/t/p/w500/52GkO29vzCCAzhzK5I6q4g94zdK.jpg"
+      },
+      {
+        "name": "The Book of Little Black Lies",
+        "overview": "In the aftermath of the latest killing, Black Lightning works to clear his name while also hunting down the person responsible for his father’s death, and anyone else involved. Tensions remain high between Black Lightning and Gambi.",
+        "image": "https://image.tmdb.org/t/p/w500/bbZlpEifxs03pw3T9YVVFXjDn8e.jpg"
+      },
+      {
+        "name": "Sins of the Father: The Book of Redemption",
+        "overview": "Black Lightning attempts to rescue several long-missing children reveals a secret he did not anticipate, and its resulting connections. Gambi struggles to stay strong while in a compromising position. Jefferson begins to view things differently.",
+        "image": "https://image.tmdb.org/t/p/w500/7NTEYqbjY27b3lHoybvuMraB3X7.jpg"
+      },
+      {
+        "name": "Black Jesus: The Book of Crucifixion",
+        "overview": "As suspicions grow that Jefferson Pierce is Black Lightning, the ASA arranges to have him arrested.  Lynn seeks help from Detective Henderson. Meanwhile, as Jefferson is in custody, Gambi and Anissa work together to show Black Lightning is still running around the streets of Freeland.",
+        "image": "https://image.tmdb.org/t/p/w500/pr2dsQkeP46KTpoI9L57scNZwdx.jpg"
+      },
+      {
+        "name": "The Resurrection and the Light: The Book of Pain",
+        "overview": "Tobias returns to Freeland. He is tasked to capture – not kill – Black Lightning with the help of an unexpected source. After a battle of epic proportions, Anissa and Jennifer provide surprising aid.",
+        "image": "https://image.tmdb.org/t/p/w500/yoUEwxG9lXeITRhdsCFJTaztGq.jpg"
+      },
+      {
+        "name": "Shadow of Death: The Book of War",
+        "overview": "The aftermath of the showdown with Black Lightning leaves everyone reeling. Meanwhile, Tobias gathers his forces.",
+        "image": "https://image.tmdb.org/t/p/w500/dbcNCme0IceCesEOe8UAXNX0Axi.jpg"
+      }
+    ],
+    [
+      {
+        "name": "The Book of Consequences: Chapter One: Rise of the Green Light Babies",
+        "overview": "Jefferson Pierce and his family may have survived Tobias’s attack, but they’re not out of the woods yet. Concerned for the safety of Garfield’s students, the board considers a motion to shut down the school, forcing Jefferson to go to Napier Frank to sway the vote. Jennifer struggles with her powers and her actions have unforeseen repercussions. Meanwhile, Anissa finds a new way to give back to Freeland. Lastly, Lynn continues her quest much to the dismay of Agent Odell.",
+        "image": "https://image.tmdb.org/t/p/w500/8rb8OcA85mBR1YmZoUIC1SWwcIi.jpg"
+      },
+      {
+        "name": "The Book of Consequences: Chapter Two: Black Jesus Blues",
+        "overview": "Jefferson must break the news to his students and faculty that he is stepping down. Struggling with his new life as Painkiller, Kahlil pays a visit to Jennifer in hopes of mending things. Meanwhile, Tobias continues to enact his plan.",
+        "image": "https://image.tmdb.org/t/p/w500/yUUo00yvwAzmvi40RVyKnFWhtw5.jpg"
+      },
+      {
+        "name": "The Book of Consequences: Chapter Three: Master Lowry",
+        "overview": "Jefferson is forced to watch as all his good work is undone before his eyes when his replacement arrives and begins implementing sweeping changes. Meanwhile, Anissa continues to play Robin Hood by stealing from one of the most powerful crime syndicates in Freeland.",
+        "image": "https://image.tmdb.org/t/p/w500/fAHHGEEWT7rIUe4QImg6K94F1Wx.jpg"
+      },
+      {
+        "name": "The Book of Consequences: Chapter Four: Translucent Freak",
+        "overview": "Jefferson confronts Anissa about her reckless and irresponsible behavior leading to a fierce disagreement.",
+        "image": "https://image.tmdb.org/t/p/w500/mGNFasOWHXTZr4CwZW5c1mONITe.jpg"
+      },
+      {
+        "name": "The Book of Blood: Chapter One: Requiem",
+        "overview": "Jefferson and Anissa work together investigating the hometown of a creepy man at the clinic and make a shocking discovery. Meanwhile, with Syonide gone, Tobias puts an increasing amount of pressure on Khalil to help fill some of the void left in the organization.",
+        "image": "https://image.tmdb.org/t/p/w500/oGtcSnSJj8UsltPcsE4DAR0C9oV.jpg"
+      },
+      {
+        "name": "The Book of Blood: Chapter Two: The Perdi",
+        "overview": "Black Lightning and Thunder return to South Freeland in an attempt to figure out what is going on. When they arrive, they are directed to a nearby wood where they are surrounded by a clan of mixed-race moonshiners called the Perdi. Meanwhile, Lynn, feeling tremendous guilt, falls into a deep depression. Lastly, Tobias finds that his plan is falling apart.",
+        "image": "https://image.tmdb.org/t/p/w500/9rp1fcofPP7cK7XoGy3Q9FFeU18.jpg"
+      },
+      {
+        "name": "The Book of Blood: Chapter Three: The Sange",
+        "overview": "When Black Lightning and Thunder are attacked by Looker and her clan, they fight to get her to release control over the Sange. Meanwhile, Jennifer and Khalil continue to grow closer.",
+        "image": "https://image.tmdb.org/t/p/w500/xrJnNtyPFw63d8Pnfw4OJaUIBxc.jpg"
+      },
+      {
+        "name": "The Book of Rebellion: Chapter One: Exodus",
+        "overview": "The Pierce family is reeling in the wake of Jennifer's disappearance. Jefferson, Lynn and Anissa all gather to discuss the most effective way to find her. After learning that Jennifer is with Khalil, Lynn goes to Detective Henderson to ask him to issue a warrant for Khalil's arrest. Meanwhile, Jennifer and Khalil are doing their best to stay off the grid but Tobias's new henchwoman Cutter is closing in on them.",
+        "image": "https://image.tmdb.org/t/p/w500/feoVfARczn2F8To9k9V1ra8oNjR.jpg"
+      },
+      {
+        "name": "The Book of Rebellion: Chapter Two: Gift of Magi",
+        "overview": "After Jennifer and Khalil escape, they take refuge in a barn and Jennifer desperately tries to save a now feverish Khalil, who has grown worse from Cutter's poisonous blade. Meanwhile, Jefferson, Lynn and Anissa try everything they can to track down Jennifer and Khalil.",
+        "image": "https://image.tmdb.org/t/p/w500/72NucmnWck0HN1I47h7bpP9r03N.jpg"
+      },
+      {
+        "name": "The Book of Rebellion: Chapter Three: Angelitos Negros",
+        "overview": "Still on the run, Jennifer and Khalil succumb to their feelings for one another and begin planning their future together. Meanwhile, Jefferson approaches Henderson with a favor.",
+        "image": "https://image.tmdb.org/t/p/w500/4aaqoZUtBOkgeHzPo7Mj3ZzXjr8.jpg"
+      },
+      {
+        "name": "The Book of Secrets: Chapter One: Prodigal Son",
+        "overview": "Jefferson suspects that Tobias is behind a recent malicious attack. He brings this news to Henderson but doesn’t get the answer he was looking for. Meanwhile, Lynn is confronted by her past.",
+        "image": "https://image.tmdb.org/t/p/w500/kdogBeZBstxXNSEnT6PGtGdnHUL.jpg"
+      },
+      {
+        "name": "The Book of Secrets: Chapter Two: Just and Unjust",
+        "overview": "When Anissa returns to work at the clinic, she meets a domestic violence victim who motivates her to take action. Meanwhile, Gambi makes a discovery.",
+        "image": "https://image.tmdb.org/t/p/w500/euXfgyhC4gmaj5ETtpzpiYhMkIv.jpg"
+      },
+      {
+        "name": "The Book of Secrets: Chapter Three: Pillar of Fire",
+        "overview": "Lynn works on two of the pod kids in a segregated safe room. Meanwhile, Jennifer plots revenge and Jefferson receives some interesting news. Lastly, Anissa makes a shocking discovery.",
+        "image": "https://image.tmdb.org/t/p/w500/og1SOI1ksc4VN4SFF7RC6uWy1Ub.jpg"
+      },
+      {
+        "name": "The Book of Secrets: Chapter Four: Original Sin",
+        "overview": "Looking for answers, a worried Anissa sets out to find Grace.",
+        "image": "https://image.tmdb.org/t/p/w500/mAw5scAiClVIIOBvklqyMl0N0Qc.jpg"
+      },
+      {
+        "name": "The Book of the Apocalypse: Chapter One: The Alpha",
+        "overview": "Lynn counsels former pod kid, Wendy, in how to live in a world that's new to her but the fate of the other pod kids remains in doubt. Meanwhile, Anissa figures out Grace's secret. Lastly, Jefferson tries to install a superhero code for his metahuman offspring, but Jennifer insists on taking revenge on Tobias for her boyfriend's death.",
+        "image": "https://image.tmdb.org/t/p/w500/gBR2Oikb1Rqndw9MdYr492ve4YN.jpg"
+      },
+      {
+        "name": "The Book of the Apocalypse: Chapter Two: The Omega",
+        "overview": "Lynn goes head to head with Dr. Jace once and for all. Meanwhile, Gambi risks his life to save Jennifer. Lastly, Tobias makes a major move to cripple Freeland and kill Black Lightning, requiring our superhero family to step up like never before.",
+        "image": "https://image.tmdb.org/t/p/w500/A4wrD8nSEM5EdoVnlGvcR6gAlzH.jpg"
+      }
+    ],
+    [
+      {
+        "name": "The Book of Occupation: Chapter One: Birth of Blackbird",
+        "overview": "We find Jefferson Pierce like never before, in the hands of the ASA with his wife Lynn as Agent Odell tightens his grip on the Pierce family, leaving Jennifer abandoned and Freeland without Black Lightning and Thunder. But Anissa secretly defies Odell in her alter ego as Blackbird with the able tactical and technical support of Gambi.",
+        "image": "https://image.tmdb.org/t/p/w500/o4bTD7eWqDc5pyD5Ahq4ONbaUSG.jpg"
+      },
+      {
+        "name": "The Book of Occupation: Chapter Two: Maryam's Tasbih",
+        "overview": "With Freeland under full-blown occupation, the Pierce family gets pulled in different directions. Jefferson and Lynn find themselves at odds with each other. Meanwhile, Anissa rebels as Blackbird while Jennifer feels powerless despite having powers.",
+        "image": "https://image.tmdb.org/t/p/w500/cErDo4av1CABvtfuEh2Li7tkv3I.jpg"
+      },
+      {
+        "name": "The Book of Occupation: Chapter Three: Agent Odell's Pipe-Dream",
+        "overview": "When Lynn learns that Jefferson brokered a deal with Agent Odell without consulting her first, it begins to put a strain on their relationship. Meanwhile, Anissa and Grace have an emotional encounter.",
+        "image": "https://image.tmdb.org/t/p/w500/Inew7sCOoA6i3vl44tXp2uF7oQ.jpg"
+      },
+      {
+        "name": "The Book of Occupation: Chapter Four: Lynn's Ouroboros",
+        "overview": "Jefferson faces new challenges due to the shocking state of Freeland; Lynn finds herself under intense pressure as she desperately tries to find a solution to the continuing crisis in Freeland; Anissa continues her work at the clinic.",
+        "image": "https://image.tmdb.org/t/p/w500/t7VSktItX8kh82YJ8xpe6YhUtky.jpg"
+      },
+      {
+        "name": "The Book of Occupation: Chapter Five: Requiem for Tavon",
+        "overview": "Jefferson struggles with the effects on his family, leading to a decision with tragic consequences. Meanwhile, Anissa's identity is threatened. Lastly, Agent Odell takes an important step toward winning over Jennifer.",
+        "image": "https://image.tmdb.org/t/p/w500/k8GFPU8fbTVVt6PkwhUPXt0VkUA.jpg"
+      },
+      {
+        "name": "The Book Of Resistance: Chapter One: Knocking on Heaven's Door",
+        "overview": "Jefferson, is torn between his loyalty to his family and his commitment to saving Freeland. Meanwhile, Anissa's commitment to Grace is deepening. Lastly, Jennifer makes an interesting discovery.",
+        "image": "https://image.tmdb.org/t/p/w500/hDbOg5udWlZMcW2sVw3fCcplsIE.jpg"
+      },
+      {
+        "name": "The Book of Resistance: Chapter Two: Henderson's Opus",
+        "overview": "Anissa and Jefferson have a heart-to-heart and she tells him she needs Black Lightning’s help in escorting meta refugees out of the perimeter. Meanwhile, Gambi  implores Lynn to help get him access to the Pit. Lastly, Jennifer  grows closer to Brandon.",
+        "image": "https://image.tmdb.org/t/p/w500/3oMEeVOOle8dvsQ1A5LEQrVp4o9.jpg"
+      },
+      {
+        "name": "The Book of Resistance: Chapter Three: The Battle of Franklin Terrace",
+        "overview": "Black Lightning decides to fight back when the ASA threatens his old neighborhood. Thunder battles Painkiller, and Tobias has a plan for Lynn to stop the ASA from weaponizing the metas.",
+        "image": "https://image.tmdb.org/t/p/w500/poLMDwlgeZjiARgSDizYuz3nkhD.jpg"
+      },
+      {
+        "name": "The Book of Resistance: Chapter Four: Earth Crisis",
+        "overview": "With the coming of the red skies, Jennifer finds herself torn between worlds.",
+        "image": "https://image.tmdb.org/t/p/w500/874bjNRZM1OyJUGujQdJ8lFTrI7.jpg"
+      },
+      {
+        "name": "The Book of Markovia: Chapter One: Blessings and Curses Reborn",
+        "overview": "Jefferson navigates his new reality following the events of the Crisis, and Lynn’s determination to save the meta kids deepens her troubles. Meanwhile, Anissa/Blackbird faces new challenges. Lastly, Jennifer’s bond with Brandon begins to grow.",
+        "image": "https://image.tmdb.org/t/p/w500/i5c9UjmfSiqjhGp7MpwBAeqYtUN.jpg"
+      },
+      {
+        "name": "The Book of Markovia: Chapter Two: Lynn's Addiction",
+        "overview": "Jefferson, Anissa and Jennifer discover that the ASA is now hunting the entire Pierce family. Meanwhile, Lynn  does the unthinkable.",
+        "image": "https://image.tmdb.org/t/p/w500/g3VwaYdpcHnBG3m6lLYUGTDtUKG.jpg"
+      },
+      {
+        "name": "The Book of Markovia: Chapter Three: Motherless ID",
+        "overview": "Jefferson and Anissa join forces with the ASA to help one of their own. Meanwhile, Lynn is forced to continue battling her demons.",
+        "image": "https://image.tmdb.org/t/p/w500/zcoSDOt1uzTBooHo2oN0SXa8Jpq.jpg"
+      },
+      {
+        "name": "The Book of Markovia: Chapter Four: Grab the Strap",
+        "overview": "Black Lightning and his team descend upon Markovia on a mission to rescue Lynn who finds herself in even more trouble when she meets Gravedigger, a metahuman on the Markovian side.",
+        "image": "https://image.tmdb.org/t/p/w500/5rIJKZtgSOvijkV4zRdJh5Q212o.jpg"
+      },
+      {
+        "name": "The Book of War: Chapter One: Homecoming",
+        "overview": "As the battle continues, old alliances are revisited and new alliances forged.",
+        "image": "https://image.tmdb.org/t/p/w500/dGTasMYuYIrkGNGisFqWPpczWIq.jpg"
+      },
+      {
+        "name": "The Book of War: Chapter Two: Freedom Ain't Free",
+        "overview": "After learning that Gravedigger and the Markovians are coming to attack Freeland, the Pierce family prepares for war.",
+        "image": "https://image.tmdb.org/t/p/w500/7GWooWR3bt5M7xon2iTjy61HRaK.jpg"
+      },
+      {
+        "name": "The Book of War: Chapter Three: Liberation",
+        "overview": "Black Lightning faces off against Gravedigger. Season finale.",
+        "image": "https://image.tmdb.org/t/p/w500/8FujZn8fDafieuESx1jeZWMZX57.jpg"
+      }
+    ],
+    [
+      {
+        "name": "The Book of Reconstruction: Chapter One: Collateral Damage",
+        "overview": "Jefferson Pierce is still mourning the death of his long-time friend Detective Henderson. Meanwhile, Gambi is presented with an interesting opportunity. Lastly, Lynn and Jefferson are still not able to see eye to eye.",
+        "image": "https://image.tmdb.org/t/p/w500/hfZct5mRfebQtNSccLv42JTSywK.jpg"
+      },
+      {
+        "name": "The Book of Reconstruction: Chapter Two",
+        "overview": "The war between the 100 and the Kobra Cartel rages on. Meanwhile, Lynn continues to be concerned about Jefferson and Jennifer's curiosity is piqued by a new boy at school.",
+        "image": "https://image.tmdb.org/t/p/w500/lbvKfh8QbCcOWWjwofbqKwezRCS.jpg"
+      },
+      {
+        "name": "The Book of Reconstruction: Chapter Three",
+        "overview": "Jefferson is feeling even more lost after a frustrating therapy session. Meanwhile, Anissa continues to care for a still comatose Grace. Lastly, Lynn has a breakthrough.",
+        "image": "https://image.tmdb.org/t/p/w500/3QFNO8Lbn9toNYnhpPQacd3xZj8.jpg"
+      },
+      {
+        "name": "The Book of Reconstruction: Chapter Four",
+        "overview": "Jefferson pays Tobias a visit and warns him to stay away from his family.",
+        "image": "https://image.tmdb.org/t/p/w500/Fu1NlLORmunj3fDvFSOE38hpP.jpg"
+      },
+      {
+        "name": "The Book of Ruin: Chapter One",
+        "overview": "Gambi supports Black Lightning as he departs on a special mission. Meanwhile, Grace tries to persuade Anissa to let her guard down.",
+        "image": "https://image.tmdb.org/t/p/w500/jMz3X8EsuzQWz6q9Kn27shU4CIL.jpg"
+      },
+      {
+        "name": "The Book of Ruin: Chapter Two",
+        "overview": "Jefferson crosses a line with Lynn. Anissa shares some important news. Tobias makes a surprising move.",
+        "image": "https://image.tmdb.org/t/p/w500/tJeQSHBSrjv7uG5RQgVhHXev1gR.jpg"
+      },
+      {
+        "name": "Painkiller",
+        "overview": "After attempting to bury the darker, devastatingly lethal Painkiller part of his persona, Khalil Payne has distanced himself away from everyone he knows and loves in a new city, Akashic Valley, in order to find peace... but peace never comes easy for men with pasts like Painkiller.",
+        "image": "https://image.tmdb.org/t/p/w500/ybod4jCGlF0UmtsJ7DEOiV3ZtuA.jpg"
+      },
+      {
+        "name": "The Book of Ruin: Chapter Three",
+        "overview": "The FBI pays Jefferson a visit. Meanwhile, Anissa surprises Grace.",
+        "image": "https://image.tmdb.org/t/p/w500/2i8SlcmmRyRwW1n4jL8dYeISTNn.jpg"
+      },
+      {
+        "name": "The Book of Ruin: Chapter Four: Lyding",
+        "overview": "Gambi warns the Pierce family of a possible crisis looming.",
+        "image": "https://image.tmdb.org/t/p/w500/sZE4ernkJpXN62Q3KIlNBIcdvov.jpg"
+      },
+      {
+        "name": "The Book of Reunification: Chapter One",
+        "overview": "Black Lightning sends Gambi an SOS. Meanwhile, Lynn finds herself in some serious trouble.",
+        "image": "https://image.tmdb.org/t/p/w500/rv5DM4QafGPxOyGXMgIKjQBUapj.jpg"
+      },
+      {
+        "name": "The Book of Reunification: Chapter Two",
+        "overview": "Jefferson takes Khalil up on his offer to help. Meanwhile, Lynn finds herself wrestling with what could be the biggest decision of her life. Lastly, Tobias follows through on a hunch.",
+        "image": "https://image.tmdb.org/t/p/w500/fU7Ypx9HYIvDV9qLOjMW7ogE5dS.jpg"
+      },
+      {
+        "name": "The Book of Resurrection: Chapter One: Crossroads",
+        "overview": "Jefferson realizes that sometimes, an admission of weakness can be a show of strength. Meanwhile, Tobias is focusing on an end game.",
+        "image": "https://image.tmdb.org/t/p/w500/96qT7jWBLIKF5l8adIWUGUnEf0i.jpg"
+      },
+      {
+        "name": "The Book of Resurrection: Chapter Two: Closure",
+        "overview": "After four seasons, the game-changing, relevant and electrifying series comes to an end.",
+        "image": "https://image.tmdb.org/t/p/w500/uXTe4wwdaZSlCZRe8u7CM2Dl88S.jpg"
+      }
+    ]
+  ],
+  "name": "Black Lightning",
+  "overview": "Jefferson Pierce is a man wrestling with a secret. As the father of two daughters and principal of a charter high school that also serves as a safe haven for young people in a New Orleans neighborhood overrun by gang violence, he is a hero to his community.",
+  "number_of_seasons": 4,
+  "image": "https://image.tmdb.org/t/p/w500/h1xbvvO6oqchfLe6xh0yLNnQxeM.jpg",
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "60dc30a55f7783073ad59c05"
+  },
+  "languages": [
+    "en"
+  ],
+  "seasons": [
+    [
+      {
+        "name": "Unaired Pilot",
+        "overview": "Sherlock was announced as a single 60-minute drama production at the Edinburgh International Television Festival in August 2008, to be broadcast in Autumn 2009, with the intention of producing a full series should the pilot be successful. The BBC decided not to transmit the pilot, as is common industry practice, but commissioned three 90-minute episodes. \n\nThis is the 60 minute pilot.",
+        "image": "https://image.tmdb.org/t/p/w500/d0seGU0EGpawgmXZQCWXTAOOahZ.jpg"
+      },
+      {
+        "name": "Unlocking Sherlock",
+        "overview": "A 32-minute documentary about the production of the series",
+        "image": "https://image.tmdb.org/t/p/w500/evg55R78fJVRoDw7IKjVoP7jFfY.jpg"
+      },
+      {
+        "name": "Sherlock Uncovered",
+        "overview": "The stars of Sherlock, Benedict Cumberbatch and Martin Freeman, talk in depth about the success of the first season and look ahead to season 2. This bonus feature also includes the show's creators, Steven Moffat and Mark Gatiss, discussing the dilemmas and pitfalls they faced when bringing these classic Holmes stories into the 21st century.",
+        "image": "https://image.tmdb.org/t/p/w500/n35gmu63Uk5MGcbHexIiqlrTbm8.jpg"
+      },
+      {
+        "name": "Many Happy Returns",
+        "overview": "Anderson believes that Sherlock is still alive after the Reichenbach fall. He confides in Lestrade and tells him his theory for his existence. Anderson believes a string of events ranging from Tibet to India to Germany involve Sherlock's assistance, and this is due to Sherlock not being able to stop investigating. Lestrade tells him Sherlock is definitely dead and goes to visit John, who has moved out of Baker Street following his death. He gives him some of Sherlock's old items, including a video message from John's birthday. In the message Sherlock states that he will see John very soon and tells him to have a good birthday without him as he is 'busy'.",
+        "image": "https://image.tmdb.org/t/p/w500/bKx0cwQ6dKzApy8LqBCyVzBKI1K.jpg"
+      },
+      {
+        "name": "Unlocking Sherlock",
+        "overview": "Find out how writers Steven Moffat and Mark Gatiss created the television hit Sherlock, taking Sir Arthur Conan Doyle's original adventures of the Victorian super sleuth and transforming them into a worldwide sensation. And we go behind the scenes on set with the stars of Sherlock. Featuring interviews with lead actors Benedict Cumberbatch and Martin Freeman, and Sir Arthur Conan Doyle.",
+        "image": "https://image.tmdb.org/t/p/w500/celN3yKuKPBRzAu5Bzwti90Bg07.jpg"
+      },
+      {
+        "name": "Sherlock Uncovered: The Return",
+        "overview": "Sherlock's back! The world's greatest detective comes back from the dead. But how did he do it? We go behind-the-scenes of the first episode cast read-through, with Benedict Cumberbatch and Martin Freeman where the answer to television's greatest mystery was first revealed. And we uncover the unlikely friendship between Sherlock Holmes and Dr John Watson.",
+        "image": "https://image.tmdb.org/t/p/w500/4XNb1pb1DLubhcnKmRgjh5CrWhG.jpg"
+      },
+      {
+        "name": "Sherlock Uncovered: The Women",
+        "overview": "The stars of Sherlock talk about the women in the life of TV's greatest detective. Sherlock Holmes may be great at solving mysteries, but he's clueless about women. We launch an investigation into the women in Sherlock's life. Mary Morstan is marrying his best friend. Irene Adler stole his heart. He doesn't know Molly exists. And Mrs Hudson's always there to pick up the pieces.",
+        "image": "https://image.tmdb.org/t/p/w500/kNmgNdpgmrUsIhEhLluad54JlMT.jpg"
+      },
+      {
+        "name": "Sherlock Uncovered: The Villains",
+        "overview": "We meet the great villains who've battled with TV's greatest detective. There's Jim Moriarty, his nemesis. There's Charles Augustus Magnussen, the only man Sherlock Holmes truly hates. And then there's Mycroft Holmes - Sherlock's brother and the last word in sibling rivalry. All of them have had influence over those closest to Sherlock. And all of them cause him grief.",
+        "image": "https://image.tmdb.org/t/p/w500/g83xHeom8UEzqliV7jnQ8Ae90TU.jpg"
+      },
+      {
+        "name": "The Abominable Bride",
+        "overview": "Sherlock Holmes and Doctor Watson investigate a mysterious ghostly bride who appears to have committed murder from beyond the grave.",
+        "image": "https://image.tmdb.org/t/p/w500/wsqo52fvORVvkxWMQK6n9GqVLZl.jpg"
+      }
+    ],
+    [
+      {
+        "name": "A Study in Pink",
+        "overview": "A war hero, invalided home from Afghanistan, meets a strange but charismatic genius who is looking for a flatmate; it is London, 2010, and Dr Watson and Sherlock Holmes are meeting for the first time. A string of impossible suicides has Scotland Yard baffled - and only one man can help.",
+        "image": "https://image.tmdb.org/t/p/w500/u8xvgVzTQjAeRu68sI9JJHeQSuA.jpg"
+      },
+      {
+        "name": "The Blind Banker",
+        "overview": "A mysterious cipher is being scrawled on the walls around London. The first person to see the cipher is dead within hours of reading it. Sherlock plunges into a world of codes and symbols, consulting with London's best graffiti artists. He soon learns that the city is in the grip a gang of international smugglers, a secret society called the Black Lotus.",
+        "image": "https://image.tmdb.org/t/p/w500/cp1mf1pwb8F7NcuCJkzcfxIkZw2.jpg"
+      },
+      {
+        "name": "The Great Game",
+        "overview": "A strange clue in an empty room, a blood-soaked car, a priceless Old Master, a deranged bomber. With the clock ticking, the curtain rises on a battle of wits between Sherlock, John and the shadowy stranger who seems to know all the answers...",
+        "image": "https://image.tmdb.org/t/p/w500/inRnf07LWmlT5Z3KkS4iWlBX48x.jpg"
+      }
+    ],
+    [
+      {
+        "name": "A Scandal in Belgravia",
+        "overview": "Compromising photographs and a case of blackmail threaten the very heart of the British establishment, but for Sherlock and John the game is on in more ways than one as they find themselves battling international terrorism, rogue CIA agents, and a secret conspiracy involving the British government. \n\nThis case will cast a darker shadow over their lives than they could ever imagine, as the great detective begins a long duel of wits with an antagonist as cold and ruthless and brilliant as himself: to Sherlock Holmes, Irene Adler will always be THE woman.",
+        "image": "https://image.tmdb.org/t/p/w500/9fmNcR20uEnMeAKmUucJnCPeUJg.jpg"
+      },
+      {
+        "name": "The Hounds of Baskerville",
+        "overview": "Something terrible has happened to Henry Knight; Sherlock and John investigate the truth about the monstrous creature which apparently killed their client's father. \n\nA hound from hell? What seems like fantasy in Baker Street is a very different prospect in the ultra-secret army base that looms over Dartmoor.",
+        "image": "https://image.tmdb.org/t/p/w500/svYBjbn3QfytGZkdK1yDhtbVHEy.jpg"
+      },
+      {
+        "name": "The Reichenbach Fall",
+        "overview": "James Moriarty possesses the greatest criminal mind that the world has ever seen. Sherlock and John knew he wouldn't stay hidden for long, but even they never guessed the sheer scale and audacity of the crime that would propel Moriarty back into the headlines.\n\nThe crime of the century; The Tower of London, the Bank of England and Pentonville prison - all sprung open on the same day, as if by magic! But Moriarty's plans don't stop there... Sherlock and John lock horns with their old enemy in one final problem that tests loyalty and courage to their very limits. \n\nSherlock must fight for his reputation, his sanity and his life. But is he all he claims to be?",
+        "image": "https://image.tmdb.org/t/p/w500/PVxRD2JqT2QM4t1Cih0v2AoRSR.jpg"
+      }
+    ],
+    [
+      {
+        "name": "The Empty Hearse",
+        "overview": "Two years on from reports of his Reichenbach Fall demise, Sherlock resurfaces as London comes under threat of a huge terrorist attack. John, though, has mixed feelings - he's delighted by the return of his best friend, but harbours worries that the consulting detective's reappearance will have an adverse affect on his settled domestic life, in particular his romance with Mary Morstan.",
+        "image": "https://image.tmdb.org/t/p/w500/zXsOogQ8BVyvWUR2zgs6NBxkReX.jpg"
+      },
+      {
+        "name": "The Sign of Three",
+        "overview": "Sherlock faces his biggest challenge of all – delivering a Best Man’s speech on John’s wedding day! But all isn’t quite as it seems. Mortal danger stalks the reception – and someone might not make it to the happy couple’s first dance. Sherlock must thank the bridesmaids, solve the case and stop a killer. ",
+        "image": "https://image.tmdb.org/t/p/w500/ca3ayuzXGpxpALFlcsVsXTQau9G.jpg"
+      },
+      {
+        "name": "His Last Vow",
+        "overview": "A case of stolen letters leads Sherlock Holmes into a long conflict with Charles Augustus Magnussen, the Napoleon of blackmail, and the one man he truly hates. But how do you tackle a foe who knows the personal weakness of every person of importance in the Western world?",
+        "image": "https://image.tmdb.org/t/p/w500/5phdYWQXMwn9cBUPzUt1Z3oie4K.jpg"
+      }
+    ],
+    [
+      {
+        "name": "The Six Thatchers",
+        "overview": "Sherlock waits to see where Moriarty will make his posthumous move. One mysterious case in particular baffles Scotland Yard - but Sherlock is more interested in a seemingly-trivial detail. Why is someone destroying images of the late Prime Minister Margaret Thatcher? Is there a madman on the loose? Or is there a much darker purpose at work? Something with its roots deep in Mary Watson's past…",
+        "image": "https://image.tmdb.org/t/p/w500/pGRnT0D3Ni2QJzmcRyX3HZVcWrE.jpg"
+      },
+      {
+        "name": "The Lying Detective",
+        "overview": "Sherlock faces perhaps the most chilling enemy of his long career: the powerful and seemingly unassailable Culverton Smith - a man with a very dark secret indeed.",
+        "image": "https://image.tmdb.org/t/p/w500/9R9QqwQCcUctYYJ4J0WuOVn4Kpc.jpg"
+      },
+      {
+        "name": "The Final Problem",
+        "overview": "Holmes and Watson travel to Europe to escape Moriarty's vengeance.",
+        "image": "https://image.tmdb.org/t/p/w500/52CguxQAPg6JLDuIOT76EsWf2a8.jpg"
+      }
+    ]
+  ],
+  "name": "Sherlock",
+  "overview": "A modern update finds the famous sleuth and his doctor partner solving crime in 21st century London.",
+  "number_of_seasons": 4,
+  "image": "https://image.tmdb.org/t/p/w500/7WTsnHkbA0FaG6R9twfFde0I9hl.jpg",
+  "__v": 0
+}]
