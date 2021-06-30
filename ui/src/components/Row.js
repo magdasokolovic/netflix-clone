@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import data from '../mockData.js/data.json'
 import Youtube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
@@ -6,6 +6,7 @@ import movieTrailer from 'movie-trailer'
 export default function Row({title, isLargeRow}) {
   const [movies, setMovies] = useState(data)
   const [trailerUrl, setTrailerUrl] = useState('')
+  // const imageRef = useRef()
 //u36N25kTMz4
 
   useEffect(()=>{
@@ -29,7 +30,7 @@ export default function Row({title, isLargeRow}) {
     if (trailerUrl) {
       setTrailerUrl('')
     } else {
-      //when you pass in the the movie name it goes and finds the trailer of it
+      //when you pass in the the movie name inside movieTrailer goes and finds the trailer of it
       movieTrailer(movie?.name || '')
       .then(url => {
         const urlParams = new URLSearchParams(new URL(url).search)
@@ -38,23 +39,31 @@ export default function Row({title, isLargeRow}) {
     }
   }
 
+  // const scrollPerClick = imageRef.current.clientWidth + 20
+
   console.table(data)
   return (
       <div className="row">
         <h2>{title}</h2>
-          <div className="row__posters">
-            {movies.map(movie=>{
+          <div className="row__posters carousel">
+
+            {movies.map((movie, index)=>{
               return (
+                <div className="carousel-box">
                   <img 
                       key={movie._id} 
-                      className={`row__poster ${isLargeRow && "row__poster-large"}`}
+                      className={`row__poster img-${index} ${isLargeRow && "row__poster-large"}`}
                       src={movie.image} 
                       alt={movie.name}
                       onClick={()=>handleClick(movie)} 
-
+                      // ref={imageRef}
                   />
+                </div>
               )
             })}
+
+            <button className="switch-left slider-buttom"></button>
+            <button className="switch-right slider-buttom"></button>
           </div>
           {/* show youtube video only when we have a trailerURL: */}
          {trailerUrl && <Youtube videoId={trailerUrl} options={options}/>}
