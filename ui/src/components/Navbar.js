@@ -1,5 +1,5 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import logo from "../images/movie-bay-logo.png";
 
 export default function Navbar() {
@@ -33,7 +33,7 @@ export default function Navbar() {
           <ul className={click ? "nav__list active" : "nav__list"}>
             <li className="nav__list-item">
               <Link to="/" className="nav__link" onClick={closeMobileMenu}>
-  Home
+                Home
               </Link>
             </li>
             <li className="nav__list-item">
@@ -61,9 +61,9 @@ export default function Navbar() {
               {/* still need to add function onSubmit */}
               <form>
                 <input
-  type = "text"
-  name = "search"
-  placeholder = "search"
+                  type="text"
+                  name="search"
+                  placeholder="search"
                   className="nav__link nav__link--input"
                 />
               </form>
