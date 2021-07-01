@@ -1,0 +1,124 @@
+header {
+  --text: #f4f4f4;
+  --text-inverse: #333;
+  --background: transparent;
+
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 3rem;
+  transition: background 250ms ease-in;
+  background: var(--background);
+  color: var(--text);
+}
+
+// if this is changed, we also need to change margin-top on hero and top for nav-list on mobile
+.site-logo {
+  width: 70px;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__link {
+  --spacing: 1em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  padding: calc(var(--spacing) / 2) var(--spacing);
+  position: relative;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+
+  // responsible for the line under links
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: var(--spacing);
+    right: var(--spacing);
+    height: 2px;
+    background: currentColor;
+    transform: scaleX(0);
+    transition: transform 150ms ease-in-out;
+  }
+
+  &:hover::after {
+    transform: scaleX(1);
+  }
+
+  &--input {
+    color: var(--text-inverse);
+    border: 1px solid var(--text-inverse);
+    border-radius: 2rem;
+    margin-left: 1rem;
+    letter-spacing: 1px;
+    padding: 0.5rem 1rem;
+
+    &:focus {
+      color: var(--text-inverse);
+      outline: none;
+      border: 1px solid $highlight-color;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.nav-active {
+  --text: #333;
+  --background: #f4f4f4;
+}
+
+.menu-icon {
+  display: none;
+}
+
+// mobile styling
+@media screen and (max-width: 960px) {
+  .nav__link {
+    font-size: 0.7rem;
+  }
+
+  .nav__list {
+    color: white;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    position: absolute;
+    top: 126px;
+    left: -100%;
+    opacity: 1;
+    transition: all 0.5s ease;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .nav__list.active {
+    background-color: $background-color-lighter;
+    height: fit-content;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+  }
+  .nav__link {
+    text-align: center;
+    padding: 1.5rem;
+    width: 50%;
+    margin: 0.2rem;
+  }
+
+  .menu-icon {
+    display: block;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
