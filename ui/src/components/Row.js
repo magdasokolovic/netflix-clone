@@ -2,17 +2,15 @@ import React, { useEffect, useRef, useState } from "react";
 import data from '../mockData.js/data.json'
 import Youtube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
+import Carousel from 'react-elastic-carousel'
 
 export default function Row({title, isLargeRow}) {
   const [movies, setMovies] = useState(data)
   const [trailerUrl, setTrailerUrl] = useState('')
-  // const imageRef = useRef()
 //u36N25kTMz4
 
   useEffect(()=>{
     //here will fetch the movies and here will update movies with "setMovies"
-  
-    
   }, [])
 
   //Youtube trailer options:
@@ -39,32 +37,29 @@ export default function Row({title, isLargeRow}) {
     }
   }
 
-  // const scrollPerClick = imageRef.current.clientWidth + 20
 
-  console.table(data)
+  console.log(data)
   return (
       <div className="row">
-        <h2>{title}</h2>
-          <div className="row__posters carousel">
+        <p>{title}</p>
+          <Carousel itemsToShow={5} className="row__posters">
 
             {movies.map((movie, index)=>{
               return (
-                <div className="carousel-box">
                   <img 
                       key={movie._id} 
-                      className={`row__poster img-${index} ${isLargeRow && "row__poster-large"}`}
+                      className={isLargeRow ? "row__poster-large" : "row__poster"}
                       src={movie.image} 
                       alt={movie.name}
                       onClick={()=>handleClick(movie)} 
-                      // ref={imageRef}
                   />
-                </div>
               )
             })}
 
-            <button className="switch-left slider-buttom"></button>
-            <button className="switch-right slider-buttom"></button>
-          </div>
+            {/* <button className="switch-left slider-button">&#60;</button> */}
+            {/* <button className="switch-right slider-button">&#62;</button> */}
+          </Carousel>
+
           {/* show youtube video only when we have a trailerURL: */}
          {trailerUrl && <Youtube videoId={trailerUrl} options={options}/>}
       </div>
