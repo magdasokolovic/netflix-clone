@@ -10,7 +10,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
+  padding: 1rem 3rem;
   transition: background 250ms ease-in;
   background: var(--background);
   color: var(--text);
@@ -94,7 +94,7 @@ header {
     width: 100%;
     height: fit-content;
     position: absolute;
-    top: 126px;
+    top: 110px;
     left: -100%;
     opacity: 1;
     transition: all 0.5s ease;
