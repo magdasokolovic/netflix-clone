@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <BrowserRouter>
-      <div className="App">
+      <div className="container">
         <Navbar />
         {/* image needs to be exchanged later with the header */}
         <img
@@ -21,7 +21,10 @@ function App() {
           className="hero"
         />
         <Row title="Netflix Originals" />
+
+        <Row title="NETFLIX ORIGINALS" isLargeRow />
         <Row title="Trending Now" />
+        <Row title="Top rated" />
 
         <Switch>
           <Route path="/serie">
