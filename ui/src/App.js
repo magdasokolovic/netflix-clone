@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Switch, Route} from "react-router-dom";
-import Row from './components/Row'
+import Row from './components/Row/Row'
 import Home from "./pages/Home";
 import Serie from "./pages/Serie.overview";
 import Season from "./pages/Season.overview";
