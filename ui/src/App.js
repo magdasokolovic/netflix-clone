@@ -1,6 +1,6 @@
 
 import { BrowserRouter, Switch, Route} from "react-router-dom";
-import Row from './components/Row/Row'
+import Row from './components/Row'
 import Home from "./pages/Home";
 import Serie from "./pages/Serie.overview";
 import Season from "./pages/Season.overview";
@@ -22,7 +22,7 @@ function App() {
           className="hero"
         />
 
-        <Row title="NETFLIX ORIGINALS" isLargeRow />
+        <Row title="MOVIE BAY ORIGINALS" isLargeRow />
         <Row title="Trending Now" />
         <Row title="Top rated" />
 

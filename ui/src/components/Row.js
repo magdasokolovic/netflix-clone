@@ -1,25 +1,26 @@
 import React, { useEffect, useState } from "react";
-import data from '../../mockData.js/data.json'
+
 import Youtube from 'react-youtube'
 import movieTrailer from 'movie-trailer'
 import Carousel from 'react-elastic-carousel'
-import arrow from '../../icons/arrow-circle-down-solid.svg'
-import play from '../../icons/play-circle-regular.svg'
-import add from '../../icons/plus-solid.svg'
-import like from '../../icons/thumbs-down-regular.svg'
-import dislike from '../../icons/thumbs-up-regular.svg'
+import arrow from '../icons/arrow-circle-down-solid.svg'
+import play from '../icons/play-circle-regular.svg'
+import add from '../icons/plus-solid.svg'
+import like from '../icons/thumbs-down-regular.svg'
+import dislike from '../icons/thumbs-up-regular.svg'
 
 export default function Row({title, isLargeRow}) {
-  const [movies, setMovies] = useState(data)
+  const [movies, setMovies] = useState([])
   const [trailerUrl, setTrailerUrl] = useState('')
 
 
   useEffect(()=>{
     //here will fetch the movies and here will update movies with "setMovies"
     fetch("http://localhost:5000/api/series")
-    .then(response => response.json)
+    .then(response => response.json())
     .then(result=>{
       console.log(result)
+      setMovies(result)
     })
   }, [])
 
@@ -47,8 +48,6 @@ export default function Row({title, isLargeRow}) {
     }
   }
 
-
-  console.log(data)
   return (
     <div className="row">
     <h2>{title}</h2>
@@ -56,7 +55,7 @@ export default function Row({title, isLargeRow}) {
 
         {movies.map((movie, index)=>{
           return (
-            <div className="movie">
+            <div className="movie" key={index}>
                     <div className={isLargeRow ? "rank" : "rank-small"}>3</div>
 
                     <div key={index} className="front">
@@ -66,15 +65,15 @@ export default function Row({title, isLargeRow}) {
                           alt={movie.name}
                           onClick={()=>handleClick(movie)} 
                       />
-                         <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
+                        <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
 
                     </div>
                     
                 
                     <div className="back">
                         <div className="streaming-info">
-                            <p className={isLargeRow ? "rating" : "rating-small"}>Number of seasons: {movie.number_of_seasons}</p>
-                            <p className={isLargeRow ? "rating" : "rating-small"}>tags: Romance, Comedy</p>
+                            <p className={isLargeRow ? "rating" : "rating-small"}>Number of seasons: {movie.seasons.length}</p>
+                            <p className={isLargeRow ? "rating" : "rating-small"}>Rating: {movie.rating}</p>
                         </div>
 
                         <div className="btn_container">
