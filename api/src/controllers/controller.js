@@ -1,4 +1,4 @@
-const {Series} = require("../models");
+const { Series } = require("../models");
 const getAllSeries = (req, res) => {
   Series.find({}, (err, data) => {
     if (err) {
@@ -8,4 +8,4 @@ const getAllSeries = (req, res) => {
   });
 };
 
-module.exports = {getAllSeries};
+module.exports = { getAllSeries };
