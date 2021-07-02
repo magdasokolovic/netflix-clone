@@ -12,7 +12,7 @@ import dislike from '../../icons/thumbs-up-regular.svg'
 export default function Row({title, isLargeRow}) {
   const [movies, setMovies] = useState(data)
   const [trailerUrl, setTrailerUrl] = useState('')
-  const [showIcons, setShowIcons] = useState(false)
+
 
   useEffect(()=>{
     //here will fetch the movies and here will update movies with "setMovies"
@@ -45,43 +45,56 @@ export default function Row({title, isLargeRow}) {
 
   console.log(data)
   return (
-      <div className="row">
-        <p>{title}</p>
-          <Carousel itemsToShow={isLargeRow ? 5:8} className="row__posters">
+    <div className="row">
+    <p>{title}</p>
+      <Carousel itemsToShow={isLargeRow ? 5:7}>
 
-            {movies.map((movie, index)=>{
-              return (
-                <div key={index} className={isLargeRow ? "card-container-large" : "card-container"}>
-                  <img
-                      className={isLargeRow ? "row__poster-large" : "row__poster"}
-                      src={movie.image} 
-                      alt={movie.name}
-                      onClick={()=>handleClick(movie)} 
-                  />
-                  <div className={setShowIcons ? "movie_info-container" : "hidden"} onMouseEnter={()=>setShowIcons(true)} onMouseLeave={()=>setShowIcons(false)}>
-                    <div className="btn_container">
-                      <div>
-                        <button><img src={play} alt="play button" /></button>
-                        <button><img src={add} alt="add button" /></button>
-                        <button><img src={like} alt="like button" /></button>
-                        <button><img src={dislike} alt="dislike button" /></button>
-                      </div>
-                      <button><img src={arrow} alt="click for more info button" /></button>
+        {movies.map((movie, index)=>{
+          return (
+            <div className="game">
+                    <div className="rank">3</div>
+
+                    <div key={index} className="front">
+                    <img
+                        className="thumbnail"
+                        src={movie.image} 
+                        alt={movie.name}
+                        onClick={()=>handleClick(movie)} 
+                    />
+                    <h3 className="name">{movie.name}</h3>
+                    </ div>
+                
+                    <div className="back">
+                        <div className="streaming-info">
+                            <p className="game-stat">Number of seasons: {movie.number_of_seasons}</p>
+                            <p className="game-stat">tags: Romance, Comedy</p>
+                        </div>
+
+                        <div className="btn_container">
+                            <div>
+                                <button><img src={play} alt="play button" /></button>
+                                <button><img src={add} alt="add button" /></button>
+                                <button><img src={like} alt="like button" /></button>
+                                <button><img src={dislike} alt="dislike button" /></button>
+                            </div>
+                            <button><img src={arrow} alt="click for more info button" /></button>
+                        </div>
                     </div>
-                    {/* <div className="movie_info">
-                      <p>Number of seasons: {movie.number_of_seasons}</p>
-                    </div>
-                    <div className="tags">tags...</div> */}
-                  </div>
-                </ div>
-              )
-            })}
 
-          </Carousel>
+                    <div className="background"></div>
 
-          {/* show youtube video only when we have a trailerURL: */}
-         {trailerUrl && <Youtube videoId={trailerUrl} options={options}/>}
-      </div>
+                    
+            </div>
+            
+          )
+        })}
+
+      </Carousel>
+
+      {/* show youtube video only when we have a trailerURL: */}
+     {trailerUrl && <Youtube videoId={trailerUrl} options={options}/>}
+  </div>
+
   )
     
 }

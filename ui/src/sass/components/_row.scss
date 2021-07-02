@@ -1,150 +1,169 @@
-.row {
-    margin-left: 20px;
+$border-radius: .25rem;
+$transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
 
-    .row__posters {
-       display: flex;
-       flex-wrap: no-wrap;
-       overflow-x: scroll;
-       overflow-y: hidden;
-       padding: 20px;
-        // do not display the scrollbal, but keep functionality of it: 
-       &:-webkit-scrollbar {
-           display: none;
+.game {
+    position: relative;
+    padding: 1em;
+    cursor: pointer;
+    button{
+        
+        border: none;
+        outline: none;
+        background-color: transparent;
+        width: 2em;
+        height: 2em;
+        margin:.2em;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+   
+    h3, p {
+        margin: 0;
+    }
+
+    
+    img {
+        max-width: 100%;
+        object-fit: cover;
+    }
+    .rank {
+        position: absolute;
+        font-weight: bold;
+        font-size: 1.125rem;
+        top: 0;
+        left: 10%;
+        z-index: 100;
+        background: #683ab7a8;
+        padding: .5em .5em .75em;
+        clip-path: polygon(100% 0, 100% 99%, 50% 85%, 0 100%, 0 0);
+        transition: $transition;
+    }
+
+    .front {
+        transition: 250ms;
+        
+
+       .name {
+           text-align: left;
+           margin: .75em 0;
        }
 
-       .hidden {
-           display: none;
+       .thumbnail {
+           border-radius: $border-radius;
+           transition: $transition;
        }
+    }
+////////////////////////////////
+ // INFO displayed on hover: ///////
+ ////////////////////////////////
+    .back {
+        opacity: 0;
+        position: absolute;
+        top: 70%;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5em;
+        transition: $transition, opacity 150ms linear;
 
-        .row__poster {
-            width: 100%;
-            max-height: 147px;
-            //"object-fit: container" will keep an aspect ratio:
-            object-fit: contain;
-            margin-right: 10px;
-            transition: transform 450ms;
-            cursor: pointer;
-            z-index: 2;
 
-            &:hover {
-                transform: scale(1.08);
-            }
+        .streaming-info {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-left: 1em;
+            width: 90%;
+            columns: 2;
+            // THis does not work for now: https
+            column-rule: 1px double rgba(255, 255, 255, 1);
 
-        }
-
-        .card-container {
-            width: 100%;
-            position: relative;
-
-            
-
-            .movie_info-container {
-                position: absolute;
-                z-index: 0;
-                bottom:5%;
-                top: 85%;
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                height: 100%;
-                background-color:#171717;
-                opacity: .8;
-            }
-    
-            .movie_info,
-            .btn_container,
-            .tags {
-                z-index: 10;
-
-            }
-            .movie_info p {
-                font-size: 10px;
-            }
-        
-        
-            }
-            .btn_container {
-                display: flex;
-                justify-content: space-between;
-                width: 80%;
-                margin: 0 auto;
-                button {
-                    border: none;
-                    outline: none;
-                    background-color: transparent;
-                    cursor: pointer;
-                    width: 10px;
-                    height: 10px;
-                    margin:.2em;
-                }
+            .game-stat {
+                font-size: .8rem;
+                text-align: center;
             }
         }
-
-
-        ///////////////////////////
-        // LARGE CARD container
-        //////////////////////////
-
-        .card-container-large {
-                width: 100%;
-                position: relative;
-                .row__poster-large {
-                    max-height: 250px;
-                    width: 100%;
-                            //"object-fit: container" will keep an aspect ratio:
-                    object-fit: contain;
-                    margin-right: 25px;
-                    transition: transform 450ms;
-                    cursor: pointer;
-                    z-index: 5;
-                    &:hover {
-                        transform: scale(1.08);
-                    }
-        
-                   
-                }
-    
-                .movie_info-container {
-                    position: absolute;
-                    z-index: 0;
-                    bottom:0;
-                    right: 0;
-                    top: 85%;
-                    width: 100%;
-                    display: flex;
-                    flex-direction: column;
-                    height: 100%;
-                    background-color: #171717;
-                    opacity: .8;
-    
-    
-                }
-        
-                .movie_info,
-                .btn_container,
-                .tags {
-                    z-index: 10;
-    
-                }
-                .movie_info p {
-                    font-size: 10px;
-                }
-            
-                .btn_container {
-                    display: flex;
-                    justify-content: space-between;
-                    width: 80%;
-                    margin: 0 auto;
-                    button {
-                        border: none;
-                        outline: none;
-                        background-color: transparent;
-                        cursor: pointer;
-                        width: 20px;
-                        height: 20px;
-                        margin:.2em;
-                    }
-                }
+        .btn_container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 90%;
         }
+
+    }
+
+    .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(37, 43, 49);
+        z-index: -1;
+        transform: scale(.2, .9);
+        transition: transform 250ms;
+        border-radius: $border-radius;
+        opacity: 0;
+    }
+
+   
+
+ ////////////////////////////////
+ // MOVIER CARD ON HOVER: ///////
+ ////////////////////////////////
+    &:hover {
+        .back {
+            opacity: 1;
+        }
+        .rank {
+            transform: translate(600%);
+        }
+        .front {
+            transform: translateY(-20%) scale(.8);
+
+            .name {
+                animation: gameName 250ms forwards;
+            }
+            .thumbnail {
+                transform: translateY(5%) scale(.9);
+            }
+        }
+        .background {
+            transition: 
+                transform $transition,
+                opacity 100ms linear;
+            opacity: 1;
+            transform: scale(1.35, 1.2) translateY(5%);
+            border-radius: $border-radius;
+        }
+    }
+
+    
+}
+
+@keyframes gameName {
+    0% {
+        text-align: left;
+        opacity: 1;
+    }
+    20% {
+        text-align: left;
+        opacity: 0;
+    }
+
+    50% {
+        text-align: center;
+        opacity: 0;
+        transform: scale(1.2);
+    }
+    100% {
+        text-align: center;
+        opacity: 1;
+        transform: scale(1.2);
+    }
 }
 
