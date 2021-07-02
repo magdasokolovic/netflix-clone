@@ -72,8 +72,8 @@ export default function Row({title, isLargeRow}) {
                 
                     <div className="back">
                         <div className="streaming-info">
-                            <p className={isLargeRow ? "rating" : "rating-small"}>Number of seasons: {movie.seasons.length}</p>
-                            <p className={isLargeRow ? "rating" : "rating-small"}>Rating: {movie.rating}</p>
+                            <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.seasons.length}</p>
+                            {/* <p className={isLargeRow ? "overview" : "overview-small"}>Overview: {movie.overview}</p> */}
                         </div>
 
                         <div className="btn_container">

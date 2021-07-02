@@ -3,7 +3,9 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
 .row {
     margin: 20px;
     height: 100%;
-
+    /////////////////////////////////////////////
+    // OVERRIDING "React Elastic Carousel" STYLING:
+    //////////////////////////////////////////////
     .rec{
         .rec-arrow {
             background-color: $highlight-color;
@@ -11,19 +13,28 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
                 background-color: lighten($highlight-color, 10%);
             }
         }
-    }
-    .ejXxNI {
-        background-color: $highlight-color;
-        box-shadow: 0 0 1px 3px $font-color;
-
-        &:hover {
-            box-shadow: 0 0 1px 3px lighten($highlight-color, 10%);
+        .ejXxNI {
+            background-color: $highlight-color;
+            box-shadow: 0 0 1px 3px $font-color;
+    
+            &:hover {
+                box-shadow: 0 0 1px 3px lighten($highlight-color, 10%);
+            }
+        }
+    
+        .rec-item-wrapper {
+            height: 100%;
         }
     }
 
-    .rec-item-wrapper {
-        height: 100%;
+    .title {
+        font-size: .9rem;
     }
+
+    .title-small {
+        font-size: .7rem;
+    }
+    
 
     .movie {
         position: relative;
@@ -101,20 +112,7 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
             position: relative;
             height: 100%;
 
-           .title, .title-small {
-            //    position: absolute;
-            //    bottom: 0;
-               text-align: left;
-               margin: .75em 0;
-           }
-           .title {
-               font-size: 1rem;
-           }
-
-           .title-small {
-               font-size: .7rem;
-           }
-    
+         
            .thumbnail {
                border-radius: $border-radius;
                transition: $transition;
@@ -140,6 +138,27 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
             align-items: center;
             gap: 1.5em;
             transition: $transition, opacity 150ms linear;
+            .seasons, .seasons-small {
+                //    position: absolute;
+                //    bottom: 0;
+                   text-align: left;
+                   margin: .75em 0;
+               }
+               .seasons {
+                   font-size: .8rem;
+               }
+    
+               .seasons-small {
+                   font-size: .5rem;
+               }
+    
+                .overview {
+                    font-size: .5rem;
+                }
+                .overview-small {
+                    font-size: .3rem;
+                }
+        
     
     
             .streaming-info {
@@ -215,9 +234,6 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
                 opacity: 1;
             }
 
-            // .title, .title-small {
-            //     bottom: -10%;
-            // }
             .background {
                 transition: 
                     transform $transition,
