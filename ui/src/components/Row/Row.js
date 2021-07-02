@@ -46,38 +46,40 @@ export default function Row({title, isLargeRow}) {
   console.log(data)
   return (
     <div className="row">
-    <p>{title}</p>
+    <h2>{title}</h2>
       <Carousel itemsToShow={isLargeRow ? 5:7}>
 
         {movies.map((movie, index)=>{
           return (
             <div className="movie">
-                    <div className="rank">3</div>
+                    <div className={isLargeRow ? "rank" : "rank-small"}>3</div>
 
                     <div key={index} className="front">
-                    <img
-                        className="thumbnail"
-                        src={movie.image} 
-                        alt={movie.name}
-                        onClick={()=>handleClick(movie)} 
-                    />
-                    <h3 className="name">{movie.name}</h3>
-                    </ div>
+                      <img
+                          className="thumbnail"
+                          src={movie.image} 
+                          alt={movie.name}
+                          onClick={()=>handleClick(movie)} 
+                      />
+                         <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
+
+                    </div>
+                    
                 
                     <div className="back">
                         <div className="streaming-info">
-                            <p className="game-stat">Number of seasons: {movie.number_of_seasons}</p>
-                            <p className="game-stat">tags: Romance, Comedy</p>
+                            <p className={isLargeRow ? "rating" : "rating-small"}>Number of seasons: {movie.number_of_seasons}</p>
+                            <p className={isLargeRow ? "rating" : "rating-small"}>tags: Romance, Comedy</p>
                         </div>
 
                         <div className="btn_container">
                             <div>
-                                <button><img src={play} alt="play button" /></button>
-                                <button><img src={add} alt="add button" /></button>
-                                <button><img src={like} alt="like button" /></button>
-                                <button><img src={dislike} alt="dislike button" /></button>
+                                <button className={isLargeRow ? "btn" : "btn-small"}><img src={play} alt="play button" /></button>
+                                <button className={isLargeRow ? "btn" : "btn-small"}><img src={add} alt="add button" /></button>
+                                <button className={isLargeRow ? "btn" : "btn-small"}><img src={like} alt="like button" /></button>
+                                <button className={isLargeRow ? "btn" : "btn-small"}><img src={dislike} alt="dislike button" /></button>
                             </div>
-                            <button><img src={arrow} alt="click for more info button" /></button>
+                            <button className={isLargeRow ? "btn" : "btn-small"}><img src={arrow} alt="click for more info button" /></button>
                         </div>
                     </div>
 
