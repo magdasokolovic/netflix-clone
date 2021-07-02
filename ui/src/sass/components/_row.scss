@@ -74,7 +74,7 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
             object-fit: cover;
         }
 
-        .rank, .rank-small {
+        .rating, .rating-small {
             position: absolute;
             font-weight: bold;
             z-index: 100;
@@ -85,13 +85,13 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
 
 
         }
-        .rank {
+        .rating {
 
             font-size: 1.125rem;
             padding: .5em .5em .75em;
         }
 
-        .rank-small {
+        .rating-small {
             font-size: .8rem;
             padding: .3em .3em .5em;
         }
@@ -195,7 +195,7 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
             .back {
                 opacity: 1;
             }
-            .rank, .rank-small {
+            .rating, .rating-small {
                 align-self: end;
                 right: 3%;
                 top: 1%;

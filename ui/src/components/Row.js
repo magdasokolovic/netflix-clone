@@ -56,7 +56,7 @@ export default function Row({title, isLargeRow}) {
         {movies.map((movie, index)=>{
           return (
             <div className="movie" key={index}>
-                    <div className={isLargeRow ? "rank" : "rank-small"}>3</div>
+                    <div className={isLargeRow ? "rating" : "rating-small"}>{movie.rating}</div>
 
                     <div key={index} className="front">
                       <img
