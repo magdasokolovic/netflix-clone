@@ -10,6 +10,7 @@ let tvID = null;
 
 const all_tv_url = `https://api.themoviedb.org/3/tv/changes?api_key=a815bbb393e7f79ac4b0c66acd437aa6&page=1`;
 const tvID_url = `${base_url}/tv/${tvID}?api_key=${api_key}&language=en-US`;
+const img_url = "https://image.tmdb.org/t/p/w500";
 
 // const episodeSchema = new mongoose.Schema({
 //   name: { type: String },
@@ -29,7 +30,8 @@ const serieSchema = new mongoose.Schema({
   seasons: [{}],
   rating: Number,
   vote_count: Number,
-  number_of_seasons: Number
+  number_of_seasons: Number,
+  image: String
 });
 
 const Series = mongoose.model("serie", serieSchema);
@@ -51,7 +53,7 @@ async function getData() {
         const detailTV = await axios(detail_tv_url);
         // console.log(detailTV);
         let tvShow = detailTV.data;
-        console.log(tvShow);
+
         const {
           name,
           languages,
@@ -59,7 +61,8 @@ async function getData() {
           seasons,
           number_of_seasons,
           vote_average,
-          vote_count
+          vote_count,
+          poster_path
         } = tvShow;
 
         let tempSeasons = [];
@@ -70,11 +73,11 @@ async function getData() {
           let tempEpisodes = [];
           try {
             const allEpisodes = await axios(episode_url);
-            // console.log(allEpisodes);
-            // allEpisodes.data.episodes.forEach((ep) =>
 
             for (const ep of allEpisodes.data.episodes) {
+              // console.log(ep);
               tempEpisodes.push({
+                image: img_url + ep.still_path,
                 name: ep.name,
                 overview: !!ep.overview ? ep.overview : season.overview
               });
@@ -91,6 +94,7 @@ async function getData() {
           languages,
           overview,
           seasons: [...tempSeasons],
+          image: img_url + poster_path,
           number_of_seasons,
           rating: vote_average,
           vote_count

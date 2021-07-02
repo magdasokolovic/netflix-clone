@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const Schema = mongoose.Schema;
 
-const SerieSchema = new Schema({
+const serieSchema = new Schema({
   name: { type: String },
   overview: String,
   languages: [String],
@@ -11,4 +11,6 @@ const SerieSchema = new Schema({
   number_of_seasons: Number
 });
 
-module.exports = mongoose.model("serie", SerieSchema);
+const Series = mongoose.model("serie", serieSchema);
+
+module.exports = { Series };
