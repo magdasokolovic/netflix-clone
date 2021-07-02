@@ -4,6 +4,27 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
     margin: 20px;
     height: 100%;
 
+    .rec{
+        .rec-arrow {
+            background-color: $highlight-color;
+            &:hover {
+                background-color: lighten($highlight-color, 10%);
+            }
+        }
+    }
+    .ejXxNI {
+        background-color: $highlight-color;
+        box-shadow: 0 0 1px 3px $font-color;
+
+        &:hover {
+            box-shadow: 0 0 1px 3px lighten($highlight-color, 10%);
+        }
+    }
+
+    .rec-item-wrapper {
+        height: 100%;
+    }
+
     .movie {
         position: relative;
         padding: 1em;
@@ -57,7 +78,7 @@ $transition: transform 200ms cubic-bezier(0.23, 1, 0.81, 1.01);
             position: absolute;
             font-weight: bold;
             z-index: 100;
-            background: #683ab7a8;
+            background: $highlight-color;
             clip-path: polygon(100% 0, 100% 99%, 50% 85%, 0 100%, 0 0);
             transition: $transition;
             align-self: start;

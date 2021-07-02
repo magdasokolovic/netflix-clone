@@ -16,6 +16,11 @@ export default function Row({title, isLargeRow}) {
 
   useEffect(()=>{
     //here will fetch the movies and here will update movies with "setMovies"
+    fetch("http://localhost:5000/api/series")
+    .then(response => response.json)
+    .then(result=>{
+      console.log(result)
+    })
   }, [])
 
   //Youtube trailer options:
