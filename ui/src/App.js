@@ -1,6 +1,6 @@
 import "./sass/main.scss";
 
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Banner from "./components/Banner";
 import Navbar from "./components/Navbar";
@@ -14,31 +14,40 @@ import Serie from "./pages/Serie.overview";
 
 function App() {
   return (
-      <BrowserRouter><div className = "container"><div className = "nav-active">
-      <Navbar /></div>
+    <BrowserRouter>
+      <div className="container">
+        <div className="nav-active">
+          <Navbar />
+        </div>
 
         <div className="banner">
           <Banner />
-      </div>
+        </div>
 
         <div className="row">
           <Row title="NETFLIX ORIGINALS" isLargeRow />
-      <Row title = "Trending Now" /><Row title = "Top rated" />
-      <Row title = "Netflix Originals" />
-      </div>
+          <Row title="Trending Now" />
+          <Row title="Top rated" />
+          <Row title="Netflix Originals" />
+        </div>
 
         <Switch>
           <Route path="/serie ">
-       < Serie /></Route>
+            <Serie />
+          </Route>
           <Route path="/season ">
-                  < Season /></Route>
+            <Season />
+          </Route>
           <Route path="/ep ">
-                              < Episode /></Route>
+            <Episode />
+          </Route>
           <Route path="/">
-                                           < Home /></Route>
+            <Home />
+          </Route>
         </Switch>
       </div>
-    </BrowserRouter>);
+    </BrowserRouter>
+  );
 }
 
 export default App;
