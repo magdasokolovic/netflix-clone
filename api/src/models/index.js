@@ -8,7 +8,9 @@ const serieSchema = new Schema({
   languages: [String],
   seasons: [{}],
   image: String,
-  number_of_seasons: Number
+  number_of_seasons: Number,
+  rating: Number,
+  vote_count: Number
 });
 
 const Series = mongoose.model("serie", serieSchema);
