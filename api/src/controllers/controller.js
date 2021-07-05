@@ -3,9 +3,9 @@ const axios = require("axios");
 const api_key = "a815bbb393e7f79ac4b0c66acd437aa6";
 const base_url = "https://api.themoviedb.org/3";
 const latest_url = `${base_url}/movie/latest?api_key=${api_key}&language=en-US`;
-const popular_url = `${base_url}/movie/popular?api_key=${api_key}&language=en-US&page=1`;
-const toprated_url = `${base_url}/movie/top_rated?api_key=${api_key}&language=en-US&page=1`;
-const upcoming_url = `${base_url}/movie/upcoming?api_key=${api_key}&language=en-US&page=1`;
+const popular_url = `${base_url}/movie/popular?api_key=${api_key}&language=en-US&page=10`;
+const toprated_url = `${base_url}/movie/top_rated?api_key=${api_key}&language=en-US&page=10`;
+const upcoming_url = `${base_url}/movie/upcoming?api_key=${api_key}&language=en-US&page=10`;
 const getAllSeries = (req, res) => {
   Series.find({}, (err, data) => {
     if (err) {
