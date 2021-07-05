@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import logo from "../images/movie-bay-logo.png";
 
 export default function Navbar() {
@@ -22,8 +22,8 @@ export default function Navbar() {
 
   const backToTop = () => {
     window.scrollTo({
-      top: 0,
-      behavior: "smooth",
+      top : 0,
+      behavior : "smooth",
     });
   };
 
@@ -32,10 +32,9 @@ export default function Navbar() {
       <header className={navbar ? "nav-active" : ""}>
         <Link to="/" onClick={closeMobileMenu}>
           <img
-            src={logo}
-            alt="logo"
-            className="site-logo"
-            onClick={backToTop}
+  src = {logo} alt = "logo"
+  className = "site-logo"
+  onClick={backToTop}
           />
         </Link>
         <nav>
@@ -72,9 +71,9 @@ export default function Navbar() {
             <li className="nav__list-item">
               <form action="/search/">
                 <input
-                  type="text"
-                  name="search"
-                  placeholder="search"
+  type = "text"
+  name = "search"
+  placeholder = "search"
                   className="nav__link nav__link--input"
                 />
               </form>

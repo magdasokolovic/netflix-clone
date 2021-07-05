@@ -1,36 +1,36 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 
 export default function Search(props) {
   console.log(props.search);
   const [series, setSeries] = useState([]);
   useEffect(() => {
     fetch("http://localhost:5000/api/series")
-      .then((res) => res.json())
-      .then((result) => {
-        if (result) {
-          if (props.search) {
-            const found = result.filter((serie) =>
-              serie.name.toLowerCase().includes(props.search.toLowerCase())
-            );
-            console.log(found);
-            setSeries(found);
+        .then((res) => res.json())
+        .then((result) => {
+          if (result) {
+            if (props.search) {
+              const found =
+                  result.filter((serie) => serie.name.toLowerCase().includes(
+                                    props.search.toLowerCase()));
+              console.log(found);
+              setSeries(found);
+            } else {
+              setSeries(result);
+              console.log(result);
+            }
           } else {
-            setSeries(result);
-            console.log(result);
+            console.log(result.message);
           }
-        } else {
-          console.log(result.message);
-        }
-      });
+        });
   }, []);
 
   return (
     <div className="search__posters carousel">
-      {series.length > 0 ? (
-        series.map((serie) => {
-          return (
-            <div key={serie._id} className="carousel-box">
-              <img
+      {
+    series.length > 0
+        ? (series.map(
+              (serie) => {return (
+                  <div key = {serie._id} className = "carousel-box">< img
                 src={serie.image}
                 alt={serie.name}
                 className="search__poster"
