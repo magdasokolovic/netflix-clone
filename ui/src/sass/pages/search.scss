@@ -1,0 +1,44 @@
+.search__posters {
+  margin-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  // 110px to make sure it doesn't overlap with navbar
+  padding: 110px 20px 20px 20px;
+  // do not display the scrollbal, but keep functionality of it:
+  &:-webkit-scrollbar {
+    display: none;
+  }
+}
+.carousel {
+  position: relative;
+  &.carousel-box {
+    width: auto;
+    overflow: scroll;
+    white-space: nowrap;
+    display: inline-block;
+    text-align: center;
+    padding-bottom: 10px !important;
+    display: flex;
+  }
+}
+.search__poster {
+  // width: 100%;
+  max-height: 220px;
+  //"object-fit: container" will keep an aspect ratio:
+  object-fit: contain;
+  margin-right: 10px;
+  transition: transform 450ms;
+  cursor: pointer;
+  z-index: 2;
+
+  &:hover {
+    transform: scale(1.09);
+    z-index: 5;
+  }
+}
+
+.found-1 {
+  display: none;
+}

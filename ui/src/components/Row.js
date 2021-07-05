@@ -41,7 +41,7 @@ export default function Row({title, isLargeRow}) {
 
   // const scrollPerClick = imageRef.current.clientWidth + 20
 
-  console.table(data)
+  // console.table(data)
   return (
       <div className="row">
         <h2>{title}</h2>

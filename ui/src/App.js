@@ -1,19 +1,22 @@
 import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Row from "./components/Row";
 import Home from "./pages/Home";
 import Serie from "./pages/Serie.overview";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
-import "./sass/main.scss";
 import Navbar from "./components/Navbar";
+import Search from "./pages/Search";
+import "./sass/main.scss";
 import Banner from "./components/Banner";
 
 // import data from './mockData.js/data.json'
 
 function App() {
+  const params = new URLSearchParams(window.location.search);
+  const search = params.get("search");
   return (
     <BrowserRouter>
       <div className="container">
+
         <div className="nav-active">
           <Navbar />
         </div>
@@ -39,9 +42,13 @@ function App() {
           <Route path="/ep">
             <Episode />
           </Route>
-          <Route path="/">
+          <Route path="/search/">
+            <Search search={search} />
+          </Route>
+          <Route exact path="/">
             <Home />
           </Route>
+
         </Switch>
       </div>
     </BrowserRouter>
