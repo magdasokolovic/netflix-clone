@@ -23,13 +23,15 @@
   font-size: 3.5rem;
   font-weight: 800;
   position: absolute;
-  top: 25vh;
+  top: 30vh;
   left: 12vh;
+  word-break: normal;
+  width: 50%;
 }
 
 .banner-overview {
   position: absolute;
-  top: 35vh;
+  top: 50vh;
   left: 12vh;
   font-size: 1.3rem;
   word-break: normal;
@@ -60,7 +62,7 @@
 
 .mylist__btns {
   top: 85vh;
-  left: 22vh;
+  left: 24vh;
   position: absolute;
 }
 
