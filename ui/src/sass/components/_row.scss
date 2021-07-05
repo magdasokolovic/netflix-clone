@@ -188,29 +188,53 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
 
                 }
             }
-            .tooltip, .tooltip-small {
+            .tooltip, .tooltip-small, .tooltip-add, .tooltip-small-add {
                 position: absolute;
                 z-index: 1010;
                 overflow: visible;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background: white;
-                color: black;
-                padding: 20px;
+                
+                background: $font-color;
+                color: $background-color;
                 box-sizing: border-box;
                 border-radius: 4px;
                 visibility: hidden;
                 opacity: 0;
-                transition: 0.5s;
+                transition: 0.5s cubic-bezier(0.23, 1, 0.81, 1.01);
                 transform: translateX(-50%) translateY(-50px);
+                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+                pointer-events: none;
 
                 .underline {
                     text-decoration: underline;
                     font-weight: bold;
                 }
             }
-            .btn_container:last-child {
+
+            .tooltip, .tooltip-small {
+                width: 100%;
+                padding: 1em;
+                bottom: 0;
+                left: 0;
+            }
+            .tooltip-add, .tooltip-small-add {
+                width: 50%;
+                padding: 0.5em;
+                bottom: 100%;
+                left: 3%;
+                font-size: .5rem;
+            }
+            .tooltip-add:before, .tooltip-small-add:before {
+                content: "";
+                position: absolute;
+                height: 8px;
+                width: 8px;
+                bottom: -4px;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                background: white;
+
+            }
+            .btn_container {
                 position: relative;
                 .btn-more {
                     &:hover, :active, :focus {
@@ -221,7 +245,16 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
                         }
                     }
                 }
-                
+
+                .btn-add {
+                    &:hover, :active, :focus {
+                        .tooltip-add, .tooltip-small-add {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateX(0) translateY(0px);
+                        }
+                    }
+                }
             }
 
             .tooltip-small {

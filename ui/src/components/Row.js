@@ -51,8 +51,9 @@ export default function Row({title, isLargeRow}) {
                                  <button className={isLargeRow ? "btn" : "btn-small"}>
                                   <Play/>
                                  </button>
-                                <button className={isLargeRow ? "btn" : "btn-small"}>
+                                <button className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}>
                                   <Add/>
+                                  <p className={isLargeRow ? "tooltip-add" : "tooltip-small-add"}>Add to the list</p>
                                 </button>
                                 <button className={isLargeRow ? "btn" : "btn-small"}>
                                   <Like/>
