@@ -1,6 +1,6 @@
 import "./sass/main.scss";
 
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
@@ -15,21 +15,31 @@ function App() {
   const params = new URLSearchParams(window.location.search);
   const search = params.get("search");
 
-  return (<BrowserRouter><div className = "container"><Navbar /><Switch>
-          <Route path = "/serie"><Serie />
+  return (
+    <BrowserRouter>
+      <div className="container">
+        <Navbar />
+        <Switch>
+          <Route path="/serie">
+            <Serie />
           </Route>
           <Route path="/season ">
-           < Season /></Route>
+            <Season />
+          </Route>
           <Route path="/ep ">
-                       < Episode />
+            <Episode />
           </Route>
           <Route path="/search / ">
-               < Search search = { search } />
+            <Search search={search} />
           </Route>
-          <Route exact path = "/"><Home /></Route>
-        </Switch><Footer />
-          </div>
-    </BrowserRouter>);
+          <Route exact path="/">
+            <Home />
+          </Route>
+        </Switch>
+        <Footer />
+      </div>
+    </BrowserRouter>
+  );
 }
 
 export default App;
