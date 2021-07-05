@@ -5,7 +5,7 @@ import {Arrow, Play, Add, Like, Dislike} from '../icons/icons'
 
 export default function Row({title, isLargeRow}) {
   const [movies, setMovies] = useState([])
-  const [overview, setOverview] = useState(false)
+  // const [overview, setOverview] = useState(false)
 
   useEffect(()=>{
     //here will fetch the movies and here will update movies with "setMovies"
@@ -41,9 +41,8 @@ export default function Row({title, isLargeRow}) {
                     <div className="back">
                         <div className="streaming-info">
                             <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.seasons.length}</p>
-                            {/* <p className={isLargeRow ? "overview" : "overview-small"}>Overview: {movie.overview.slice(0, 80)}... 
-                            </p> */}
-                            <p className={isLargeRow ? "overview" : "overview-small"}>Languages available: {movie.languages.toString()}
+
+                            <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.languages.toString()}
                             </p>
                         </div>
 
@@ -63,15 +62,12 @@ export default function Row({title, isLargeRow}) {
                                 </button>
                             </div>
 
-                            <button className={isLargeRow ? "btn" : "btn-small"}
-                                onClick={()=>setOverview(true)}>
+                            <button className={`btn-more ${isLargeRow ? "btn" : "btn-small"}`}
+                                >
                               <Arrow/>
 
-                              {setOverview ? 
-                              <p className={isLargeRow ? "tooltip" : "tooltip-small"}>Overview: {movie.overview}</p>
-                              : 
-                              null
-                             }
+                              <p className={isLargeRow ? "tooltip" : "tooltip-small"}><span className="underline">Overview</span>: {movie.overview}</p>
+
                             </button>
                         </div>
                     </div>

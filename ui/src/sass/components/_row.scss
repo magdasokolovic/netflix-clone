@@ -144,9 +144,8 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
 
             
             .seasons, .seasons-small {
-
-                   text-align: left;
-                   margin: .75em 0;
+                    text-align: left;
+                   margin-top: .75em;
                }
                .seasons {
                    font-size: .8rem;
@@ -156,16 +155,17 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
                    font-size: .5rem;
                }
 
-               .overview, .overview-small {
+               .language, .language-small {
+                   text-align: left;
                    position: relative;
                    z-index: 10;
                }
 
-                .overview {
-                    font-size: .5rem;
+                .language {
+                    font-size: .7rem;
                 }
-                .overview-small {
-                    font-size: .3rem;
+                .language-small {
+                    font-size: .5rem;
                 }
         
     
@@ -204,16 +204,24 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
                 opacity: 0;
                 transition: 0.5s;
                 transform: translateX(-50%) translateY(-50px);
+
+                .underline {
+                    text-decoration: underline;
+                    font-weight: bold;
+                }
             }
             .btn_container:last-child {
                 position: relative;
-                &:active, :focus {
-                    .tooltip, .tooltip-small {
-                        visibility: visible;
-                        opacity: 1;
-                        transform: translateX(0px) translateY(0px);
+                .btn-more {
+                    &:hover, :active, :focus {
+                        .tooltip, .tooltip-small {
+                            visibility: visible;
+                            opacity: 1;
+                            transform: translateX(0) translateY(0px);
+                        }
                     }
                 }
+                
             }
 
             .tooltip-small {
