@@ -83,7 +83,7 @@ export default function Row({title, isLargeRow}) {
 
       </Carousel>
 
-    }
+    
   </div>
 
   )
