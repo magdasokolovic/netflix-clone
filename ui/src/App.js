@@ -9,7 +9,6 @@ import "./sass/main.scss";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
 
-// import data from './mockData.js/data.json'
 
 function App() {
   return (
@@ -27,7 +26,6 @@ function App() {
           <Row title="NETFLIX ORIGINALS" isLargeRow />
           <Row title="Trending Now" />
           <Row title="Top rated" />
-          <Row title="Netflix Originals" />
         </div>
 
         <Switch>
