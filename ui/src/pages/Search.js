@@ -8,20 +8,21 @@ export default function Search(props) {
       .then((res) => res.json())
       .then((result) => {
         if (result) {
-          setSeries(result);
+          if (props.search) {
+            const found = result.filter((serie) =>
+              serie.name.toLowerCase().includes(props.search.toLowerCase())
+            );
+            console.log(found);
+            setSeries(found);
+          } else {
+            setSeries(result);
+            console.log(result);
+          }
         } else {
           console.log(result.message);
         }
       });
   }, []);
-
-  useEffect(() => {
-    const found = series.filter((serie) =>
-      serie.name.toLowerCase().includes(props.search.toLowerCase())
-    );
-    console.log(found);
-    // setSeries(found);
-  }, [series, props.search]);
 
   return (
     <div className="search__posters carousel">
@@ -39,7 +40,8 @@ export default function Search(props) {
           );
         })
       ) : (
-        <h2>no series found</h2>
+        // should add delay to this message
+        <h2 on>no series found</h2>
       )}
     </div>
   );

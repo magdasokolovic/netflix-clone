@@ -20,11 +20,23 @@ export default function Navbar() {
 
   const closeMobileMenu = () => setClick(false);
 
+  const backToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   return (
     <div>
       <header className={navbar ? "nav-active" : ""}>
         <Link to="/" onClick={closeMobileMenu}>
-          <img src={logo} alt="logo" className="site-logo" />
+          <img
+            src={logo}
+            alt="logo"
+            className="site-logo"
+            onClick={backToTop}
+          />
         </Link>
         <nav>
           <div className="menu-icon" onClick={handleClick}>
@@ -65,7 +77,6 @@ export default function Navbar() {
                   placeholder="search"
                   className="nav__link nav__link--input"
                 />
-                {/* <input type="button" hidden /> */}
               </form>
             </li>
           </ul>

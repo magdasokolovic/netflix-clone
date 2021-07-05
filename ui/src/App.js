@@ -6,31 +6,16 @@ import Episode from "./pages/Episode.overview";
 import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
 import "./sass/main.scss";
-import Banner from "./components/Banner";
-
-// import data from './mockData.js/data.json'
 
 function App() {
+  // for the search function:
   const params = new URLSearchParams(window.location.search);
   const search = params.get("search");
+
   return (
     <BrowserRouter>
       <div className="container">
-
-        <div className="nav-active">
-          <Navbar />
-        </div>
-
-        <div className="banner">
-          <Banner />
-        </div>
-
-        <div className="row">
-          <Row title="NETFLIX ORIGINALS" isLargeRow />
-          <Row title="Trending Now" />
-          <Row title="Top rated" />
-          <Row title="Netflix Originals" />
-        </div>
+        <Navbar />
 
         <Switch>
           <Route path="/serie">
@@ -48,7 +33,6 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-
         </Switch>
       </div>
     </BrowserRouter>

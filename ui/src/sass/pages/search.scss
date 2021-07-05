@@ -6,7 +6,7 @@
   overflow-y: hidden;
   // 110px to make sure it doesn't overlap with navbar
   padding: 110px 20px 20px 20px;
-  // do not display the scrollbal, but keep functionality of it:
+  // do not display the scrollbar, but keep functionality of it:
   &:-webkit-scrollbar {
     display: none;
   }
