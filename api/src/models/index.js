@@ -18,10 +18,11 @@ const filmSchema = new Schema({
   languages: [String],
   image: String,
   rating: Number,
-  vote_count: Number
+  vote_count: Number,
+  key: String
 });
 
 const Series = mongoose.model("serie", serieSchema);
-const Films = mongoose.model("film", serieSchema);
+const Films = mongoose.model("film", filmSchema);
 
 module.exports = { Series, Films };

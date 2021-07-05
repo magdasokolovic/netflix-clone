@@ -17,13 +17,21 @@ async function getData() {
     });
     const response = await axios(films_url);
     // console.log(response);
-    const data = await response.data.results.slice(1, 10);
+    const data = await response.data.results.slice(1420, 1590);
     // console.log(data);
+    //https://api.themoviedb.org/3/movie/{movie_id}/videos?api_key=<<api_key>>&language=en-US
     for (const film of data) {
       const detail_movies = `${base_url}/movie/${film.id}?api_key=${api_key}&language=en-US`;
+      const video_keys = `https://api.themoviedb.org/3/movie/${film.id}/videos?api_key=${api_key}&language=en-US`;
       try {
-        const res = await axios(detail_movies);
-        const movie = res.data;
+        const res_video_key = await axios(video_keys);
+        const video_key = res_video_key.data.results;
+        // If  movie does not have trailer => just run over
+        if (video_key.length === 0) continue;
+        console.log("VIDEO KEY", video_key);
+        const { key } = video_key[0];
+        const res_movie = await axios(detail_movies);
+        const movie = res_movie.data;
 
         const {
           original_title,
@@ -39,7 +47,8 @@ async function getData() {
           languages: original_language,
           image: backdrop_path,
           rating: vote_average,
-          vote_count
+          vote_count,
+          key: key
         });
         await film.save();
       } catch (error) {

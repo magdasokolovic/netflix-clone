@@ -12,19 +12,6 @@ const all_tv_url = `https://api.themoviedb.org/3/tv/changes?api_key=a815bbb393e7
 const tvID_url = `${base_url}/tv/${tvID}?api_key=${api_key}&language=en-US`;
 const img_url = "https://image.tmdb.org/t/p/w500";
 
-// const serieSchema = new mongoose.Schema({
-//   name: { type: String },
-//   overview: String,
-//   languages: [String],
-//   seasons: [{}],
-//   rating: Number,
-//   vote_count: Number,
-//   number_of_seasons: Number,
-//   image: String
-// });
-
-// const Series = mongoose.model("serie", serieSchema);
-
 async function getData() {
   try {
     await mongoose.connect(process.env.MONGO_URL, {
