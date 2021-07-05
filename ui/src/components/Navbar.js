@@ -26,7 +26,7 @@ export default function Navbar() {
         <Link to="/" onClick={closeMobileMenu}>
           <img src={logo} alt="logo" className="site-logo" />
         </Link>
-        <nav className="main-nav">
+        <nav>
           <div className="menu-icon" onClick={handleClick}>
             <i className={click ? "fas fa-times" : "fas fa-bars"} />
           </div>
@@ -58,14 +58,14 @@ export default function Navbar() {
             </li> */}
 
             <li className="nav__list-item">
-              {/* still need to add function onSubmit */}
-              <form>
+              <form action="/search/">
                 <input
                   type="text"
                   name="search"
                   placeholder="search"
                   className="nav__link nav__link--input"
                 />
+                {/* <input type="button" hidden /> */}
               </form>
             </li>
           </ul>
