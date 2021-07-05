@@ -7,6 +7,7 @@ import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
 import "./sass/main.scss";
 import Navbar from "./components/Navbar";
+import Banner from "./components/Banner";
 
 // import data from './mockData.js/data.json'
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
+<<<<<<< HEAD
         <Navbar />
         {/* image needs to be exchanged later with the header */}
         <img
@@ -25,6 +27,22 @@ function App() {
         <Row title="MOVIE BAY ORIGINALS" isLargeRow />
         <Row title="Trending Now" />
         <Row title="Top rated" />
+=======
+        <div className="nav-active">
+          <Navbar />
+        </div>
+
+        <div className="banner">
+          <Banner />
+        </div>
+
+        <div className="row">
+          <Row title="NETFLIX ORIGINALS" isLargeRow />
+          <Row title="Trending Now" />
+          <Row title="Top rated" />
+          <Row title="Netflix Originals" />
+        </div>
+>>>>>>> f18a36d9e04281d13af8e95192c3cecaf2060ac6
 
         <Switch>
           <Route path="/serie">
