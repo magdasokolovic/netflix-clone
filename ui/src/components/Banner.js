@@ -1,4 +1,4 @@
-import "../sass/components/Banner.css";
+import "../sass/components/_banner.scss";
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -35,12 +35,19 @@ function Banner() {
 
   return (
     <div className="banner">
-      <img className="banner-backdrop" alt="" src={images[index]} />
+      <img
+        // style={{
+        //   backgroundColor:
+        //     "linear-gradient(to right, #111 30%, transparent 70%)",
+        // }}
+        className="banner-backdrop"
+        alt=""
+        src={images[index]}
+      />
 
-      <button className="play__btns">Play</button>
-      <button className="mylist__btns">My List</button>
       <h1 className="banner-title">{names[index]}</h1>
-      <div></div>
+      <button className="play__btns">▶ Play</button>
+      <button className="mylist__btns">My List</button>
       <p className="banner-overview">{synopses[index]}</p>
     </div>
   );
