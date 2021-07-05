@@ -9,6 +9,8 @@
 
 .banner {
   overflow: hidden;
+  /* need padding, otherwise it overlaps with the navbar */
+  padding-top: 110px;
 }
 
 .banner-backdrop {
