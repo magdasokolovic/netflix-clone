@@ -8,6 +8,7 @@ import play from '../icons/play-circle-regular.svg'
 import add from '../icons/plus-solid.svg'
 import like from '../icons/thumbs-down-regular.svg'
 import dislike from '../icons/thumbs-up-regular.svg'
+import fallback from '../images/movie-bay-logo.png'
 
 export default function Row({title, isLargeRow}) {
   const [movies, setMovies] = useState([])
@@ -59,12 +60,16 @@ export default function Row({title, isLargeRow}) {
                     <div className={isLargeRow ? "rating" : "rating-small"}>{movie.rating}</div>
 
                     <div key={index} className="front">
-                      <img
+                      <picture>
+                        <source srcSet={movie.image} type="image/jpg" />
+                        <img src={fallback} alt="Movie Bay Logo" />
+                      </picture>
+                      {/* <img
                           className="thumbnail"
                           src={movie.image} 
                           alt={movie.name}
                           onClick={()=>handleClick(movie)} 
-                      />
+                      /> */}
                         <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
 
                     </div>
