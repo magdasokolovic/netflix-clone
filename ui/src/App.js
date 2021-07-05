@@ -15,19 +15,6 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-<<<<<<< HEAD
-        <Navbar />
-        {/* image needs to be exchanged later with the header */}
-        <img
-          src="https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80"
-          alt="cinema"
-          className="hero"
-        />
-
-        <Row title="MOVIE BAY ORIGINALS" isLargeRow />
-        <Row title="Trending Now" />
-        <Row title="Top rated" />
-=======
         <div className="nav-active">
           <Navbar />
         </div>
@@ -42,7 +29,6 @@ function App() {
           <Row title="Top rated" />
           <Row title="Netflix Originals" />
         </div>
->>>>>>> f18a36d9e04281d13af8e95192c3cecaf2060ac6
 
         <Switch>
           <Route path="/serie">

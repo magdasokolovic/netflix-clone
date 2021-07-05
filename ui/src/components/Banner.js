@@ -1,4 +1,5 @@
-import "../sass/components/Banner.css";
+// NO NEED TO IMPORT THIS CSS FILE HERE IF YOU USE SASS
+// import "../sass/components/Banner.css";
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
