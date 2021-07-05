@@ -62,4 +62,91 @@ body {
   max-width: 1660px;
   margin: 0 auto;
 }
+
+.row {
+  margin-left: 20px;
+}
+
+.row .row__posters {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 20px;
+}
+
+.row .row__posters:-webkit-scrollbar {
+  display: none;
+}
+
+.row .carousel {
+  position: relative;
+}
+
+.row .carousel.carousel-box {
+  width: auto;
+  overflow: scroll;
+  white-space: nowrap;
+  display: inline-block;
+  text-align: center;
+  padding-bottom: 10px !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.row .carousel.switch-right, .row .carousel .switch-left {
+  color: white;
+  font-weight: bold;
+  height: 100%;
+  width: 45px;
+  line-height: 250px;
+  font-size: 25px;
+  text-align: center;
+  background-color: #832121;
+  font-family: sans-serif;
+  top: 0;
+  z-index: 3;
+}
+
+.row .carousel.switch-left {
+  position: absolute;
+  right: -50px;
+}
+
+.row .carousel.switch-left {
+  position: absolute;
+  right: -50px;
+}
+
+.row .row__poster {
+  max-height: 147px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  margin-right: 10px;
+  -webkit-transition: -webkit-transform 450ms;
+  transition: -webkit-transform 450ms;
+  transition: transform 450ms;
+  transition: transform 450ms, -webkit-transform 450ms;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.row .row__poster:hover {
+  -webkit-transform: scale(1.08);
+          transform: scale(1.08);
+  z-index: 5;
+}
+
+.row .row__poster-large {
+  max-height: 220px;
+}
+
+.row .row__poster-large:hover {
+  -webkit-transform: scale(1.09);
+          transform: scale(1.09);
+}
 /*# sourceMappingURL=main.css.map */

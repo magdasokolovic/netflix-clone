@@ -1,0 +1,79 @@
+.row {
+    margin-left: 20px;
+
+    .row__posters {
+       display: flex;
+       flex-wrap: wrap;
+       overflow-x: scroll;
+       overflow-y: hidden;
+       padding: 20px;
+        // do not display the scrollbal, but keep functionality of it: 
+       &:-webkit-scrollbar {
+           display: none;
+       }
+
+    }
+    .carousel {
+        position: relative;
+        &.carousel-box {
+            width: auto;
+            overflow: scroll;
+            white-space: nowrap;
+            display: inline-block;
+            text-align: center;
+            padding-bottom: 10px !important;
+            display:flex;
+        }
+        &.switch-right, .switch-left {
+            color: white;
+            font-weight: bold;
+            height: 100%;
+            width: 45px;
+            line-height: 250px;
+            font-size: 25px;
+            text-align:center;
+            background-color: rgb(131, 33, 33);
+            font-family: sans-serif;
+            top: 0;
+            z-index: 3;
+        }
+
+        &.switch-left {
+            position: absolute;
+            right: -50px;
+        }
+        &.switch-left {
+            position: absolute;
+            right: -50px;
+        }
+    }
+    .row__poster {
+        // width: 100%;
+        max-height: 147px;
+        //"object-fit: container" will keep an aspect ratio:
+        object-fit: contain;
+        margin-right: 10px;
+        transition: transform 450ms;
+        cursor: pointer;
+        z-index: 2;
+
+        &:hover {
+            transform: scale(1.08);
+            z-index: 5;
+        }
+
+    }
+
+    .row__poster-large {
+        max-height: 220px;
+
+        &:hover {
+            transform: scale(1.09);
+
+        }
+    }
+   
+   
+}
+
+// 
