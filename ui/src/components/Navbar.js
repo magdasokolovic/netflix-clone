@@ -28,7 +28,7 @@ export default function Navbar() {
   };
 
   return (
-    <div>
+    <div className="navigation">
       <header className={navbar ? "nav-active" : ""}>
         <Link to="/" onClick={closeMobileMenu}>
           <img
