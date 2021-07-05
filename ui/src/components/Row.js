@@ -16,7 +16,7 @@ export default function Row({title, isLargeRow}) {
     })
   }, [])
 
-
+ 
   return (
     <div className="row">
     <h2>{title}</h2>
