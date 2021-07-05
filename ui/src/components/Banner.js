@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
 import "../sass/components/Banner.css";
+
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const api_key = "4251b22b61515cc0f3716d0531658a55";
 const BASE_URL = "https://api.themoviedb.org/3";
