@@ -45,7 +45,7 @@ async function getData() {
         sortData.push(data[i]);
       }
     }
-    console.log(sortData);
+    // console.log(sortData);
     for (let z = 0; z < sortData.length; z++) {
       let tv = sortData[z];
       const detail_tv_url = `${base_url}/tv/${tv.id}?api_key=${api_key}&language=en-US`;
