@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 import Carousel from 'react-elastic-carousel'
 import fallback from '../images/movie-bay-logo.png'
 import {Arrow, Play, Add, Like, Dislike} from '../icons/icons'
-
+import {Link} from 'react-router-dom'
 export default function Row({title, isLargeRow}) {
   const [movies, setMovies] = useState([])
-  // const [overview, setOverview] = useState(false)
 
   useEffect(()=>{
     //here will fetch the movies and here will update movies with "setMovies"
@@ -50,6 +49,7 @@ export default function Row({title, isLargeRow}) {
                             <div>
                                  <button className={isLargeRow ? "btn" : "btn-small"}>
                                   <Play/>
+                                  <Link to="./player"></Link>
                                  </button>
                                 <button className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}>
                                   <Add/>

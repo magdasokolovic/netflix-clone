@@ -8,7 +8,7 @@ import Episode from "./pages/Episode.overview";
 import "./sass/main.scss";
 import Navbar from "./components/Navbar";
 import Banner from "./components/Banner";
-
+import Player from "./components/Player";
 
 function App() {
   return (
@@ -28,6 +28,8 @@ function App() {
           <Row title="Top rated" />
         </div>
 
+        <Player/>
+
         <Switch>
           <Route path="/serie">
             <Serie />
@@ -38,8 +40,11 @@ function App() {
           <Route path="/ep">
             <Episode />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/player">
+            <Player />
           </Route>
         </Switch>
       </div>
