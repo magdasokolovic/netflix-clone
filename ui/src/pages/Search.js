@@ -41,27 +41,12 @@ export default function Search(props) {
         })
       ) : (
         // should add delay to this message
-        <h2 on>no series found</h2>
+        <div className="error-message">
+          <h2>
+            Unfortunately we couldn't find anything titled "{props.search}".
+          </h2>
+        </div>
       )}
     </div>
   );
 }
-
-// {series.map((serie) => {
-//   const foundSeries = serie.name
-//     .toLowerCase()
-//     .includes(props.search.toLowerCase());
-//   console.log(foundSeries);
-//   if (foundSeries) {
-//     return (
-//       <div key={serie._id} className="carousel-box">
-//         <img
-//           src={serie.image}
-//           alt={serie.name}
-//           className="search__poster"
-//         />
-//         {/* make sure we have backup image in case image link is not working!!!! */}
-//       </div>
-//     );
-//   }
-// })}

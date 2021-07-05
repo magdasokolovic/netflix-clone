@@ -4,6 +4,7 @@
   flex-wrap: wrap;
   overflow-x: scroll;
   overflow-y: hidden;
+  min-height: 80vh;
   // 110px to make sure it doesn't overlap with navbar
   padding: 110px 20px 20px 20px;
   // do not display the scrollbar, but keep functionality of it:
@@ -41,4 +42,8 @@
 
 .found-1 {
   display: none;
+}
+
+.error-message {
+  margin-top: 4rem;
 }

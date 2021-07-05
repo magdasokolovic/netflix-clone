@@ -19,11 +19,13 @@ header {
 // if this is changed, we also need to change margin-top on hero and top for nav-list on mobile
 
 .site-logo {
+  margin-left: 6rem;
   width: 70px;
 }
 
 .nav__list {
   display: flex;
+  margin-right: 6rem;
 }
 
 .nav__link {
@@ -121,5 +123,16 @@ header {
     display: block;
     font-size: 1.6rem;
     cursor: pointer;
+  }
+}
+
+// 1660px because this is the width of the banner
+
+@media screen and (max-width: 1660px) {
+  .site-logo {
+    margin-left: 0;
+  }
+  .nav__list {
+    margin-right: 0;
   }
 }

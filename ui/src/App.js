@@ -6,6 +6,7 @@ import Episode from "./pages/Episode.overview";
 import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
 import "./sass/main.scss";
+import Footer from "./components/Footer";
 
 function App() {
   // for the search function:
@@ -16,7 +17,6 @@ function App() {
     <BrowserRouter>
       <div className="container">
         <Navbar />
-
         <Switch>
           <Route path="/serie">
             <Serie />
@@ -34,6 +34,7 @@ function App() {
             <Home />
           </Route>
         </Switch>
+        <Footer />
       </div>
     </BrowserRouter>
   );
