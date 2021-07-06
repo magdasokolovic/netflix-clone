@@ -1,16 +1,16 @@
-// NOT WORKING YET!
-
-import React, { useEffect, useState } from "react";
-import fallback from "../images/movie-bay-logo.png";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
-import { Link } from "react-router-dom";
-import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
+import fallback from "../images/movie-bay-logo.png";
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
+import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
+import { Link, useHistory } from "react-router-dom";
 
 export default function Series() {
   const [series, setSeries] = useState([]);
   const [loading, setLoading] = useState(true);
+  const history = useHistory();
+  const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
     setLoading(true);
@@ -27,71 +27,75 @@ export default function Series() {
       })
       .catch((err) => console.log(err));
   }, []);
+  const handleSerie = (serie) => {
+    console.log(serie);
+    // history.push({
+    //   pathname: "/season",
+    //   state: {
+    //     serie
+    //   }
+    // });
+    history.push("/season", {
+      serie
+    });
+  };
   return (
-    // <div className="series-overview">
-    //   <div className="carousel search__posters">
-    //     {series.map((serie) => {
-    //       return (
-    //         <div key={serie._id} className="carousel-box">
-    //           <img
-    //             src={serie.image}
-    //             alt={serie.name}
-    //             className="search__poster"
-    //           />
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
-    // </div>
-
     <Layout>
-      {loading && <Loading />}
       <div className="row">
-        <h2>all tv shows</h2>
-        <Carousel itemsToShow={7}>
-          {series.map((serie) => {
+        {loading && <Loading />}
+        <Carousel itemsToShow={5} itemsToScroll={5}>
+          {series.map((serie, index) => {
             return (
-              <div className="serie" key={serie._id}>
-                <div className="rating-small">{serie.rating}</div>
+              <div
+                className="movie"
+                style={{ marginTop: "6rem" }}
+                key={index}
+                onClick={() => handleSerie(serie)}
+              >
+                <div className="rating">{serie.rating}</div>
 
-                <div key={serie._id} className="front">
+                <div key={index} className="front">
                   <picture className="thumbnail">
-                    <source srcSet={serie.image} type="image/jpg" />
+                    <source
+                      srcSet={baseImageUrl + serie.image}
+                      type="image/jpg"
+                    />
                     <img src={fallback} alt="Movie Bay Logo" />
                   </picture>
-                  <h3 className="title-small">{serie.name}</h3>
+
+                  <h3 className="title">{serie.name}</h3>
                 </div>
 
                 <div className="back">
                   <div className="streaming-info">
-                    <p className="seasons-small">
-                      Number of seasons: {serie.seasons.length}
-                    </p>
-                    <p className="language-small">
-                      Languages available: {serie.languages.toString()}
-                    </p>
+                    <p className="seasons">Seasons: {serie.seasons.length}</p>
+
+                    <p className="language">Languages: {serie.languages[0]}</p>
                   </div>
-                  <div className="btn-container">
+
+                  <div className="btn_container">
                     <div>
-                      <button className="btn-small">
-                        <Play />
-                        <Link to="./player"></Link>
+                      <button className="btn">
+                        <Link to="/player">
+                          <Play />
+                        </Link>
                       </button>
-                      <button className="btn-add btn-small">
+                      <button className={`btn-add  btn `}>
                         <Add />
-                        <p className="tooltip-small-add">Add to the list</p>
+                        <p className="tooltip-add">Add to the list</p>
                       </button>
-                      <button className="btn-small">
+                      {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
+                      <button className="btn">
                         <Like />
                       </button>
-                      <button className="btn-small">
+                      <button className="btn">
                         <Dislike />
                       </button>
                     </div>
 
-                    <button className="btn-more btn-small">
+                    <button className="btn-more btn">
                       <Arrow />
-                      <p className="tooltip-small">
+                      <p className="tooltip">
                         <span className="underline">Overview</span>:{" "}
                         {serie.overview}
                       </p>

@@ -10,41 +10,35 @@ export default function Row({ title, isLargeRow, data }) {
   return (
     <div className="row">
       <h2>{title}</h2>
-      <Carousel itemsToShow={isLargeRow ? 5 : 7}>
+      <Carousel itemsToShow={5}>
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
-              <div className={isLargeRow ? "rating" : "rating-small"}>
-                {movie.vote_average}
-              </div>
+              {/* <div className={isLargeRow ? "rating" : "rating-small"}> */}
+              <div className="rating">{movie.rating}</div>
 
               <div key={index} className="front">
                 <picture className="thumbnail">
                   <source
-                    srcSet={baseImageUrl + movie.poster_path}
+                    srcSet={baseImageUrl + movie.image}
                     type="image/jpg"
                   />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
-                <h3 className={isLargeRow ? "title" : "title-small"}>
-                  {movie.title}
-                </h3>
+                {/* <h3 className={isLargeRow ? "title" : "title-small"}> */}
+                <h3 className="title">{movie.name}</h3>
               </div>
 
               <div className="back">
                 <div className="streaming-info">
-                  <p className={isLargeRow ? "seasons" : "seasons-small"}>
-                    Number of seasons: {movie.vote_count}
-                  </p>
+                  <p className="seasons">Voted: {movie.vote_count}</p>
 
-                  <p className={isLargeRow ? "language" : "language-small"}>
-                    Languages available: {movie.original_language}
-                  </p>
+                  <p className="language">Languages: {movie.languages[0]}</p>
                 </div>
 
                 <div className="btn_container">
                   <div>
-                    <button className={isLargeRow ? "btn" : "btn-small"}>
+                    <button className="btn">
                       <Link to="/player">
                         <Play />
                       </Link>
@@ -61,19 +55,18 @@ export default function Row({ title, isLargeRow, data }) {
                         Add to the list
                       </p>
                     </button>
-                    <button className={isLargeRow ? "btn" : "btn-small"}>
+                    {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
+                    <button className="btn">
                       <Like />
                     </button>
-                    <button className={isLargeRow ? "btn" : "btn-small"}>
+                    <button className="btn">
                       <Dislike />
                     </button>
                   </div>
 
-                  <button
-                    className={`btn-more ${isLargeRow ? "btn" : "btn-small"}`}
-                  >
+                  <button className={`btn-more btn`}>
                     <Arrow />
-                    <p className={isLargeRow ? "tooltip" : "tooltip-small"}>
+                    <p className="tooltip">
                       <span className="underline">Overview</span>:{" "}
                       {movie.overview}
                     </p>
