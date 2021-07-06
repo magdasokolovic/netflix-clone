@@ -1,6 +1,71 @@
-$border-radius: .25rem;
+$border-radius: 0.25rem;
 $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
 .row {
+
+  margin: 20px;
+  height: 100%;
+
+  /////////////////////////////////////////////
+  // OVERRIDING "React Elastic Carousel" STYLING:
+  //////////////////////////////////////////////
+  .rec {
+    // height: auto;
+    .rec-arrow {
+      background-color: $highlight-color;
+      &:hover {
+        background-color: lighten($highlight-color, 10%);
+      }
+    }
+    .ejXxNI {
+      background-color: $highlight-color;
+      box-shadow: 0 0 1px 3px $font-color;
+
+      &:hover {
+        box-shadow: 0 0 1px 3px lighten($highlight-color, 10%);
+      }
+    }
+
+    .rec-item-wrapper {
+      height: 100%;
+    }
+  }
+  //////////////////
+  // MY OWN STYLING:
+  //////////////////
+
+  .title {
+    font-size: 0.9rem;
+  }
+
+  .title-small {
+    font-size: 0.7rem;
+  }
+
+  .movie {
+    position: relative;
+    padding: 1em;
+    cursor: pointer;
+    border-radius: $border-radius;
+    display: flex;
+    flex-direction: column;
+    padding: 4.5rem 0;
+    .btn,
+    .btn-small {
+      border: none;
+      outline: none;
+      background-color: transparent;
+      transition: $transition;
+
+      svg {
+        width: 100%;
+        height: 100%;
+        transition: $transition;
+        &:hover {
+          transform: scale(1.2);
+          path {
+            fill: $highlight-color;
+          }
+
     margin: 20px;
     height: 100%;
     /////////////////////////////////////////////
@@ -25,21 +90,47 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
     
         .rec-item-wrapper {
             height: 100%;
+
         }
-
+      }
     }
-    //////////////////
-    // MY OWN STYLING:
-    //////////////////
-
-    .title {
-        font-size: .9rem;
+    .btn {
+      width: 1.5em;
+      height: 1.5em;
+      margin: 0.2em;
     }
 
-    .title-small {
-        font-size: .7rem;
+    .btn-small {
+      width: 1em;
+      height: 1em;
+      margin: 0.1em;
     }
-    
+
+    h3,
+    p {
+      margin: 0;
+    }
+
+    img {
+      max-width: 100%;
+      object-fit: cover;
+    }
+
+
+    .rating,
+    .rating-small {
+      position: absolute;
+      font-weight: bold;
+      z-index: 100;
+      background: $highlight-color;
+      clip-path: polygon(100% 0, 100% 99%, 50% 85%, 0 100%, 0 0);
+      transition: $transition;
+      align-self: start;
+    }
+    .rating {
+      font-size: 1.125rem;
+      padding: 0.3em 0.3em 0.85em;
+    }
 
     .movie {
         position: relative;
@@ -70,284 +161,251 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
             height: 1.5em;
             margin:.2em;
 
-        }
 
-        .btn-small {
-            width: 1em;
-            height: 1em;
-            margin: .1em;
-        }
-       
-        h3, p {
-            margin: 0;
-        }
-    
-        
-        img {
-            max-width: 100%;
-            object-fit: cover;
-        }
+    .rating-small {
+      font-size: 0.8rem;
+      padding: 0.1em 0.1em 0.5em;
+    }
 
-        .rating, .rating-small {
-            position: absolute;
-            font-weight: bold;
-            z-index: 100;
-            background: $highlight-color;
-            clip-path: polygon(100% 0, 100% 99%, 50% 85%, 0 100%, 0 0);
-            transition: $transition;
-            align-self: start;
+    .front {
+      transition: 250ms ease-in;
+      position: relative;
+      height: 100%;
 
+      .thumbnail {
+        border-radius: $border-radius;
+        transition: $transition;
+        opacity: 0.8;
 
+        &:hover {
+          opacity: 1;
         }
+      }
+    }
+    ////////////////////////////////
+    // INFO displayed on hover: ///////
+    ////////////////////////////////
+    .back {
+      opacity: 0;
+      position: absolute;
+      z-index: 10;
+      top: 65%;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      transition: $transition, opacity 150ms linear;
+
+      .seasons,
+      .seasons-small {
+        text-align: left;
+        margin-top: 0.75em;
+      }
+      .seasons {
+        font-size: 0.8rem;
+      }
+
+      .seasons-small {
+        font-size: 0.5rem;
+      }
+
+      .language,
+      .language-small {
+        text-align: left;
+        position: relative;
+        z-index: 10;
+      }
+
+      .language {
+        font-size: 0.7rem;
+      }
+      .language-small {
+        font-size: 0.5rem;
+      }
+
+      .streaming-info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-left: 1em;
+        width: 90%;
+
         .rating {
-            font-size: 1.125rem;
-            padding: .3em .3em .85em;
+          font-size: 0.7rem;
+          text-align: center;
         }
 
         .rating-small {
-            font-size: .8rem;
-            padding: .1em .1em .5em;
+          font-size: 0.7rem;
         }
-    
-        .front {
-            transition: 250ms ease-in;
-            position: relative;
-            height: 100%;
+      }
+      .tooltip,
+      .tooltip-small,
+      .tooltip-add,
+      .tooltip-small-add {
+        position: absolute;
+        z-index: 1010;
+        overflow: visible;
 
-        
-           .thumbnail {
-               border-radius: $border-radius;
-               transition: $transition;
-               opacity: .8;
+        background: $font-color;
+        color: $background-color;
+        box-sizing: border-box;
+        border-radius: 4px;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.5s cubic-bezier(0.23, 1, 0.81, 1.01);
+        transform: translateX(-50%) translateY(-50px);
+        box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+        pointer-events: none;
 
-               &:hover {
-                   opacity: 1;
-               }
-           }
+        .underline {
+          text-decoration: underline;
+          font-weight: bold;
         }
-    ////////////////////////////////
-     // INFO displayed on hover: ///////
-     ////////////////////////////////
-        .back {
-            opacity: 0;
-            position: absolute;
-            z-index: 10;
-            top: 65%;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content:space-between;
-            transition: $transition, opacity 150ms linear;
+      }
 
-            
-            .seasons, .seasons-small {
-                    text-align: left;
-                   margin-top: .75em;
-               }
-               .seasons {
-                   font-size: .8rem;
-               }
-    
-               .seasons-small {
-                   font-size: .5rem;
-               }
-
-               .language, .language-small {
-                   text-align: left;
-                   position: relative;
-                   z-index: 10;
-               }
-
-                .language {
-                    font-size: .7rem;
-                }
-                .language-small {
-                    font-size: .5rem;
-                }
-        
-    
-    
-            .streaming-info {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                padding-left: 1em;
-                width: 90%;
-
-                .rating {
-                    font-size: .7rem;
-                    text-align: center;
-                }
-
-                .rating-small {
-                    font-size: .7rem;
-
-                }
-            }
-            .tooltip, .tooltip-small, .tooltip-add, .tooltip-small-add {
-                position: absolute;
-                z-index: 1010;
-                overflow: visible;
-                
-                background: $font-color;
-                color: $background-color;
-                box-sizing: border-box;
-                border-radius: 4px;
-                visibility: hidden;
-                opacity: 0;
-                transition: 0.5s cubic-bezier(0.23, 1, 0.81, 1.01);
-                transform: translateX(-50%) translateY(-50px);
-                box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
-                pointer-events: none;
-
-                .underline {
-                    text-decoration: underline;
-                    font-weight: bold;
-                }
-            }
-
-            .tooltip, .tooltip-small {
-                width: 100%;
-                padding: 1em;
-                bottom: 0;
-                left: 0;
-            }
-            .tooltip-add, .tooltip-small-add {
-                width: 50%;
-                padding: 0.5em;
-                bottom: 100%;
-                left: 3%;
-                font-size: .5rem;
-            }
-            .tooltip-add:before, .tooltip-small-add:before {
-                content: "";
-                position: absolute;
-                height: 8px;
-                width: 8px;
-                bottom: -4px;
-                left: 50%;
-                transform: translateX(-50%) rotate(45deg);
-                background: white;
-
-            }
-            .btn_container {
-                position: relative;
-                .btn-more {
-                    &:hover, :active, :focus {
-                        .tooltip, .tooltip-small {
-                            visibility: visible;
-                            opacity: 1;
-                            transform: translateX(0) translateY(0px);
-                        }
-                    }
-                }
-
-                .btn-add {
-                    &:hover, :active, :focus {
-                        .tooltip-add, .tooltip-small-add {
-                            visibility: visible;
-                            opacity: 1;
-                            transform: translateX(0) translateY(0px);
-                        }
-                    }
-                }
-            }
-
+      .tooltip,
+      .tooltip-small {
+        width: 100%;
+        padding: 1em;
+        bottom: 0;
+        left: 0;
+      }
+      .tooltip-add,
+      .tooltip-small-add {
+        width: 50%;
+        padding: 0.5em;
+        bottom: 100%;
+        left: 3%;
+        font-size: 0.5rem;
+      }
+      .tooltip-add:before,
+      .tooltip-small-add:before {
+        content: "";
+        position: absolute;
+        height: 8px;
+        width: 8px;
+        bottom: -4px;
+        left: 50%;
+        transform: translateX(-50%) rotate(45deg);
+        background: white;
+      }
+      .btn_container {
+        position: relative;
+        .btn-more {
+          &:hover,
+          :active,
+          :focus {
+            .tooltip,
             .tooltip-small {
-                font-size: .5rem;
+              visibility: visible;
+              opacity: 1;
+              transform: translateX(0) translateY(0px);
             }
-
-            .btn_container {
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                width: 90%;
-                padding-bottom: 1em;
-            }
-    
+          }
         }
-    
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgb(37, 43, 49);
-            z-index: -1;
-            transform: scale(.2, .9);
-            transition: transform 250ms;
-            opacity: 0;
-        }
-    
-       
-    
-     ////////////////////////////////
-     // MOVIE CARD ON HOVER: ///////
-     ////////////////////////////////
-        &:hover {
-            .back {
-                opacity: 1;
-            }
-            .rating, .rating-small {
-                align-self: end;
-                right: 3%;
-                top: 1%;
-            }
 
-            .front {
-                
-                transform: translateY(-20%) scale(.9);
-    
-                .title, .title-small {
-                    animation: movieName 250ms forwards;
-                }
-                .thumbnail {
-                    position: relative;
-                    z-index: 1000;
-                    overflow: visible;
-                    transform: translateY(5%) scale(.9);
-                }
+        .btn-add {
+          &:hover,
+          :active,
+          :focus {
+            .tooltip-add,
+            .tooltip-small-add {
+              visibility: visible;
+              opacity: 1;
+              transform: translateX(0) translateY(0px);
             }
-            
-
-            .background {
-                transition: 
-                    transform $transition,
-                    opacity 100ms linear;
-                opacity: 1;
-                transform: scale(1.35, 1.2) translateY(5%);
-                border-radius: $border-radius;
-            }
+          }
         }
-        
+      }
+
+      .tooltip-small {
+        font-size: 0.5rem;
+      }
+
+      .btn_container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 90%;
+        padding-bottom: 1em;
+      }
     }
-}
 
+    .background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgb(37, 43, 49);
+      z-index: -1;
+      transform: scale(0.2, 0.9);
+      transition: transform 250ms;
+      opacity: 0;
+    }
+
+    ////////////////////////////////
+    // MOVIE CARD ON HOVER: ///////
+    ////////////////////////////////
+    &:hover {
+      .back {
+        opacity: 1;
+      }
+      .rating,
+      .rating-small {
+        align-self: end;
+        right: 3%;
+        top: 1%;
+      }
+
+      .front {
+        transform: translateY(-20%) scale(0.9);
+
+        .title,
+        .title-small {
+          animation: movieName 250ms forwards;
+        }
+        .thumbnail {
+          position: relative;
+          z-index: 1000;
+          overflow: visible;
+          transform: translateY(5%) scale(0.9);
+        }
+      }
+
+      .background {
+        transition: transform $transition, opacity 100ms linear;
+        opacity: 1;
+        transform: scale(1.35, 1.2) translateY(5%);
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
 
 @keyframes movieName {
-    0% {
-        text-align: left;
-        opacity: 1;
-    }
-    20% {
-        text-align: left;
-        opacity: 0;
-    }
+  0% {
+    text-align: left;
+    opacity: 1;
+  }
+  20% {
+    text-align: left;
+    opacity: 0;
+  }
 
-    50% {
-        text-align: center;
-        opacity: 0;
-        transform: scale(1.2);
-    }
-    100% {
-        text-align: center;
-        opacity: 1;
-        transform: scale(1.2);
-    }
+  50% {
+    text-align: center;
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    text-align: center;
+    opacity: 1;
+    transform: scale(1.2);
+  }
 }
-
