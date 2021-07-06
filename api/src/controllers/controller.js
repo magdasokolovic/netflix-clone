@@ -24,7 +24,7 @@ const getAllFilms = (req, res) => {
 };
 const getAllLatest = async (req, res) => {
   // console.log("haha");
-  Films.find({ rating: { $lt: 7.7 } }, (err, data) => {
+  Films.find({ rating: { $gt: 6.7 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
@@ -44,7 +44,7 @@ const getAllPopular = async (req, res) => {
 };
 const getAllTopRated = async (req, res) => {
   // console.log("haha");
-  Films.find({ rating: { $gt: 8.7 } }, (err, data) => {
+  Films.find({ rating: { $gt: 8 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
