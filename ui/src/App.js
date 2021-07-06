@@ -20,10 +20,6 @@ function App() {
 
   return (
     <BrowserRouter>
-
-        {/* {/* <div className="nav-active">
-          <Navbar />
-        </div> */}
         <Navbar />
         <Switch>
           <Route path="/series">

@@ -1,16 +1,15 @@
-import React, { useState } from 'react'
-import ReactPlayer from "react-player"
+import React from 'react'
+import ReactPlayer from "react-player/youtube"
 
 const Player = () => {
-
     return (
         <>
             <div className='player-wrapper'>
               <ReactPlayer
                 className='react-player'
                 url='https://www.youtube.com/watch?v=LHOtME2DL4g'
-                width='100%'
-                height='100%'
+                width='640px'
+                height='360px'
                 controls={true}
               />
             </div>
