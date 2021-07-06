@@ -6,25 +6,39 @@ const Footer = () => {
     <div className="footer">
       <ul>
         <li>
-          <Link className="footer-links">Audio and Subtitles</Link>
+          <Link to="/" className="footer-links">
+            Audio and Subtitles
+          </Link>
         </li>
         <li>
-          <Link className="footer-links">Audio Description</Link>
+          <Link to="/" className="footer-links">
+            Audio Description
+          </Link>
         </li>
         <li>
-          <Link className="footer-links">Help Center</Link>
+          <Link to="/" className="footer-links">
+            Help Center
+          </Link>
         </li>
         <li>
-          <Link className="footer-links">Gift Cards</Link>
+          <Link to="/" className="footer-links">
+            Gift Cards
+          </Link>
         </li>
         <li>
-          <Link className="footer-links">Media Center</Link>
+          <Link to="/" className="footer-links">
+            Media Center
+          </Link>
         </li>
         <li>
-          <Link className="footer-links">Jobs</Link>
+          <Link to="/" className="footer-links">
+            Jobs
+          </Link>
         </li>
         <li>
-          <Link className="footer-links">Terms of Use</Link>
+          <Link to="/" className="footer-links">
+            Terms of Use
+          </Link>
         </li>
       </ul>
 
