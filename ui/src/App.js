@@ -1,14 +1,16 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-import Row from "./components/Row";
-import Home from "./pages/Home";
-import Season from "./pages/Season.overview";
-import Episode from "./pages/Episode.overview";
-import Navbar from "./components/Navbar";
+import "./sass/main.scss";
+
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+
 import Banner from "./components/Banner";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
+import Row from "./components/Row";
+import Episode from "./pages/Episode.overview";
+import Home from "./pages/Home";
 // import Player from "./components/Player";
 import Search from "./pages/Search";
-import "./sass/main.scss";
-import Footer from "./components/Footer";
+import Season from "./pages/Season.overview";
 import Series from "./pages/Series";
 
 function App() {
