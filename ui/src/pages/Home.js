@@ -14,7 +14,6 @@ function Home() {
   
   useEffect(() => {
 
-
     fetch(requests.fetchLatest)
     .then(response => response.json())
     .then(result=>{
@@ -51,7 +50,7 @@ function Home() {
       <Banner />
       {trendingMovies && <Row title="POPULAR" isLargeRow data={trendingMovies}/>}
       {latestMovies && <Row title="Latest" data={latestMovies}/>}
-      {upcomingMovies &&<Row title="Upcoming" data={upcomingMovies}/>}
+      {upcomingMovies && <Row title="Upcoming" data={upcomingMovies}/>}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies}/>}
       <Footer />
     </div>

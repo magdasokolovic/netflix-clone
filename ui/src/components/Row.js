@@ -3,15 +3,12 @@ import Carousel from 'react-elastic-carousel'
 import fallback from '../images/movie-bay-logo.png'
 import {Arrow, Play, Add, Like, Dislike} from '../icons/icons'
 import {Link} from 'react-router-dom'
-// import Youtube from 'react-youtube'
-// import movieTrailer from 'movie-trailer'
 
-export default function Row({title, isLargeRow, data, all}) {
 
+export default function Row({title, isLargeRow, data}) {
 
   const baseImageUrl = "https://image.tmdb.org/t/p/w500"
 
-  
   return (
   <div className="row">
     <h2>{title}</h2>
@@ -19,11 +16,11 @@ export default function Row({title, isLargeRow, data, all}) {
         {data.map((movie, index)=>{
           return (
             <div className="movie" key={index}>
-              <div className={isLargeRow ? "rating" : "rating-small"}>{all ? movie.rating :movie.vote_average}</div>
+              <div className={isLargeRow ? "rating" : "rating-small"}>{movie.vote_average}</div>
 
               <div key={index} className="front">
                 <picture className="thumbnail">
-                  <source srcSet={`${baseImageUrl}${all ? movie.image : movie.poster_path}`} type="image/jpg" />
+                  <source srcSet={baseImageUrl + movie.poster_path} type="image/jpg" />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
                 <h3 className={isLargeRow ? "title" : "title-small"}>{movie.title}</h3>
@@ -32,9 +29,9 @@ export default function Row({title, isLargeRow, data, all}) {
                 
               <div className="back">
                   <div className="streaming-info">
-                      <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {all ? movie.name : movie.vote_count}</p>
+                      <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.vote_count}</p>
 
-                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {all ? movie.name : movie.original_language.toString()}
+                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.original_language.toString()}
                       </p>
                   </div>
 
@@ -71,7 +68,6 @@ export default function Row({title, isLargeRow, data, all}) {
         })}
       </Carousel>
 
-      {/* {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />} */}
   </div>
 
   )

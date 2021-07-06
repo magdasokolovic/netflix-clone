@@ -21,7 +21,6 @@ function App() {
 
   return (
     <BrowserRouter>
-        {/* <Player/> */}
 
         {/* <Navbar /> */}
         <Switch>
