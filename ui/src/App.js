@@ -9,7 +9,7 @@ import Banner from "./components/Banner";
 import Search from "./pages/Search";
 import "./sass/main.scss";
 import Footer from "./components/Footer";
-import Series from "./pages/Series";
+import TvShow from "./pages/TvShows";
 
 function App() {
   // for the search function:
@@ -19,18 +19,12 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        {/* <div className="row">
-          <Row title="NETFLIX ORIGINALS" isLargeRow />
-          <Row title="Trending Now" />
-          <Row title="Top rated" />
-        </div> */}
-
         {/* <Player/> */}
 
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
-          <Route path="/series">
-            <Series />
+          <Route path="/tvshows">
+            <TvShow />
           </Route>
           <Route path="/season">
             <Season />
@@ -46,7 +40,6 @@ function App() {
           </Route>
           <Route path="/player">{/* <Player /> */}</Route>
         </Switch>
-        <Footer />
       </div>
     </BrowserRouter>
   );

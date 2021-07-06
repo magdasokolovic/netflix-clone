@@ -3,6 +3,7 @@ import Carousel from "react-elastic-carousel";
 import fallback from "../images/movie-bay-logo.png";
 import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
 import { Link } from "react-router-dom";
+
 export default function Row({ title, isLargeRow, movies }) {
   return (
     <div className="row">

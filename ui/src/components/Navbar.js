@@ -50,7 +50,7 @@ export default function Navbar() {
             </li>
             <li className="nav__list-item">
               <Link
-                to="/series"
+                to="/tvshows"
                 className="nav__link"
                 onClick={closeMobileMenu}
               >
