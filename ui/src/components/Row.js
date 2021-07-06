@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Carousel from "react-elastic-carousel";
 import fallback from "../images/movie-bay-logo.png";
 import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
@@ -8,6 +8,7 @@ export default function Row({ title, isLargeRow, data }) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   return (
+
     <div className="row">
       <h2>{title}</h2>
       <Carousel itemsToShow={isLargeRow ? 5 : 7}>
@@ -22,18 +23,18 @@ export default function Row({ title, isLargeRow, data }) {
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
                 <h3 className={isLargeRow ? "title" : "title-small"}>
-                  {movie.title}
+                  {movie.name}
                 </h3>
               </div>
 
               <div className="back">
                 <div className="streaming-info">
                   <p className={isLargeRow ? "seasons" : "seasons-small"}>
-                    Number of seasons: {movie.vote_count}
+                    Number of votes: {movie.vote_count}
                   </p>
 
                   <p className={isLargeRow ? "language" : "language-small"}>
-                    Languages available: {movie.original_language}
+                    Languages available: {movie.languages}
                   </p>
                 </div>
 
