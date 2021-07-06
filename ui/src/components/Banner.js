@@ -27,7 +27,7 @@ function Banner() {
 
   let index = Math.floor(Math.random() * images.length);
 
-  if (images[index] == "https://www.themoviedb.org/t/p/originalnull") {
+  if (images[index] === "https://www.themoviedb.org/t/p/originalnull") {
     delete images[index];
     delete names[index];
     delete synopses[index];
@@ -36,12 +36,19 @@ function Banner() {
 
   return (
     <div className="banner">
-      <img className="banner-backdrop" alt="" src={images[index]} />
+      <img
+        // style={{
+        //   backgroundColor:
+        //     "linear-gradient(to right, #111 30%, transparent 70%)",
+        // }}
+        className="banner-backdrop"
+        alt=""
+        src={images[index]}
+      />
 
-      <button className="play__btns">Play</button>
-      <button className="mylist__btns">My List</button>
       <h1 className="banner-title">{names[index]}</h1>
-      <div></div>
+      <button className="play__btns">▶ Play</button>
+      <button className="mylist__btns">My List</button>
       <p className="banner-overview">{synopses[index]}</p>
     </div>
   );

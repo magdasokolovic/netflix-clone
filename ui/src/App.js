@@ -2,12 +2,12 @@
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 
 import Home from "./pages/Home";
-import Serie from "./pages/Serie.overview";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
 import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
+import Series from "./pages/Series";
 
 ///// STYLING: 
 import "./sass/main.scss";
@@ -25,8 +25,8 @@ function App() {
         </div> */}
         <Navbar />
         <Switch>
-          <Route path="/serie">
-            <Serie />
+          <Route path="/series">
+            <Series />
           </Route>
           <Route path="/season">
             <Season />
