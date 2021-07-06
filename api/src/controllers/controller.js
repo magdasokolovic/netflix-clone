@@ -1,4 +1,4 @@
-const {Series, Films} = require("../models");
+const { Series, Films } = require("../models");
 const axios = require("axios");
 const api_key = "a815bbb393e7f79ac4b0c66acd437aa6";
 const base_url = "https://api.themoviedb.org/3";
@@ -28,7 +28,7 @@ const getAllFilms = (req, res) => {
 };
 const getAllLatest = async (req, res) => {
   // console.log("haha");
-  Films.find({rating : {$gt : 6.7}}, (err, data) => {
+  Films.find({ rating: { $gt: 6.7 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
@@ -38,7 +38,7 @@ const getAllLatest = async (req, res) => {
 };
 const getAllPopular = async (req, res) => {
   // console.log("haha");
-  Films.find({rating : {$gt : 9}}, (err, data) => {
+  Films.find({ rating: { $gt: 9 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
@@ -48,7 +48,7 @@ const getAllPopular = async (req, res) => {
 };
 const getAllTopRated = async (req, res) => {
   // console.log("haha");
-  Films.find({rating : {$gt : 8}}, (err, data) => {
+  Films.find({ rating: { $gt: 8 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
@@ -58,7 +58,7 @@ const getAllTopRated = async (req, res) => {
 };
 const getAllUpcoming = async (req, res) => {
   // console.log("haha");
-  Films.find({rating : {$gt : 7.7}}, (err, data) => {
+  Films.find({ rating: { $gt: 7.7 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
@@ -72,5 +72,5 @@ module.exports = {
   getAllLatest,
   getAllPopular,
   getAllTopRated,
-  getAllUpcoming
+  getAllUpcoming,
 };
