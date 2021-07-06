@@ -1,8 +1,8 @@
 const axios = require("axios");
-
+const path = require("path");
 const mongoose = require("mongoose");
 require("dotenv").config();
-
+const { Series } = require("../src/models");
 const api_key = "a815bbb393e7f79ac4b0c66acd437aa6";
 const base_url = "https://api.themoviedb.org/3";
 
@@ -12,30 +12,6 @@ const all_tv_url = `https://api.themoviedb.org/3/tv/changes?api_key=a815bbb393e7
 const tvID_url = `${base_url}/tv/${tvID}?api_key=${api_key}&language=en-US`;
 const img_url = "https://image.tmdb.org/t/p/w500";
 
-// const episodeSchema = new mongoose.Schema({
-//   name: { type: String },
-//   overview: String
-// });
-
-// const seasonSchema = new mongoose.Schema({
-//   name: { type: String },
-//   overview: String,
-//   episodes: [episodeSchema]
-// });
-
-const serieSchema = new mongoose.Schema({
-  name: { type: String },
-  overview: String,
-  languages: [String],
-  seasons: [{}],
-  rating: Number,
-  vote_count: Number,
-  number_of_seasons: Number,
-  image: String
-});
-
-const Series = mongoose.model("serie", serieSchema);
-
 async function getData() {
   try {
     await mongoose.connect(process.env.MONGO_URL, {
@@ -44,15 +20,27 @@ async function getData() {
     });
     const response = await axios(all_tv_url);
     const data = await response.data.results;
-
-    data.slice(200, 210).forEach(async (tv, i) => {
-      //   console.log(tv);
-
+    // console.log(data);
+    let i = 0;
+    let y = 0;
+    let sortData = [];
+    while (i < 150) {
+      console.log(data[i]);
+      y++;
+      if (data[y].adult === false) {
+        i++;
+        sortData.push(data[i]);
+      }
+    }
+    // console.log(sortData);
+    for (let z = 0; z < sortData.length; z++) {
+      let tv = sortData[z];
       const detail_tv_url = `${base_url}/tv/${tv.id}?api_key=${api_key}&language=en-US`;
       try {
         const detailTV = await axios(detail_tv_url);
-        // console.log(detailTV);
+
         let tvShow = detailTV.data;
+        // console.log(tvShow);
 
         const {
           name,
@@ -65,19 +53,21 @@ async function getData() {
           poster_path
         } = tvShow;
 
+        if (vote_count <= 50) continue;
+        console.log(vote_count);
+
         let tempSeasons = [];
-        // console.log(seasons);
-        // seasons.forEach(async (season, i) =>
+
         for (const season of seasons) {
           const episode_url = `https://api.themoviedb.org/3/tv/${tv.id}/season/${season.season_number}?api_key=a815bbb393e7f79ac4b0c66acd437aa6&language=en-US`;
           let tempEpisodes = [];
           try {
             const allEpisodes = await axios(episode_url);
-
             for (const ep of allEpisodes.data.episodes) {
-              // console.log(ep);
               tempEpisodes.push({
-                image: img_url + ep.still_path,
+                image: !!ep.still_path
+                  ? img_url + ep.still_path
+                  : img_url + poster_path,
                 name: ep.name,
                 overview: !!ep.overview ? ep.overview : season.overview
               });
@@ -85,8 +75,8 @@ async function getData() {
           } catch (error) {
             console.log(error);
           }
-
           tempSeasons.push(tempEpisodes);
+          console.log(tempSeasons);
         }
 
         const serie = new Series({
@@ -94,7 +84,9 @@ async function getData() {
           languages,
           overview,
           seasons: [...tempSeasons],
-          image: img_url + poster_path,
+          image: poster_path
+            ? img_url + poster_path
+            : path.basename("api/src/public/netflix-bg.png"),
           number_of_seasons,
           rating: vote_average,
           vote_count
@@ -103,7 +95,7 @@ async function getData() {
       } catch (error) {
         console.log(error);
       }
-    });
+    }
   } catch (error) {
     console.log(error);
   }

@@ -1,3 +1,7 @@
-# Netflix clone 
-### Participats: Julia, Chi, Nathaly, Magda
-![girl and film](https://images.unsplash.com/photo-1585951237313-1979e4df7385?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fG1vdmllfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60)
+# NETFLIX CLONE
+This is a full-stack project based on React.
+
+### Participants: Chi, Julia, Magda, Nathaly
+
+![cinema](https://images.unsplash.com/photo-1536440136628-849c177e76a1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=925&q=80)
+
