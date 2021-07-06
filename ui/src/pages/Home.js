@@ -9,6 +9,19 @@ function Home() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    // const fetchdata = async () => {
+    //   try {
+    //     const lastest = await fetch("link latest");
+    //     const lastestData = await lastest.json();
+    //     const upcoming = await fetch("link upcoming");
+    //     const upcomingData = await upcoming.json();
+    //     // then set useState
+    //   } catch (error) {
+    //     console.log(error);
+    //   }
+    // };
+    // fetchdata();
+
     setLoading(true);
     //here will fetch the movies and here will update movies with "setMovies"
     fetch("http://localhost:5000/api/series")
