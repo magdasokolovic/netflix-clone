@@ -12,56 +12,66 @@ function Home() {
   const [trendingMovies, setTrendingMovies] = useState();
 
   useEffect(() => {
-    // const fetchdata = async () => {
-    //   try {
-    //     const lastest = await fetch("link latest");
-    //     const lastestData = await lastest.json();
-    //     const upcoming = await fetch("link upcoming");
-    //     const upcomingData = await upcoming.json();
-    //     // then set useState
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // };
-    // fetchdata();
+    const fetchdata = async () => {
+      try {
+        const latestData = await fetch(requests.fetchLatest).then((response) =>
+          response.json()
+        );
+        setLatestMovies(latestData);
+        const trendingData = await fetch(requests.fetchTrending).then(
+          (response) => response.json()
+        );
+        setTrendingMovies(trendingData);
+        const upcomingData = await fetch(requests.fetchUpcoming).then(
+          (response) => response.json()
+        );
+        setUpcomingMovies(upcomingData);
+        const topratedData = await fetch(requests.fetchTopRated).then(
+          (response) => response.json()
+        );
+        setTopRatedMovies(topratedData);
+        // console.log(latestData);
+        // .then((result) => {
+        //   console.log(result, "latest");
+        //   setLatestMovies(result.results);
+        // });
 
-    setLoading(true);
-    //here will fetch the movies and here will update movies with "setMovies"
-    fetch("http://localhost:5000/api/series")
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        setLoading(false);
-        setMovies(result);
-      });
+        // fetch(requests.fetchTrending)
+        //   .then((response) => response.json())
+        //   .then((result) => {
+        //     console.log(result, "trending");
+        //     setTrendingMovies(result.results);
+        //   });
 
-    fetch(requests.fetchLatest)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result, "latest");
-        setLatestMovies(result.results);
-      });
+        // fetch(requests.fetchUpcoming)
+        //   .then((response) => response.json())
+        //   .then((result) => {
+        //     console.log(result, "upcoming");
+        //     setUpcomingMovies(result.results);
+        //   });
 
-    fetch(requests.fetchTrending)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result, "trending");
-        setTrendingMovies(result.results);
-      });
+        // fetch(requests.fetchTopRated)
+        //   .then((response) => response.json())
+        //   .then((result) => {
+        //     console.log(result, "top rated");
+        //     setTopRatedMovies(result.results);
+        //   });
+        // then set useState
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchdata();
 
-    fetch(requests.fetchUpcoming)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result, "upcoming");
-        setUpcomingMovies(result.results);
-      });
-
-    fetch(requests.fetchTopRated)
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result, "top rated");
-        setTopRatedMovies(result.results);
-      });
+    // setLoading(true);
+    // here will fetch the movies and here will update movies with "setMovies"
+    // fetch("http://localhost:5000/api/series")
+    //   .then((response) => response.json())
+    //   .then((result) => {
+    //     console.log(result);
+    //     setLoading(false);
+    //     setMovies(result);
+    //   });
   }, []);
 
   return (
