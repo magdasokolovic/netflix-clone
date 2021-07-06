@@ -1,4 +1,4 @@
-const {Series, Films} = require("../models");
+const { Series, Films } = require("../models");
 const axios = require("axios");
 const api_key = "a815bbb393e7f79ac4b0c66acd437aa6";
 const base_url = "https://api.themoviedb.org/3";
@@ -58,7 +58,7 @@ const getAllTopRated = async (req, res) => {
 };
 const getAllUpcoming = async (req, res) => {
   // console.log("haha");
-  Films.find({rating : 8}, (err, data) => {
+  Films.find({ rating: 8 }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
@@ -71,5 +71,5 @@ module.exports = {
   getAllLatest,
   getAllPopular,
   getAllTopRated,
-  getAllUpcoming
+  getAllUpcoming,
 };
