@@ -7,9 +7,12 @@ import Episode from "./pages/Episode.overview";
 import Search from "./pages/Search";
 import Series from "./pages/Series";
 import Player from "./components/Player";
+import Footer from "./components/Footer";
+import TvShow from "./pages/TvShows";
 
 ///// STYLING: 
 import "./sass/main.scss";
+
 
 function App() {
   // for the search function:
@@ -18,10 +21,12 @@ function App() {
 
   return (
     <BrowserRouter>
+        {/* <Player/> */}
 
+        {/* <Navbar /> */}
         <Switch>
-          <Route path="/series">
-            <Series />
+          <Route path="/tvshows">
+            <TvShow />
           </Route>
           <Route path="/season">
             <Season />

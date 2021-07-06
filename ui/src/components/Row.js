@@ -97,7 +97,6 @@ export default function Row({title, isLargeRow, data, all}) {
             </div>
           )
         })}
-
       </Carousel>
 
       {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
