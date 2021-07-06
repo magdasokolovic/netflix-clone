@@ -1,10 +1,12 @@
 import React from "react";
 import Banner from "../components/Banner";
 import Row from "../components/Row";
+import Header from "../components/Header";
 
 function Home() {
   return (
     <div>
+      <Header />
       <Banner />
       <Row title="Netflix Originals" />
       <Row title="NETFLIX ORIGINALS" isLargeRow />

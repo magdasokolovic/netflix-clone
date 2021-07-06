@@ -1,6 +1,5 @@
-
-import { BrowserRouter, Switch, Route} from "react-router-dom";
-import Row from './components/Row'
+import { BrowserRouter, Switch, Route } from "react-router-dom";
+import Row from "./components/Row";
 import Home from "./pages/Home";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
@@ -20,19 +19,11 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        <div className="nav-active">
-          <Navbar />
-        </div>
-
-        <div className="banner">
-          <Banner />
-        </div>
-
-        <div className="row">
+        {/* <div className="row">
           <Row title="NETFLIX ORIGINALS" isLargeRow />
           <Row title="Trending Now" />
           <Row title="Top rated" />
-        </div>
+        </div> */}
 
         {/* <Player/> */}
 
@@ -53,9 +44,7 @@ function App() {
           <Route exact path="/">
             <Home />
           </Route>
-          <Route path="/player">
-            {/* <Player /> */}
-          </Route>
+          <Route path="/player">{/* <Player /> */}</Route>
         </Switch>
         <Footer />
       </div>
