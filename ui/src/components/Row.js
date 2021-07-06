@@ -1,22 +1,10 @@
 import React, { useEffect, useState } from "react";
+import Carousel from "react-elastic-carousel";
 import fallback from "../images/movie-bay-logo.png";
 import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
 import { Link } from "react-router-dom";
-import Carousel from "react-elastic-carousel";
 
-export default function Row({ title, isLargeRow }) {
-  const [movies, setMovies] = useState([]);
-
-  useEffect(() => {
-    //here will fetch the movies and here will update movies with "setMovies"
-    fetch("http://localhost:5000/api/series")
-      .then((response) => response.json())
-      .then((result) => {
-        console.log(result);
-        setMovies(result);
-      });
-  }, []);
-
+export default function Row({ title, isLargeRow, movies }) {
   return (
     <div className="row">
       <h2>{title}</h2>

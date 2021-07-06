@@ -19,23 +19,9 @@ function App() {
   return (
     <BrowserRouter>
       <div className="container">
-        {/* <div className="nav-active">
-          <Navbar />
-        </div>
-
-        <div className="banner">
-          <Banner />
-        </div>
-
-        <div className="row">
-          <Row title="NETFLIX ORIGINALS" isLargeRow />
-          <Row title="Trending Now" />
-          <Row title="Top rated" />
-        </div> */}
-
         {/* <Player/> */}
 
-        <Navbar />
+        {/* <Navbar /> */}
         <Switch>
           <Route path="/tvshows">
             <TvShow />
@@ -54,7 +40,6 @@ function App() {
           </Route>
           <Route path="/player">{/* <Player /> */}</Route>
         </Switch>
-        <Footer />
       </div>
     </BrowserRouter>
   );
