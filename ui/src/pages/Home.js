@@ -2,6 +2,8 @@ import React, {useEffect, useState} from "react";
 import Banner from "../components/Banner";
 import Row from "../components/Row";
 import requests from '../Requests';
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 function Home() {
   const [latestMovies, setLatestMovies] = useState()
@@ -43,12 +45,15 @@ function Home() {
 
   return (
     <div>
+      <Navbar />
       <Banner />
       {trendingMovies && <Row title="POPULAR" isLargeRow data={trendingMovies}/>}
       {latestMovies && <Row title="Latest" data={latestMovies}/>}
       {upcomingMovies &&<Row title="Upcoming" data={upcomingMovies}/>}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies}/>}
+      <Footer />
     </div>
+    
   );
 }
 
