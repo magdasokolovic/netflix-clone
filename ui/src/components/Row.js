@@ -16,11 +16,11 @@ export default function Row({title, isLargeRow, data}) {
         {data.map((movie, index)=>{
           return (
             <div className="movie" key={index}>
-              <div className={isLargeRow ? "rating" : "rating-small"}>{movie.vote_average}</div>
+              <div className={isLargeRow ? "rating" : "rating-small"}>{movie.rating}</div>
 
               <div key={index} className="front">
                 <picture className="thumbnail">
-                  <source srcSet={baseImageUrl + movie.poster_path} type="image/jpg" />
+                  <source srcSet={baseImageUrl + movie.image} type="image/jpg" />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
                 <h3 className={isLargeRow ? "title" : "title-small"}>{movie.title}</h3>
@@ -29,9 +29,9 @@ export default function Row({title, isLargeRow, data}) {
                 
               <div className="back">
                   <div className="streaming-info">
-                      <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.vote_count}</p>
+                      <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: 1</p>
 
-                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.original_language.toString()}
+                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.languages.toString()}
                       </p>
                   </div>
 
