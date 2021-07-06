@@ -3,39 +3,14 @@ import Carousel from 'react-elastic-carousel'
 import fallback from '../images/movie-bay-logo.png'
 import {Arrow, Play, Add, Like, Dislike} from '../icons/icons'
 import {Link} from 'react-router-dom'
-import Youtube from 'react-youtube'
-import movieTrailer from 'movie-trailer'
+// import Youtube from 'react-youtube'
+// import movieTrailer from 'movie-trailer'
 
 export default function Row({title, isLargeRow, data, all}) {
-  
-  const [trailerUrl, setTrailerUrl] = useState('')
-  //"w9dshlVBrSg"
+
 
   const baseImageUrl = "https://image.tmdb.org/t/p/w500"
 
-
-  const opts = {
-    height: '390',
-    width: '640',
-    playerVars: {
-      autoplay: 1,
-    }
-  }
-
- 
-    const handleClick = (movie) => {
-        //if the trailer is open then close it:
-        if (trailerUrl) {
-          setTrailerUrl('')
-        } else {
-          movieTrailer(movie.title || '')
-          .then(url => {
-            const urlParams = new URLSearchParams(URL(url).search)
-            setTrailerUrl(urlParams.get('v'))
-          }).catch(err =>console.log(err))
-        }
-    }  
- 
   
   return (
   <div className="row">
@@ -65,13 +40,11 @@ export default function Row({title, isLargeRow, data, all}) {
 
                   <div className="btn_container">
                     <div>
-                          <button className={isLargeRow ? "btn" : "btn-small"}
-                          onClick={()=>handleClick(movie)}
-                          >
+                          <button className={isLargeRow ? "btn" : "btn-small"}>
                       
-                            {/* <Link to="/player"> */}
+                            <Link to="/player">
                               <Play/>
-                            {/* </Link> */}
+                            </Link>
                           </button>
                           <button className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}>
                             <Add/>
@@ -89,7 +62,6 @@ export default function Row({title, isLargeRow, data, all}) {
                             >
                           <Arrow/>
                           <p className={isLargeRow ? "tooltip" : "tooltip-small"}><span className="underline">Overview</span>: {movie.overview}</p>
-
                         </button>
                     </div>
                   </div>
@@ -99,7 +71,7 @@ export default function Row({title, isLargeRow, data, all}) {
         })}
       </Carousel>
 
-      {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />}
+      {/* {trailerUrl && <Youtube videoId={trailerUrl} opts={opts} />} */}
   </div>
 
   )

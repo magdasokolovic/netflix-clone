@@ -5,9 +5,9 @@ import Home from "./pages/Home";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
 import Search from "./pages/Search";
-import Series from "./pages/Series";
+// import Series from "./pages/Series";
 import Player from "./components/Player";
-import Footer from "./components/Footer";
+// import Footer from "./components/Footer";
 import TvShow from "./pages/TvShows";
 
 ///// STYLING: 
