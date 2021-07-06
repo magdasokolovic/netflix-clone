@@ -2,7 +2,6 @@
 import { BrowserRouter, Switch, Route} from "react-router-dom";
 import Row from './components/Row'
 import Home from "./pages/Home";
-import Serie from "./pages/Serie.overview";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
 import Navbar from "./components/Navbar";
@@ -11,6 +10,7 @@ import Banner from "./components/Banner";
 import Search from "./pages/Search";
 import "./sass/main.scss";
 import Footer from "./components/Footer";
+import Series from "./pages/Series";
 
 function App() {
   // for the search function:
@@ -38,8 +38,8 @@ function App() {
 
         <Navbar />
         <Switch>
-          <Route path="/serie">
-            <Serie />
+          <Route path="/series">
+            <Series />
           </Route>
           <Route path="/season">
             <Season />
