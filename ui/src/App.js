@@ -1,6 +1,6 @@
 import "./sass/main.scss";
 
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import Banner from "./components/Banner";
 import Footer from "./components/Footer";
