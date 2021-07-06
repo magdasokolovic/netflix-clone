@@ -6,12 +6,20 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 function Home() {
+  const [allMovies, setAllMovies] = useState()
   const [latestMovies, setLatestMovies] = useState()
   const [upcomingMovies, setUpcomingMovies] = useState()
   const [topRatedMovies, setTopRatedMovies] = useState()
   const [trendingMovies, setTrendingMovies] = useState()
-
+  
   useEffect(() => {
+    fetch(requests.fetchAll)
+    .then(response => response.json())
+    .then(result=>{
+      console.log(result, "ALL")
+      setAllMovies(result)
+    })
+
 
     fetch(requests.fetchLatest)
     .then(response => response.json())
@@ -47,6 +55,7 @@ function Home() {
     <div>
       <Navbar />
       <Banner />
+      {allMovies && <Row title="ALL" isLargeRow all data={allMovies}/>}
       {trendingMovies && <Row title="POPULAR" isLargeRow data={trendingMovies}/>}
       {latestMovies && <Row title="Latest" data={latestMovies}/>}
       {upcomingMovies &&<Row title="Upcoming" data={upcomingMovies}/>}
