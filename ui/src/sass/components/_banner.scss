@@ -21,29 +21,29 @@
   top: 30vh;
   left: 12vh;
   word-break: normal;
-  width: 40%;
   line-height: normal;
 }
 
 .banner-overview {
   position: absolute;
-  top: 65vh;
+  top: 70vh;
   left: 12vh;
   font-size: 1.5rem;
   font-weight: 700;
   word-break: normal;
-  width: 50%;
+  max-width: 60%;
 }
 
 .mylist__btns,
 .play__btns {
   cursor: pointer;
   color: #fff;
+  background-color: rgba(51, 51, 51, 0.5);
+  font-weight: 700;
+  font-size: 1.2rem;
   text-transform: uppercase;
   outline: none;
   border: 0;
-  font-weight: 700;
-  font-size: 1.2rem;
   border-radius: 0.2vw;
   padding: 0.5rem 2rem;
   margin-right: 1rem;
@@ -59,13 +59,13 @@
 }
 
 .mylist__btns {
-  top: 55vh;
+  top: 60vh;
   left: 28vh;
   position: absolute;
 }
 
 .play__btns {
-  top: 55vh;
+  top: 60vh;
   left: 12vh;
   position: absolute;
 }

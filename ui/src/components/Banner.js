@@ -36,21 +36,14 @@ function Banner() {
 
   return (
     <div className="banner">
-      <img
-        // style={{
-        //   backgroundColor:
-        //     "linear-gradient(to right, #111 30%, transparent 70%)",
-        // }}
-        className="banner-backdrop"
-        alt=""
-        src={images[index]}
-      />
-
+      <img className="banner-backdrop" alt="" src={images[index]} />
+      {/* <div id="movie-details"> */}
       <h1 className="banner-title">{names[index]}</h1>
       <button className="play__btns">▶ Play</button>
       <button className="mylist__btns">My List</button>
       <p className="banner-overview">{synopses[index]}</p>
     </div>
+    // </div>
   );
 }
 
