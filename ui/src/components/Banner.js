@@ -36,7 +36,7 @@ function Banner() {
 
   return (
     <div className="banner">
-      <img className="banner-backdrop" alt="" src={images[index]} />
+      <img className="banner-backdrop" alt="backdrop" src={images[index]} />
       <h1 className="banner-title">{names[index]}</h1>
       <button className="play__btns">▶ Play</button>
       <button className="mylist__btns">My List</button>
