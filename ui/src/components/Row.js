@@ -1,9 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, {useEffect, useState} from "react";
 import Carousel from "react-elastic-carousel";
+import {Link} from "react-router-dom";
+
+import {Add, Arrow, Dislike, Like, Play} from "../icons/icons";
 import fallback from "../images/movie-bay-logo.png";
-import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
-import { Link } from "react-router-dom";
-export default function Row({ title, isLargeRow, movies }) {
+
+export default function Row({title, isLargeRow, movies}) {
   return (
     <div className="row">
       <h2>{title}</h2>
@@ -43,43 +45,35 @@ export default function Row({ title, isLargeRow, movies }) {
                       <Link to="./player"></Link>
                     </button>
                     <button
-                      className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}
-                    >
-                      <Add />
-                      <p
-                        className={
-                          isLargeRow ? "tooltip-add" : "tooltip-small-add"
-                        }
-                      >
-                        Add to the list
-                      </p>
+  className = {`btn-add ${isLargeRow ? "btn" : "btn-small"}`} > <Add />< p
+  className =
+      {isLargeRow ? "tooltip-add" : "tooltip-small-add"} >
+      Add to the list</p>
                     </button>
-                    <button className={isLargeRow ? "btn" : "btn-small"}>
-                      <Like />
-                    </button>
+      <button className = {isLargeRow ? "btn" : "btn-small"}><Like />
+      </button>
                     <button className={isLargeRow ? "btn" : "btn-small"}>
                       <Dislike />
-                    </button>
+      </button>
                   </div>
 
-                  <button
-                    className={`btn-more ${isLargeRow ? "btn" : "btn-small"}`}
-                  >
-                    <Arrow />
+      < button
+  className =
+      {`btn-more ${isLargeRow ? "btn" : "btn-small"}`} > <Arrow />
 
-                    <p className={isLargeRow ? "tooltip" : "tooltip-small"}>
-                      <span className="underline">Overview</span>:{" "}
+      <p className = {isLargeRow ? "tooltip" : "tooltip-small"}>
+      <span className = "underline">Overview<
+          /span>:{" "}
                       {movie.overview}
                     </p>
-                  </button>
+      </button>
                 </div>
-              </div>
+      </div>
 
               <div className="background"></div>
-            </div>
+      </div>
           );
         })}
-      </Carousel>
-    </div>
+      </Carousel>< /div>
   );
 }
