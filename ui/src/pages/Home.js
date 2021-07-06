@@ -4,8 +4,10 @@ import Row from "../components/Row";
 import requests from "../Requests";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 function Home() {
+  const [loading, setLoading] = useState(false);
   const [latestMovies, setLatestMovies] = useState();
   const [upcomingMovies, setUpcomingMovies] = useState();
   const [topRatedMovies, setTopRatedMovies] = useState();
@@ -13,11 +15,12 @@ function Home() {
 
   useEffect(() => {
     const fetchdata = async () => {
+      setLoading(true);
       try {
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
-        setLatestMovies(latestData);
+        setLatestMovies(latestData.results);
         const trendingData = await fetch(requests.fetchTrending).then(
           (response) => response.json()
         );
@@ -30,6 +33,7 @@ function Home() {
           (response) => response.json()
         );
         setTopRatedMovies(topratedData);
+        setLoading(false);
         // console.log(latestData);
         // .then((result) => {
         //   console.log(result, "latest");
@@ -63,8 +67,7 @@ function Home() {
     };
     fetchdata();
 
-    // setLoading(true);
-    // here will fetch the movies and here will update movies with "setMovies"
+    //here will fetch the movies and here will update movies with "setMovies"
     // fetch("http://localhost:5000/api/series")
     //   .then((response) => response.json())
     //   .then((result) => {
@@ -76,6 +79,7 @@ function Home() {
 
   return (
     <div>
+      {loading && <Loading />}
       <Navbar />
       <Banner />
       {trendingMovies && (
