@@ -6,19 +6,20 @@ import {Link} from 'react-router-dom'
 
 
 
-export default function Row({title, isLargeRow, fetchUrl}) {
+export default function Row({title, isLargeRow, data}) {
 
-  const [movies, setMovies] = useState([])
+  // const [movies, setMovies] = useState([])
+  const baseUrl = "https://image.tmdb.org/t/p/w500"
 
-  useEffect(() => {
-    //here will fetch the movies and here will update movies with "setMovies"
-    fetch("http://localhost:5000/api/series")
-    .then(response => response.json())
-    .then(result=>{
-      console.log(result)
-      setMovies(result)
-    })
-  }, [])
+  // useEffect(() => {
+  //   //here will fetch the movies and here will update movies with "setMovies"
+  //   fetch("http://localhost:5000/api/series")
+  //   .then(response => response.json())
+  //   .then(result=>{
+  //     console.log(result, "movies")
+  //     setMovies(result)
+  //   })
+  // }, [])
 
  
   return (
@@ -26,35 +27,35 @@ export default function Row({title, isLargeRow, fetchUrl}) {
     <h2>{title}</h2>
       <Carousel itemsToShow={isLargeRow ? 5:7}>
 
-        {movies.map((movie, index)=>{
+        {data.map((movie, index)=>{
 
           return (
             <div className="movie" key={index}>
-              <div className={isLargeRow ? "rating" : "rating-small"}>{movie.rating}</div>
+              <div className={isLargeRow ? "rating" : "rating-small"}>{movie.vote_average}</div>
 
               <div key={index} className="front">
                 <picture className="thumbnail">
-                  <source srcSet={movie.image} type="image/jpg" />
+                  <source srcSet={baseUrl + movie.poster_path} type="image/jpg" />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
-                <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
+                <h3 className={isLargeRow ? "title" : "title-small"}>{movie.title}</h3>
               </div>
                     
                 
               <div className="back">
                   <div className="streaming-info">
-                      <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.seasons.length}</p>
+                      <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.vote_count}</p>
 
-                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.languages.toString()}
+                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.original_language.toString()}
                       </p>
                   </div>
 
                   <div className="btn_container">
                     <div>
                           <button className={isLargeRow ? "btn" : "btn-small"}>
-                            <Play/>
-                            <Link to="./player"></Link>
-                            </button>
+                      
+                            <Link to="/player"><Play/></Link>
+                          </button>
                           <button className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}>
                             <Add/>
                             <p className={isLargeRow ? "tooltip-add" : "tooltip-small-add"}>Add to the list</p>

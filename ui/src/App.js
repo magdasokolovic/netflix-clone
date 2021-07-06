@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Search from "./pages/Search";
 import Footer from "./components/Footer";
 import Series from "./pages/Series";
+import Player from "./components/Player";
 
 ///// STYLING: 
 import "./sass/main.scss";
@@ -41,6 +42,7 @@ function App() {
             <Home />
           </Route>
           <Route path="/player">
+          <Player/>
           </Route>
         </Switch>
         <Footer />
