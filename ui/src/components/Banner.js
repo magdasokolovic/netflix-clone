@@ -1,4 +1,5 @@
-import "../sass/components/_banner.scss";
+// NO NEED TO IMPORT THIS CSS FILE HERE IF YOU USE SASS
+// import "../sass/components/Banner.css";
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
@@ -26,7 +27,7 @@ function Banner() {
 
   let index = Math.floor(Math.random() * images.length);
 
-  if (images[index] == "https://www.themoviedb.org/t/p/originalnull") {
+  if (images[index] === "https://www.themoviedb.org/t/p/originalnull") {
     delete images[index];
     delete names[index];
     delete synopses[index];

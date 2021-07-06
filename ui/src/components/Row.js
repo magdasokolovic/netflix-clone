@@ -1,76 +1,91 @@
-import React, { useEffect, useRef, useState } from "react";
-import data from "../mockData.js/data.json";
-import Youtube from "react-youtube";
-import movieTrailer from "movie-trailer";
-
-export default function Row({ title, isLargeRow }) {
-  const [movies, setMovies] = useState(data);
-  const [trailerUrl, setTrailerUrl] = useState("");
-  // const imageRef = useRef()
-  //u36N25kTMz4
+import React, { useEffect, useState } from "react";
+import Carousel from 'react-elastic-carousel'
+import fallback from '../images/movie-bay-logo.png'
+import {Arrow, Play, Add, Like, Dislike} from '../icons/icons'
+import {Link} from 'react-router-dom'
+export default function Row({title, isLargeRow}) {
+  const [movies, setMovies] = useState([])
 
   useEffect(() => {
     //here will fetch the movies and here will update movies with "setMovies"
-  }, []);
+    fetch("http://localhost:5000/api/series")
+    .then(response => response.json())
+    .then(result=>{
+      console.log(result)
+      setMovies(result)
+    })
+  }, [])
 
-  //Youtube trailer options:
-  const options = {
-    height: "390",
-    width: "100%",
-    playerVars: {
-      autoplay: 1
-    }
-  };
-
-  //youtube trailer works only some movies
-  const handleClick = (movie) => {
-    // if the trailer is open then hide it:
-    console.log(movie);
-    if (trailerUrl) {
-      setTrailerUrl("");
-    } else {
-      //when you pass in the the movie name inside movieTrailer goes and finds the trailer of it
-      movieTrailer(movie?.name)
-        .then((url) => {
-          // console.log(url);
-          // const urlParams = new URLSearchParams(new URL(url).search);
-
-          // console.log(urlParams.get("v"));
-          setTrailerUrl(url.split("?v=")[1]);
-        })
-        .catch((error) => console.log(error));
-    }
-  };
-
-  // const scrollPerClick = imageRef.current.clientWidth + 20
-
-  // console.table(data)
+ 
   return (
     <div className="row">
-      <h2>{title}</h2>
-      <div className="row__posters carousel">
-        {movies.map((movie, index) => {
+    <h2>{title}</h2>
+      <Carousel itemsToShow={isLargeRow ? 5:7}>
+
+        {movies.map((movie, index)=>{
+
           return (
-            <div className="carousel-box">
-              <img
-                key={movie._id}
-                className={`row__poster img-${index} ${
-                  isLargeRow && "row__poster-large"
-                }`}
-                src={movie.image}
-                alt={movie.name}
-                onClick={() => handleClick(movie)}
-                // ref={imageRef}
-              />
+            <div className="movie" key={index}>
+                    <div className={isLargeRow ? "rating" : "rating-small"}>{movie.rating}</div>
+
+                    <div key={index} className="front">
+                      <picture className="thumbnail">
+                        <source srcSet={movie.image} type="image/jpg" />
+                        <img src={fallback} alt="Movie Bay Logo" />
+                      </picture>
+                      <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
+                    </div>
+                    
+                
+                    <div className="back">
+                        <div className="streaming-info">
+                            <p className={isLargeRow ? "seasons" : "seasons-small"}>Number of seasons: {movie.seasons.length}</p>
+
+                            <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.languages.toString()}
+                            </p>
+                        </div>
+
+                        <div className="btn_container">
+                            <div>
+                                 <button className={isLargeRow ? "btn" : "btn-small"}>
+                                  <Play/>
+                                  <Link to="./player"></Link>
+                                 </button>
+                                <button className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}>
+                                  <Add/>
+                                  <p className={isLargeRow ? "tooltip-add" : "tooltip-small-add"}>Add to the list</p>
+                                </button>
+                                <button className={isLargeRow ? "btn" : "btn-small"}>
+                                  <Like/>
+                                </button>
+                                <button className={isLargeRow ? "btn" : "btn-small"}>
+                                  <Dislike/>
+                                </button>
+                            </div>
+
+                            <button className={`btn-more ${isLargeRow ? "btn" : "btn-small"}`}
+                                >
+                              <Arrow/>
+
+                              <p className={isLargeRow ? "tooltip" : "tooltip-small"}><span className="underline">Overview</span>: {movie.overview}</p>
+
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="background"></div>
+
+                    
             </div>
-          );
+            
+          )
         })}
 
-        <button className="switch-left slider-buttom"></button>
-        <button className="switch-right slider-buttom"></button>
-      </div>
-      {/* show youtube video only when we have a trailerURL: */}
-      {trailerUrl && <Youtube videoId={trailerUrl} options={options} />}
-    </div>
-  );
+      </Carousel>
+
+    
+  </div>
+
+  )
+    
 }
