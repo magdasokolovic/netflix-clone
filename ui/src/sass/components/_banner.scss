@@ -4,6 +4,7 @@
   position: relative;
   height: auto;
   padding-top: 110px;
+
   &::before {
     content: "";
     position: absolute;
@@ -13,6 +14,9 @@
     z-index: 1;
     background-color: rgba($color: #000000, $alpha: 0.4);
   }
+
+  // background: linear-gradient(to right, #111 30%, transparent 70%);
+
 }
 
 .banner-backdrop {
@@ -21,8 +25,11 @@
   display: block;
   width: 100%;
   background-size: cover;
+
   // background: linear-gradient(to right, #111 30%, transparent 70%);
   // background-color: rgba(0, 0, 0, 0.03);
+
+
 }
 
 .banner-title {
@@ -33,31 +40,39 @@
   top: 30vh;
   left: 12vh;
   word-break: normal;
-  width: 40%;
   line-height: normal;
+
   z-index: 2;
+
+  max-width: 60%;
+
 }
 
 .banner-overview {
   position: absolute;
-  top: 65vh;
+  top: 70vh;
   left: 12vh;
   font-size: 1.5rem;
   font-weight: 700;
   word-break: normal;
+
   width: 50%;
   z-index: 2;
+
+  max-width: 60%;
+
 }
 
 .mylist__btns,
 .play__btns {
   cursor: pointer;
   color: #fff;
+  background-color: rgba(51, 51, 51, 0.5);
+  font-weight: 700;
+  font-size: 1.2rem;
   text-transform: uppercase;
   outline: none;
   border: 0;
-  font-weight: 700;
-  font-size: 1.2rem;
   border-radius: 0.2vw;
   padding: 0.5rem 2rem;
   margin-right: 1rem;
@@ -74,13 +89,13 @@
 }
 
 .mylist__btns {
-  top: 55vh;
+  top: 60vh;
   left: 28vh;
   position: absolute;
 }
 
 .play__btns {
-  top: 55vh;
+  top: 60vh;
   left: 12vh;
   position: absolute;
 }
