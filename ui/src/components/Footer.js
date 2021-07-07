@@ -43,7 +43,7 @@ const Footer = () => {
       </ul>
 
       <div className="copyright">
-        &copy; 2021,
+        &copy; 2021,&nbsp;
         <a
           href="https://github.com/KhanhChiTran"
           target="_blank"
