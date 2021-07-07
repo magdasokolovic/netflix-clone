@@ -27,6 +27,11 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
     .rec-item-wrapper {
       height: 100%;
     }
+    .rec-pagination {
+      @media (max-width: 710px) {
+        display: none;
+      }
+    }
   }
   //////////////////
   // MY OWN STYLING:

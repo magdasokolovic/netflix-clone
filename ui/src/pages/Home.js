@@ -79,7 +79,7 @@ function Home() {
 
   return (
     <div>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <Navbar />
       <Banner />
       {trendingMovies && (

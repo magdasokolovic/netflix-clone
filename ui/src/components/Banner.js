@@ -29,21 +29,23 @@ function Banner() {
 
   let index = Math.floor(Math.random() * images.length);
 
-  if (images[index] === "https://www.themoviedb.org/t/p/originalnull") {
-    delete images[index];
-    delete names[index];
-    delete synopses[index];
-    index = Math.floor(Math.random() * images.length);
-  }
+  // if (images[index] === "https://www.themoviedb.org/t/p/originalnull") {
+  //   delete images[index];
+  //   delete names[index];
+  //   delete synopses[index];
+  //   index = Math.floor(Math.random() * images.length);
+  // }
 
   return (
     <div className="banner">
       {loading && <Loading />}
       <img className="banner-backdrop" alt="backdrop" src={images[index]} />
-      <h1 className="banner-title">{names[index]}</h1>
-      <button className="play__btns">▶ Play</button>
-      <button className="mylist__btns">My List</button>
-      <p className="banner-overview">{synopses[index]}</p>
+      <div className="banner-cta">
+        <h1 className="banner-title">{names[index]}</h1>
+        <button className="play__btns">▶ Play</button>
+        <button className="mylist__btns">My List</button>
+        <p className="banner-overview">{synopses[index]}</p>
+      </div>
     </div>
   );
 }

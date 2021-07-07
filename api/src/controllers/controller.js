@@ -28,7 +28,7 @@ const getAllLatest = async (req, res) => {
     if (err) {
       res.status(500).json(err);
     }
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   });
 };
@@ -38,7 +38,7 @@ const getAllPopular = async (req, res) => {
     if (err) {
       res.status(500).json(err);
     }
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   });
 };
@@ -50,7 +50,7 @@ const getAllTopRated = async (req, res) => {
       if (err) {
         res.status(500).json(err);
       }
-      console.log(data);
+      // console.log(data);
       res.status(200).json(data);
     }
   );
@@ -61,7 +61,7 @@ const getAllUpcoming = async (req, res) => {
     if (err) {
       res.status(500).json(err);
     }
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   });
 };

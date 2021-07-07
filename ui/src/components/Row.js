@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Carousel from "react-elastic-carousel";
 import fallback from "../images/movie-bay-logo.png";
 import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
@@ -6,11 +6,23 @@ import { Link } from "react-router-dom";
 
 export default function Row({ title, isLargeRow, data }) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
+  const [num, setNum] = useState(5);
+  const handleResize = () => {
+    setNum(Math.floor(window.innerWidth / 360));
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  useEffect(() => {
+    setNum(Math.floor(window.innerWidth / 360));
+  }, []);
 
   return (
     <div className="row">
       <h2>{title}</h2>
-      <Carousel itemsToShow={5}>
+      <Carousel itemsToShow={num}>
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
@@ -39,7 +51,13 @@ export default function Row({ title, isLargeRow, data }) {
                 <div className="btn_container">
                   <div>
                     <button className="btn">
-                      <Link to="/player">
+                      <Link
+                        to={{
+                          pathname: "/player",
+
+                          state: { data: movie }
+                        }}
+                      >
                         <Play />
                       </Link>
                     </button>
