@@ -9,3 +9,5 @@ This is a full-stack project based on React.
 # DEV NOTES
 
 [move all branch to master](https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch)
+
+## TECHNOLOGIES USED FOR THE PROJECT
