@@ -10,7 +10,7 @@ This is a full-stack project based on React.
 
 [move all branches to master](https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch)
 
-## TECHNOLOGIES USED FOR THE PROJECT:
+## DEPENDENCIES USED FOR THE PROJECT:
 - [axios](https://www.npmjs.com/package/axios) for data fetching
 - [react-router-dom](https://www.npmjs.com/package/react-router-dom) for routing
 - [react-player](https://www.npmjs.com/package/react-player) for playing a youtube video
