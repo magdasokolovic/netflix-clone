@@ -41,7 +41,7 @@ export default function Row({ title, isLargeRow, data }) {
                 <h3 className="title">{movie.name}</h3>
               </div>
 
-              <div className={isLargeRow ? "back" : "back-small"}>
+              <div className="back">
                 <div className="streaming-info">
                   <p className="seasons">Voted: {movie.vote_count}</p>
 
