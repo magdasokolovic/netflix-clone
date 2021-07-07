@@ -7,16 +7,20 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
 function Home() {
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState(true);
   const [latestMovies, setLatestMovies] = useState();
-  const [upcomingMovies, setUpcomingMovies] = useState();
-  const [topRatedMovies, setTopRatedMovies] = useState();
-  const [trendingMovies, setTrendingMovies] = useState();
+  const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
     const fetchdata = async () => {
-      setLoading(true);
       try {
+        const topratedData = await fetch(requests.fetchTopRated).then(
+          (response) => response.json()
+        );
+        console.log(topratedData);
+        setTopRatedMovies(topratedData);
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
@@ -29,10 +33,7 @@ function Home() {
           (response) => response.json()
         );
         setUpcomingMovies(upcomingData);
-        const topratedData = await fetch(requests.fetchTopRated).then(
-          (response) => response.json()
-        );
-        setTopRatedMovies(topratedData);
+
         setLoading(false);
       } catch (error) {
         setTimeout(() => setLoading(false), 3000);
@@ -41,12 +42,17 @@ function Home() {
     };
     fetchdata();
   }, []);
+  if (loading) return <Loading />;
 
   return (
     <div>
-      {loading && <Loading />}
+      {/* {loading && <Loading />} */}
       <Navbar />
-      <Banner />
+      <Banner
+        topRatedMovies={
+          topRatedMovies[Math.floor(Math.ceil(Math.random() * 11) - 1)]
+        }
+      />
       {trendingMovies && (
         <Row title="POPULAR" isLargeRow data={trendingMovies} />
       )}
