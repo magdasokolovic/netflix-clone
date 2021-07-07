@@ -8,7 +8,7 @@ export default function Row({ title, isLargeRow, data }) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
   const [num, setNum] = useState(5);
   const handleResize = () => {
-    setNum(Math.floor(window.innerWidth / 360));
+    setNum(Math.floor(window.innerWidth / 250));
   };
 
   useEffect(() => {
@@ -16,7 +16,7 @@ export default function Row({ title, isLargeRow, data }) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
   useEffect(() => {
-    setNum(Math.floor(window.innerWidth / 360));
+    setNum(Math.floor(window.innerWidth / 250));
   }, []);
 
   return (
