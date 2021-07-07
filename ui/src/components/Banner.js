@@ -3,7 +3,10 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import Loading from "./Loading";
+import requests from "../Requests";
+
 const api_key = "4251b22b61515cc0f3716d0531658a55";
 const BASE_URL = "https://api.themoviedb.org/3";
 const getImage = (file) => `https://www.themoviedb.org/t/p/original${file}`;
@@ -11,41 +14,55 @@ const getImage = (file) => `https://www.themoviedb.org/t/p/original${file}`;
 function Banner() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState(false);
-  const api = axios.create({ baseURL: BASE_URL });
+  const [topRatedMovies, setTopRatedMovies] = useState(null);
 
-  const getPopular = api.get("movie/popular", { params: { api_key } });
+  const api = axios.create({ baseURL: BASE_URL });
 
   useEffect(() => {
     setLoading(true);
-    getPopular.then((res) => {
-      setData(res.data.results);
+    const fetchdata = async () => {
+      const topratedData = await fetch(requests.fetchTopRated).then(
+        (response) => response.json()
+      );
+      let x = Math.floor(Math.random() * topratedData.length - 1);
+      console.log(topratedData);
+      const data = topratedData[x];
+      setTopRatedMovies(data);
       setLoading(false);
-    });
+    };
+    fetchdata();
   }, []);
 
-  const images = data.map((image) => getImage(image.backdrop_path));
-  const names = data.map((name) => name.original_title);
-  const synopses = data.map((synopsis) => synopsis.overview);
-
-  let index = Math.floor(Math.random() * images.length);
-
-  // if (images[index] === "https://www.themoviedb.org/t/p/originalnull") {
-  //   delete images[index];
-  //   delete names[index];
-  //   delete synopses[index];
-  //   index = Math.floor(Math.random() * images.length);
-  // }
+  console.log(topRatedMovies);
 
   return (
     <div className="banner">
       {loading && <Loading />}
-      <img className="banner-backdrop" alt="backdrop" src={images[index]} />
-      <div className="banner-cta">
-        <h1 className="banner-title">{names[index]}</h1>
-        <button className="play__btns">▶ Play</button>
-        <button className="mylist__btns">My List</button>
-        <p className="banner-overview">{synopses[index]}</p>
-      </div>
+      {topRatedMovies && (
+        <>
+          <img
+            className="banner-backdrop"
+            alt="backdrop"
+            src={`https://image.tmdb.org/t/p/w500${topRatedMovies.image}`}
+          />
+          <div className="banner-cta">
+            <h1 className="banner-title">{topRatedMovies.name}</h1>
+            <button className="play__btns">
+              <Link
+                to={{
+                  pathname: "/player",
+
+                  state: { data: topRatedMovies }
+                }}
+              >
+                ▶ Play
+              </Link>
+            </button>
+            <button className="mylist__btns">My List</button>
+            <p className="banner-overview">{topRatedMovies.overview}</p>
+          </div>
+        </>
+      )}
     </div>
   );
 }

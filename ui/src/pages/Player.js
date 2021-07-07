@@ -5,12 +5,11 @@ import Layout from "../components/Layout";
 
 const Player = () => {
   const history = useHistory();
-  const key = history.location.state.data.key;
   const [id, setId] = useState(null);
   useEffect(() => {
+    console.log(history.location.state);
     setId(history.location.state.data.key);
   }, []);
-  console.log(id);
   return (
     <Layout>
       <div className="player-wrapper">

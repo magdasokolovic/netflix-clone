@@ -41,7 +41,7 @@
 
 .banner-title {
   color: white;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
   word-break: normal;
   line-height: normal;
@@ -63,6 +63,8 @@
   z-index: 2;
 
   max-width: 60%;
+  max-height: calc(100vw * 9 / 16);
+  overflow: hidden;
   @media (max-width: 768px) {
     display: none;
   }
@@ -86,6 +88,10 @@
   background-color: rgba(51, 51, 51, 0.5);
   display: inline-block;
   z-index: 2;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .mylist__btns:hover,
