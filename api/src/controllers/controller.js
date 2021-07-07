@@ -24,41 +24,44 @@ const getAllFilms = (req, res) => {
 };
 const getAllLatest = async (req, res) => {
   // console.log("haha");
-  Films.find({ rating: { $gt: 6.7 } }, (err, data) => {
+  Films.find({ vote_count: { $lt: 500 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   });
 };
 const getAllPopular = async (req, res) => {
   // console.log("haha");
-  Films.find({ rating: { $gt: 9 } }, (err, data) => {
+  Films.find({ vote_count: { $gt: 5000 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   });
 };
 const getAllTopRated = async (req, res) => {
   // console.log("haha");
-  Films.find({ rating: { $gt: 8 } }, (err, data) => {
-    if (err) {
-      res.status(500).json(err);
+  Films.find(
+    { rating: { $gt: 6.5 }, vote_count: { $gt: 8000 } },
+    (err, data) => {
+      if (err) {
+        res.status(500).json(err);
+      }
+      // console.log(data);
+      res.status(200).json(data);
     }
-    console.log(data);
-    res.status(200).json(data);
-  });
+  );
 };
 const getAllUpcoming = async (req, res) => {
   // console.log("haha");
-  Films.find({ rating: { $gt: 7.7 } }, (err, data) => {
+  Films.find({ rating: { $lt: 6 }, vote_count: { $lt: 500 } }, (err, data) => {
     if (err) {
       res.status(500).json(err);
     }
-    console.log(data);
+    // console.log(data);
     res.status(200).json(data);
   });
 };

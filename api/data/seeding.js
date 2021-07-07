@@ -41,7 +41,7 @@ async function getData() {
 
         let tvShow = detailTV.data;
         // console.log(tvShow);
-
+        if (!tvShow.poster_path) continue;
         const {
           name,
           languages,
@@ -64,10 +64,9 @@ async function getData() {
           try {
             const allEpisodes = await axios(episode_url);
             for (const ep of allEpisodes.data.episodes) {
+              if (!ep.still_path) continue;
               tempEpisodes.push({
-                image: !!ep.still_path
-                  ? img_url + ep.still_path
-                  : img_url + poster_path,
+                image: img_url + ep.still_path,
                 name: ep.name,
                 overview: !!ep.overview ? ep.overview : season.overview
               });
@@ -84,9 +83,7 @@ async function getData() {
           languages,
           overview,
           seasons: [...tempSeasons],
-          image: poster_path
-            ? img_url + poster_path
-            : path.basename("api/src/public/netflix-bg.png"),
+          image: img_url + poster_path,
           number_of_seasons,
           rating: vote_average,
           vote_count
