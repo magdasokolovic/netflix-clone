@@ -82,7 +82,9 @@ function Home() {
       {loading && <Loading />}
       <Navbar />
       <Banner />
-      {trendingMovies && <Row title="TRENDING MOVIES" isLargeRow data={trendingMovies} />}
+      {trendingMovies && (
+        <Row title="POPULAR" isLargeRow data={trendingMovies} />
+      )}
       {latestMovies && <Row title="Latest" data={latestMovies} />}
       {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}
