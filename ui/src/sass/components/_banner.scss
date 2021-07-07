@@ -29,7 +29,8 @@
   // background-color: rgba(0, 0, 0, 0.03);
 }
 .banner-cta {
-  width: fit-content;
+  // width: fit-content;
+  // max-width: calc(95vw -70px);
   position: absolute;
   z-index: 2;
   top: calc(110px + 7vw);
