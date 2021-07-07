@@ -1,9 +1,7 @@
-// NOT WORKING YET!
-
 import React, { useEffect, useState } from "react";
 import fallback from "../images/movie-bay-logo.png";
 import Carousel from "react-elastic-carousel";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
@@ -11,6 +9,8 @@ import Loading from "../components/Loading";
 export default function Movies() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
+  //   const history = useHistory();
+  const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   useEffect(() => {
     setLoading(true);
@@ -27,39 +27,27 @@ export default function Movies() {
       })
       .catch((err) => console.log(err));
   }, []);
-  return (
-    // <div className="movies-overview">
-    //   <div className="carousel search__posters">
-    //     {movies.map((movie) => {
-    //       return (
-    //         <div key={movie._id} className="carousel-box">
-    //           <img
-    //             src={movie.image}
-    //             alt={movie.name}
-    //             className="search__poster"
-    //           />
-    //         </div>
-    //       );
-    //     })}
-    //   </div>
-    // </div>
 
+  return (
     <Layout>
-      {loading && <Loading />}
       <div className="row movie-row">
+        {loading && <Loading />}
         <h2>all movies</h2>
-        <Carousel itemsToShow={7}>
+        <Carousel itemsToShow={5} itemsToScroll={5}>
           {movies.map((movie) => {
             return (
               <div className="movie" key={movie._id}>
-                <div className="rating-small">{movie.rating}</div>
+                <div className="rating">{movie.rating}</div>
 
                 <div key={movie._id} className="front">
                   <picture className="thumbnail">
-                    {/* <source srcSet={movie.image} type="image/jpg" /> */}
+                    <source
+                      srcSet={baseImageUrl + movie.image}
+                      type="image/jpg"
+                    />
                     <img src={fallback} alt="Movie Bay Logo" />
                   </picture>
-                  <h3 className="title-small">{movie.name}</h3>
+                  <h3 className="title">{movie.name}</h3>
                 </div>
 
                 <div className="back">
@@ -67,9 +55,7 @@ export default function Movies() {
                     {/* <p className="seasons-small">
                       Number of seasons: {movie.seasons.length}
                     </p> */}
-                    <p className="language-small">
-                      Languages available: {movie.languages.toString()}
-                    </p>
+                    <p className="language">Languages: {movie.languages[0]}</p>
                   </div>
                   <div className="btn-container">
                     <div>

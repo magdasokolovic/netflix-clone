@@ -48,7 +48,7 @@ export default function Series() {
             return (
               <div
                 className="movie"
-                style={{ marginTop: "6rem" }}
+                style={{ marginTop: "110px" }}
                 key={index}
                 onClick={() => handleSerie(serie)}
               >
@@ -96,7 +96,7 @@ export default function Series() {
                     <button className="btn-more btn">
                       <Arrow />
                       <p className="tooltip">
-                        <span className="underline">Overview</span>:{" "}
+                        <span className="underline">Overview</span>:
                         {serie.overview}
                       </p>
                     </button>
