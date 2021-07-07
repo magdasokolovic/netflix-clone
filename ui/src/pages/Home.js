@@ -30,55 +30,20 @@ function Home() {
           (response) => response.json()
         );
         setTopRatedMovies(topratedData);
-        // console.log(latestData);
-        // .then((result) => {
-        //   console.log(result, "latest");
-        //   setLatestMovies(result.results);
-        // });
-
-        // fetch(requests.fetchTrending)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "trending");
-        //     setTrendingMovies(result.results);
-        //   });
-
-        // fetch(requests.fetchUpcoming)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "upcoming");
-        //     setUpcomingMovies(result.results);
-        //   });
-
-        // fetch(requests.fetchTopRated)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "top rated");
-        //     setTopRatedMovies(result.results);
-        //   });
-        // then set useState
+      
       } catch (error) {
         console.log(error);
       }
     };
     fetchdata();
 
-    // setLoading(true);
-    // here will fetch the movies and here will update movies with "setMovies"
-    // fetch("http://localhost:5000/api/series")
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     console.log(result);
-    //     setLoading(false);
-    //     setMovies(result);
-    //   });
   }, []);
 
   return (
     <div>
       <Navbar />
       <Banner />
-      {trendingMovies && <Row title="TRENDING MOVIES" isLargeRow data={trendingMovies} />}
+      {trendingMovies && <Row title="TRENDING MOVIES" isLargeRow data={trendingMovies.slice(0, 10)} />}
       {latestMovies && <Row title="Latest" data={latestMovies} />}
       {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}

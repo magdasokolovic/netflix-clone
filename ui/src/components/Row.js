@@ -27,7 +27,7 @@ export default function Row({ title, isLargeRow, data }) {
                 </h3>
               </div>
 
-              <div className="back">
+              <div className={isLargeRow ? "back" : "back-small"}>
                 <div className="streaming-info">
                   <p className={isLargeRow ? "seasons" : "seasons-small"}>
                     Number of votes: {movie.vote_count}
@@ -42,7 +42,7 @@ export default function Row({ title, isLargeRow, data }) {
                   <div>
                     <button className={isLargeRow ? "btn" : "btn-small"}>
                       <Link to="/player">
-                        <Play />
+                        <Play key={movie.key}/>
                       </Link>
                     </button>
                     <button
