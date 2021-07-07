@@ -39,59 +39,86 @@ export default function Row({ title, isLargeRow, data }) {
                 </picture>
                 {/* <h3 className={isLargeRow ? "title" : "title-small"}> */}
                 <h3 className="title">{movie.name}</h3>
-              </div>
 
-              <div className="back">
-                <div className="streaming-info">
-                  <p className="seasons">Voted: {movie.vote_count}</p>
-
-                  <p className="language">Languages: {movie.languages[0]}</p>
+                <div className={isLargeRow ? "rating" : "rating-small"}>
+                  {movie.rating}
                 </div>
 
-                <div className="btn_container">
-                  <div>
-                    <button className="btn">
-                      <Link
-                        to={{
-                          pathname: "/player",
+                <div key={index} className="front">
+                  <picture className="thumbnail">
+                    <source
+                      srcSet={baseImageUrl + movie.image}
+                      type="image/jpg"
+                    />
+                    <img src={fallback} alt="Movie Bay Logo" />
+                  </picture>
+                  <h3 className={isLargeRow ? "title" : "title-small"}>
+                    {movie.name}
+                  </h3>
+                </div>
 
-                          state: { data: movie }
-                        }}
-                      >
-                        <Play />
-                      </Link>
-                    </button>
-                    <button
-                      className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}
-                    >
-                      <Add />
-                      <p
-                        className={
-                          isLargeRow ? "tooltip-add" : "tooltip-small-add"
-                        }
-                      >
-                        Add to the list
-                      </p>
-                    </button>
-                    {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
-                    <button className="btn">
-                      <Like />
-                    </button>
-                    <button className="btn">
-                      <Dislike />
-                    </button>
+                <div className="back">
+                  <div className="streaming-info">
+                    <p className="seasons">Voted: {movie.vote_count}</p>
+
+                    <p className="language">Languages: {movie.languages[0]}</p>
+
+                    <p className={isLargeRow ? "seasons" : "seasons-small"}>
+                      Number of votes: {movie.vote_count}
+                    </p>
+
+                    <p className={isLargeRow ? "language" : "language-small"}>
+                      Languages available: {movie.languages}
+                    </p>
                   </div>
 
-                  <button className={`btn-more btn`}>
-                    <Arrow />
-                    <p className="tooltip">
-                      <span className="underline">Overview</span>:{" "}
-                      {movie.overview}
-                    </p>
-                  </button>
+                  <div className="btn_container">
+                    <div>
+                      <button className="btn">
+                        <Link
+                          to={{
+                            pathname: "/player",
+
+                            state: { data: movie }
+                          }}
+                        >
+                          <Play />
+                        </Link>
+                      </button>
+                      <button
+                        className={`btn-add ${
+                          isLargeRow ? "btn" : "btn-small"
+                        }`}
+                      >
+                        <Add />
+                        <p
+                          className={
+                            isLargeRow ? "tooltip-add" : "tooltip-small-add"
+                          }
+                        >
+                          Add to the list
+                        </p>
+                      </button>
+                      {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
+                      <button className="btn">
+                        <Like />
+                      </button>
+                      <button className="btn">
+                        <Dislike />
+                      </button>
+                    </div>
+
+                    <button className={`btn-more btn`}>
+                      <Arrow />
+                      <p className="tooltip">
+                        <span className="underline">Overview</span>:{" "}
+                        {movie.overview}
+                      </p>
+                    </button>
+                  </div>
                 </div>
+                <div className="background"></div>
               </div>
-              <div className="background"></div>
             </div>
           );
         })}
