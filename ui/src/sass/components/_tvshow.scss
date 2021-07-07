@@ -1,5 +1,12 @@
 .rec.rec-arrow {
   border-radius: 0;
+  @media (max-width: 768px) {
+    width: 36px;
+    min-width: 36px;
+    height: 36px;
+    font-size: 1.3rem;
+    line-height: 36px;
+  }
 }
 /* round buttons on hover */
 .rec.rec-arrow:hover {
@@ -7,7 +14,8 @@
 }
 /* hide disabled buttons */
 .rec.rec-arrow:disabled {
-  visibility: hidden;
+  // visibility: hidden;
+  background-color: #777;
 }
 /* disable default outline on focused items */
 /* add custom outline on focused items */

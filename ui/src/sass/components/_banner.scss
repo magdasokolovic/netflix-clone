@@ -16,7 +16,6 @@
   }
 
   // background: linear-gradient(to right, #111 30%, transparent 70%);
-
 }
 
 .banner-backdrop {
@@ -28,30 +27,34 @@
 
   // background: linear-gradient(to right, #111 30%, transparent 70%);
   // background-color: rgba(0, 0, 0, 0.03);
-
-
+}
+.banner-cta {
+  width: fit-content;
+  position: absolute;
+  z-index: 2;
+  top: calc(110px + 7vw);
+  left: calc(70px + 5vw);
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .banner-title {
   color: white;
-  font-size: 5rem;
+  font-size: 4rem;
   font-weight: 800;
-  position: absolute;
-  top: 30vh;
-  left: 12vh;
   word-break: normal;
   line-height: normal;
 
   z-index: 2;
 
   max-width: 60%;
-
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 .banner-overview {
-  position: absolute;
-  top: 70vh;
-  left: 12vh;
   font-size: 1.5rem;
   font-weight: 700;
   word-break: normal;
@@ -60,7 +63,11 @@
   z-index: 2;
 
   max-width: 60%;
-
+  max-height: calc(100vw * 9 / 16);
+  overflow: hidden;
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 .mylist__btns,
@@ -76,9 +83,15 @@
   border-radius: 0.2vw;
   padding: 0.5rem 2rem;
   margin-right: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   background-color: rgba(51, 51, 51, 0.5);
   display: inline-block;
   z-index: 2;
+  a {
+    color: white;
+    text-decoration: none;
+  }
 }
 
 .mylist__btns:hover,
@@ -88,14 +101,17 @@
   transition: all 0.28s ease;
 }
 
-.mylist__btns {
-  top: 60vh;
-  left: 28vh;
-  position: absolute;
-}
+// .mylist__btns {
+//   top: 24rem;
+//   left: 3rem;
+//   position: absolute;
+//   @media (max-width: 768px) {
+//     top: 18rem;
+//   }
+// }
 
-.play__btns {
-  top: 60vh;
-  left: 12vh;
-  position: absolute;
-}
+// .play__btns {
+//   top: 24rem;
+//   left: 3rem;
+//   position: absolute;
+// }
