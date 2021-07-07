@@ -1,24 +1,21 @@
-import React, { useState, useEffect } from "react";
+import React, {useEffect, useState} from "react";
 import Carousel from "react-elastic-carousel";
-import fallback from "../images/movie-bay-logo.png";
-import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-export default function Row({ title, isLargeRow, data }) {
+import {Add, Arrow, Dislike, Like, Play} from "../icons/icons";
+import fallback from "../images/movie-bay-logo.png";
+
+export default function Row({title, isLargeRow, data}) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   const [num, setNum] = useState(5);
-  const handleResize = () => {
-    setNum(Math.floor(window.innerWidth / 250));
-  };
+  const handleResize = () => { setNum(Math.floor(window.innerWidth / 250)); };
 
   useEffect(() => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
-  useEffect(() => {
-    setNum(Math.floor(window.innerWidth / 250));
-  }, []);
+  useEffect(() => { setNum(Math.floor(window.innerWidth / 250)); }, []);
 
   return (
     <div className="row">
@@ -49,50 +46,39 @@ export default function Row({ title, isLargeRow, data }) {
                   <div>
                     <button className="btn">
                       <Link
-                        to={{
-                          pathname: "/player",
+  to = {
+    {
+      pathname: "/player",
 
-                          state: { data: movie }
-                        }}
-                      >
-                        <Play />
-                      </Link>
-                    </button>
-                    <button
-                      className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}
-                    >
-                      <Add />
-                      <p
-                        className={
-                          isLargeRow ? "tooltip-add" : "tooltip-small-add"
-                        }
-                      >
-                        Add to the list
-                      </p>
-                    </button>
-                    {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
-                    <button className="btn">
-                      <Like />
-                    </button>
+          state: {data: movie}
+    }
+  } > <Play /></Link>
+                    </button>< button
+  className = {`btn-add ${isLargeRow ? "btn" : "btn-small"}`} > <Add />< p
+  className =
+      {isLargeRow ? "tooltip-add" : "tooltip-small-add"} >
+      Add to the list</p>
+                    </button>{
+          /* <button className={isLargeRow ? "btn" : "btn-small"}> */}<
+          button className = "btn"><Like />
+      </button>
                     <button className="btn">
                       <Dislike />
-                    </button>
+      </button>
                   </div>
 
-                  <button className={`btn-more btn`}>
-                    <Arrow />
-                    <p className="tooltip">
-                      <span className="underline">Overview</span>:{" "}
+      <button className = {`btn-more btn`}><Arrow /><p className = "tooltip">
+      <span className = "underline">Overview<
+          /span>:{" "}
                       {movie.overview}
                     </p>
-                  </button>
+      </button>
                 </div>
-              </div>
+      </div>
               <div className="background"></div>
-            </div>
+      </div>
           );
         })}
-      </Carousel>
-    </div>
+      </Carousel>< /div>
   );
 }
