@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Row from "../components/Row";
-import Header from "../components/Header";
 import Loading from "../components/Loading";
 import Layout from "../components/Layout";
+
 function Home() {
   const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);

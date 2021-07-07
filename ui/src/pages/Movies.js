@@ -8,18 +8,18 @@ import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
 
-export default function Series() {
-  const [series, setSeries] = useState([]);
+export default function Movies() {
+  const [movies, setMovies] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
 
-    fetch("http://localhost:5000/api/series")
+    fetch("http://localhost:5000/api/films")
       .then((res) => res.json())
       .then((result) => {
         if (result) {
-          setSeries(result);
+          setMovies(result);
           setLoading(false);
         } else {
           console.log(result.message);
@@ -28,14 +28,14 @@ export default function Series() {
       .catch((err) => console.log(err));
   }, []);
   return (
-    // <div className="series-overview">
+    // <div className="movies-overview">
     //   <div className="carousel search__posters">
-    //     {series.map((serie) => {
+    //     {movies.map((movie) => {
     //       return (
-    //         <div key={serie._id} className="carousel-box">
+    //         <div key={movie._id} className="carousel-box">
     //           <img
-    //             src={serie.image}
-    //             alt={serie.name}
+    //             src={movie.image}
+    //             alt={movie.name}
     //             className="search__poster"
     //           />
     //         </div>
@@ -46,29 +46,29 @@ export default function Series() {
 
     <Layout>
       {loading && <Loading />}
-      <div className="row">
-        <h2>all tv shows</h2>
+      <div className="row movie-row">
+        <h2>all movies</h2>
         <Carousel itemsToShow={7}>
-          {series.map((serie) => {
+          {movies.map((movie) => {
             return (
-              <div className="serie" key={serie._id}>
-                <div className="rating-small">{serie.rating}</div>
+              <div className="movie" key={movie._id}>
+                <div className="rating-small">{movie.rating}</div>
 
-                <div key={serie._id} className="front">
+                <div key={movie._id} className="front">
                   <picture className="thumbnail">
-                    <source srcSet={serie.image} type="image/jpg" />
+                    {/* <source srcSet={movie.image} type="image/jpg" /> */}
                     <img src={fallback} alt="Movie Bay Logo" />
                   </picture>
-                  <h3 className="title-small">{serie.name}</h3>
+                  <h3 className="title-small">{movie.name}</h3>
                 </div>
 
                 <div className="back">
                   <div className="streaming-info">
                     {/* <p className="seasons-small">
-                      Number of seasons: {serie.seasons.length}
+                      Number of seasons: {movie.seasons.length}
                     </p> */}
                     <p className="language-small">
-                      Languages available: {serie.languages.toString()}
+                      Languages available: {movie.languages.toString()}
                     </p>
                   </div>
                   <div className="btn-container">
@@ -93,7 +93,7 @@ export default function Series() {
                       <Arrow />
                       <p className="tooltip-small">
                         <span className="underline">Overview</span>:
-                        {serie.overview}
+                        {movie.overview}
                       </p>
                     </button>
                   </div>
