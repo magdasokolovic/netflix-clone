@@ -4,8 +4,10 @@ import Row from "../components/Row";
 import requests from "../Requests";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import Loading from "../components/Loading";
 
 function Home() {
+  const [loading, setLoading] = useState(false);
   const [latestMovies, setLatestMovies] = useState();
   const [upcomingMovies, setUpcomingMovies] = useState();
   const [topRatedMovies, setTopRatedMovies] = useState();
@@ -13,11 +15,12 @@ function Home() {
 
   useEffect(() => {
     const fetchdata = async () => {
+      setLoading(true);
       try {
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
-        setLatestMovies(latestData);
+        setLatestMovies(latestData.results);
         const trendingData = await fetch(requests.fetchTrending).then(
           (response) => response.json()
         );
@@ -37,10 +40,19 @@ function Home() {
     };
     fetchdata();
 
+    //here will fetch the movies and here will update movies with "setMovies"
+    // fetch("http://localhost:5000/api/series")
+    //   .then((response) => response.json())
+    //   .then((result) => {
+    //     console.log(result);
+    //     setLoading(false);
+    //     setMovies(result);
+    //   });
   }, []);
 
   return (
     <div>
+      {loading && <Loading />}
       <Navbar />
       <Banner />
       {trendingMovies && <Row title="TRENDING MOVIES" isLargeRow data={trendingMovies.slice(0, 10)} />}
