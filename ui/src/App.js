@@ -4,9 +4,7 @@ import Home from "./pages/Home";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
 import Search from "./pages/Search";
-// import Series from "./pages/Series";
-import Player from "./components/Player";
-// import Footer from "./components/Footer";
+import Player from "./pages/Player";
 import TvShow from "./pages/TvShows";
 import Movies from "./pages/Movies";
 
@@ -21,9 +19,6 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/tvshows">
-          <TvShow />
-        </Route>
         <Route path="/season">
           <Season />
         </Route>
@@ -35,6 +30,9 @@ function App() {
         </Route>
         <Route exact path="/">
           <Home />
+        </Route>{" "}
+        <Route path="/tvshows">
+          <TvShow />
         </Route>
         <Route path="/movies">
           <Movies />

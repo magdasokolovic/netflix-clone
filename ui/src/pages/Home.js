@@ -4,8 +4,6 @@ import Row from "../components/Row";
 import Loading from "../components/Loading";
 import Layout from "../components/Layout";
 import requests from "../Requests";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 
 function Home() {
   const [loading, setLoading] = useState(false);
@@ -35,33 +33,6 @@ function Home() {
         );
         setTopRatedMovies(topratedData);
         setLoading(false);
-        // console.log(latestData);
-        // .then((result) => {
-        //   console.log(result, "latest");
-        //   setLatestMovies(result.results);
-        // });
-
-        // fetch(requests.fetchTrending)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "trending");
-        //     setTrendingMovies(result.results);
-        //   });
-
-        // fetch(requests.fetchUpcoming)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "upcoming");
-        //     setUpcomingMovies(result.results);
-        //   });
-
-        // fetch(requests.fetchTopRated)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "top rated");
-        //     setTopRatedMovies(result.results);
-        //   });
-        // then set useState
       } catch (error) {
         console.log(error);
       }
@@ -84,7 +55,7 @@ function Home() {
         {loading && <Loading />}
         <Banner />
         {trendingMovies && (
-          <Row title="TRENDING MOVIES" isLargeRow data={trendingMovies} />
+          <Row title="POPULAR" isLargeRow data={trendingMovies} />
         )}
         {latestMovies && <Row title="Latest" data={latestMovies} />}
         {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
