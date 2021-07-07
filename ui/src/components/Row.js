@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import fallback from "../images/movie-bay-logo.png";
-import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
 import { Link } from "react-router-dom";
+
+import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
+import fallback from "../images/movie-bay-logo.png";
 
 export default function Row({ title, isLargeRow, data }) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
@@ -27,23 +28,31 @@ export default function Row({ title, isLargeRow, data }) {
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
-              <div className={isLargeRow ? "rating" : "rating-small"}>{movie.rating}</div>
+              <div className={isLargeRow ? "rating" : "rating-small"}>
+                {movie.rating}
+              </div>
 
               <div key={index} className="front">
                 <picture className="thumbnail">
-                  <source srcSet={baseImageUrl + movie.image} type="image/jpg" />
+                  <source
+                    srcSet={baseImageUrl + movie.image}
+                    type="image/jpg"
+                  />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
-                <h3 className={isLargeRow ? "title" : "title-small"}>{movie.name}</h3>
+                <h3 className={isLargeRow ? "title" : "title-small"}>
+                  {movie.name}
+                </h3>
               </div>
 
               <div className="back">
                 <div className="streaming-info">
                   <p className="seasons">Voted: {movie.vote_count}</p>
 
-                      <p className={isLargeRow ? "language" : "language-small"}>Languages available: {movie.languages.toString()}
-                      </p>
-                  </div>
+                  <p className={isLargeRow ? "language" : "language-small"}>
+                    Languages available: {movie.languages.toString()}
+                  </p>
+                </div>
 
                 <div className="btn_container">
                   <div>
@@ -52,15 +61,17 @@ export default function Row({ title, isLargeRow, data }) {
                         to={{
                           pathname: "/player",
 
-                          state: { data: movie }
+                          state: { data: movie },
                         }}
                       >
+                        {" "}
                         <Play />
                       </Link>
                     </button>
                     <button
                       className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}
                     >
+                      {" "}
                       <Add />
                       <p
                         className={
