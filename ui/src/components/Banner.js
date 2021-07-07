@@ -3,21 +3,23 @@
 
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-
+import Loading from "./Loading";
 const api_key = "4251b22b61515cc0f3716d0531658a55";
 const BASE_URL = "https://api.themoviedb.org/3";
 const getImage = (file) => `https://www.themoviedb.org/t/p/original${file}`;
 
 function Banner() {
   const [data, setData] = useState([]);
-
+  const [loading, setLoading] = useState(false);
   const api = axios.create({ baseURL: BASE_URL });
 
   const getPopular = api.get("movie/popular", { params: { api_key } });
 
   useEffect(() => {
+    setLoading(true);
     getPopular.then((res) => {
       setData(res.data.results);
+      setLoading(false);
     });
   }, []);
 
@@ -36,6 +38,7 @@ function Banner() {
 
   return (
     <div className="banner">
+      {loading && <Loading />}
       <img className="banner-backdrop" alt="backdrop" src={images[index]} />
       <h1 className="banner-title">{names[index]}</h1>
       <button className="play__btns">▶ Play</button>

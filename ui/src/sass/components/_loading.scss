@@ -1,5 +1,13 @@
 .overlay {
+<<<<<<< HEAD
   position: fixed;
+=======
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+>>>>>>> 1a04dca4e0fbe10541eaae4f5a10442daab999c1
   inset: 0;
   //   background: rgba(0, 0, 0, 0.3);
   background: rgb(0, 0, 0);
@@ -13,7 +21,7 @@
   width: 120px;
   height: 120px;
   margin: 40vh auto;
-  -webkit-animation: spin 2s linear infinite; /* Safari */
+  -webkit-animation: spin 1s linear infinite; /* Safari */
   animation: spin 2s linear infinite;
 }
 
