@@ -28,9 +28,12 @@ export default function Row({ title, data }) {
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
+
               <div className={"rating"}>
                 {movie.rating}
               </div>
+
+
 
               <div key={index} className="front">
                 <picture className="thumbnail">
@@ -40,12 +43,14 @@ export default function Row({ title, data }) {
                   />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
-                {/* <h3 className={isLargeRow ? "title" : "title-small"}>
-                  {movie.name}
-                </h3> */}
+
+            
                 <h3 className={"title"}>
                   {movie.name}
                 </h3>
+
+         
+
               </div>
 
               <div className="back">
@@ -64,7 +69,10 @@ export default function Row({ title, data }) {
                         to={{
                           pathname: "/player",
 
-                          state: { data: movie },
+
+
+                          state: { data: movie }
+
                         }}
                       >
                         {" "}
