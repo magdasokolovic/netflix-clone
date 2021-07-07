@@ -33,7 +33,7 @@ function Home() {
           (response) => response.json()
         );
         setTopRatedMovies(topratedData);
-      
+        setLoading(false);
       } catch (error) {
         console.log(error);
       }
@@ -55,13 +55,13 @@ function Home() {
       {loading && <Loading />}
       <Navbar />
       <Banner />
-<<<<<<< HEAD
-      {trendingMovies && <Row title="TRENDING MOVIES" isLargeRow data={trendingMovies.slice(0, 10)} />}
-=======
       {trendingMovies && (
-        <Row title="POPULAR" isLargeRow data={trendingMovies} />
+        <Row
+          title="TRENDING MOVIES"
+          isLargeRow
+          data={trendingMovies.slice(0, 10)}
+        />
       )}
->>>>>>> Chi
       {latestMovies && <Row title="Latest" data={latestMovies} />}
       {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}
