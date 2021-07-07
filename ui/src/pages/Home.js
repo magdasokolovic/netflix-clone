@@ -7,6 +7,7 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
 function Home() {
+  const [num, setNum] = useState(null);
   const [loading, setLoading] = useState(true);
   const [latestMovies, setLatestMovies] = useState();
   const [upcomingMovies, setUpcomingMovies] = useState([]);
@@ -19,22 +20,27 @@ function Home() {
         const topratedData = await fetch(requests.fetchTopRated).then(
           (response) => response.json()
         );
-        console.log(topratedData);
         setTopRatedMovies(topratedData);
-        const latestData = await fetch(requests.fetchLatest).then((response) =>
-          response.json()
-        );
-        setLatestMovies(latestData.results);
+        setNum(Math.floor(Math.ceil(Math.random() * topratedData.length) - 1));
+        // Trending
         const trendingData = await fetch(requests.fetchTrending).then(
           (response) => response.json()
         );
         setTrendingMovies(trendingData);
+        /**
+         * We just NEEDED 2 of these data to show on
+         * viewable screen at the very first ( reduce loading time)
+         * */
+        setLoading(false);
         const upcomingData = await fetch(requests.fetchUpcoming).then(
           (response) => response.json()
         );
         setUpcomingMovies(upcomingData);
 
-        setLoading(false);
+        const latestData = await fetch(requests.fetchLatest).then((response) =>
+          response.json()
+        );
+        setLatestMovies(latestData.results);
       } catch (error) {
         setTimeout(() => setLoading(false), 3000);
         console.log(error);
@@ -46,13 +52,8 @@ function Home() {
 
   return (
     <div>
-      {/* {loading && <Loading />} */}
       <Navbar />
-      <Banner
-        topRatedMovies={
-          topRatedMovies[Math.floor(Math.ceil(Math.random() * 11) - 1)]
-        }
-      />
+      <Banner topRatedMovies={topRatedMovies[num]} />
       {trendingMovies && (
         <Row title="POPULAR" isLargeRow data={trendingMovies} />
       )}
