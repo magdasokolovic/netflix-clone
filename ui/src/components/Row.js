@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
 import fallback from "../images/movie-bay-logo.png";
 
-export default function Row({ title, isLargeRow, data }) {
+export default function Row({ title, data }) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
 
   const [num, setNum] = useState(5);
@@ -28,7 +28,7 @@ export default function Row({ title, isLargeRow, data }) {
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
-              <div className={isLargeRow ? "rating" : "rating-small"}>
+              <div className={"rating"}>
                 {movie.rating}
               </div>
 
@@ -40,7 +40,10 @@ export default function Row({ title, isLargeRow, data }) {
                   />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
-                <h3 className={isLargeRow ? "title" : "title-small"}>
+                {/* <h3 className={isLargeRow ? "title" : "title-small"}>
+                  {movie.name}
+                </h3> */}
+                <h3 className={"title"}>
                   {movie.name}
                 </h3>
               </div>
@@ -49,7 +52,7 @@ export default function Row({ title, isLargeRow, data }) {
                 <div className="streaming-info">
                   <p className="seasons">Voted: {movie.vote_count}</p>
 
-                  <p className={isLargeRow ? "language" : "language-small"}>
+                  <p className={"language"}>
                     Languages available: {movie.languages.toString()}
                   </p>
                 </div>
@@ -69,19 +72,18 @@ export default function Row({ title, isLargeRow, data }) {
                       </Link>
                     </button>
                     <button
-                      className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}
+                      className={"btn-add btn"}
                     >
                       {" "}
                       <Add />
                       <p
                         className={
-                          isLargeRow ? "tooltip-add" : "tooltip-small-add"
+                          "tooltip-add"
                         }
                       >
                         Add to the list
                       </p>
                     </button>
-                    {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
                     <button className="btn">
                       <Like />
                     </button>
