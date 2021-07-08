@@ -16,6 +16,7 @@ function Home() {
 
   useEffect(() => {
     const fetchdata = async () => {
+      setLoading(true);
       try {
         const topratedData = await fetch(requests.fetchTopRated).then(
           (response) => response.json()
@@ -31,16 +32,19 @@ function Home() {
          * We just NEEDED 2 of these data to show on
          * viewable screen at the very first ( reduce loading time)
          * */
-        setLoading(false);
         const upcomingData = await fetch(requests.fetchUpcoming).then(
           (response) => response.json()
         );
         setUpcomingMovies(upcomingData);
-
+        const topratedData = await fetch(requests.fetchTopRated).then(
+          (response) => response.json()
+        );
+        setTopRatedMovies(topratedData);
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
         setLatestMovies(latestData);
+        setLoading(false);
       } catch (error) {
         setTimeout(() => setLoading(false), 3000);
         console.log(error);
@@ -48,17 +52,16 @@ function Home() {
     };
     fetchdata();
   }, []);
-  if (loading) return <Loading />;
 
   return (
     <div>
-      <Navbar />
+       <Layout>
       <Banner topRatedMovies={topRatedMovies[num]} />
-      {trendingMovies && <Row title="POPULAR" isLargeRow data={trendingMovies} />}
+      {trendingMovies && <Row title="Popular" isLargeRow data={trendingMovies} />}
       {latestMovies && <Row title="Latest" data={latestMovies} />}
       {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}
-      <Footer />
+      </Layout>
     </div>
   );
 }
