@@ -7,24 +7,31 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
 function Home() {
-  const [loading, setLoading] = useState(false);
+  const [num, setNum] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [latestMovies, setLatestMovies] = useState();
-  const [upcomingMovies, setUpcomingMovies] = useState();
-  const [topRatedMovies, setTopRatedMovies] = useState();
-  const [trendingMovies, setTrendingMovies] = useState();
+  const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
     const fetchdata = async () => {
       setLoading(true);
       try {
-        const latestData = await fetch(requests.fetchLatest).then((response) =>
-          response.json()
+        const topratedData = await fetch(requests.fetchTopRated).then(
+          (response) => response.json()
         );
-        setLatestMovies(latestData.results);
+        setTopRatedMovies(topratedData);
+        setNum(Math.floor(Math.ceil(Math.random() * topratedData.length) - 1));
+        // Trending
         const trendingData = await fetch(requests.fetchTrending).then(
           (response) => response.json()
         );
         setTrendingMovies(trendingData);
+        /**
+         * We just NEEDED 2 of these data to show on
+         * viewable screen at the very first ( reduce loading time)
+         * */
         const upcomingData = await fetch(requests.fetchUpcoming).then(
           (response) => response.json()
         );
@@ -33,9 +40,13 @@ function Home() {
           (response) => response.json()
         );
         setTopRatedMovies(topratedData);
+        const latestData = await fetch(requests.fetchLatest).then((response) =>
+          response.json()
+        );
+        setLatestMovies(latestData);
         setLoading(false);
-
       } catch (error) {
+        setTimeout(() => setLoading(false), 3000);
         console.log(error);
       }
     };
@@ -44,16 +55,13 @@ function Home() {
 
   return (
     <div>
-      {loading && <Loading />}
-      <Navbar />
-      <Banner />
-      {trendingMovies && (
-        <Row title="POPULAR" data={trendingMovies} />
-      )}
+       <Layout>
+      <Banner topRatedMovies={topRatedMovies[num]} />
+      {trendingMovies && <Row title="Popular" isLargeRow data={trendingMovies} />}
       {latestMovies && <Row title="Latest" data={latestMovies} />}
       {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}
-      <Footer />
+      </Layout>
     </div>
   );
 }

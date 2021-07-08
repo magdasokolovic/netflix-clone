@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import logo from "../images/movie-bay-logo.png";
 
@@ -14,7 +14,12 @@ export default function Navbar() {
       setNavbar(false);
     }
   };
-  window.addEventListener("scroll", changeBackground);
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground);
+    return () => {
+      window.removeEventListener("scroll", changeBackground);
+    };
+  }, []);
 
   const handleClick = () => setClick(!click);
 
@@ -23,7 +28,7 @@ export default function Navbar() {
   const backToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: "smooth",
+      behavior: "smooth"
     });
   };
 

@@ -8,10 +8,12 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
   //////////////////////////////////////////////
     .rec-arrow {
       background-color: $highlight-color;
+      border-radius: 50%;
       &:hover {
         background-color: lighten($highlight-color, 10%);
       }
     }
+
     .ejXxNI {
       background-color: $highlight-color;
       box-shadow: 0 0 1px 3px $font-color;

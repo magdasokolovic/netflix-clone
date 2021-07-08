@@ -29,11 +29,12 @@
   // background-color: rgba(0, 0, 0, 0.03);
 }
 .banner-cta {
-  width: fit-content;
+  // width: fit-content;
+  // max-width: calc(95vw -70px);
   position: absolute;
   z-index: 2;
   top: calc(110px + 7vw);
-  left: calc(70px + 5vw);
+  left: calc(50px + 5vw);
   @media (max-width: 768px) {
     font-size: 3rem;
   }
@@ -41,30 +42,32 @@
 
 .banner-title {
   color: white;
-  font-size: 4rem;
+  font-size: calc(2.2rem + 2vw);
   font-weight: 800;
   word-break: normal;
-  line-height: normal;
+  line-height: 1.1;
 
   z-index: 2;
 
-  max-width: 60%;
+  max-width: 70%;
   @media (max-width: 768px) {
     font-size: 3rem;
+    max-width: 100%;
   }
 }
 
 .banner-overview {
-  font-size: 1.5rem;
+  font-size: calc(0.3rem + 1.3vw);
   font-weight: 700;
   word-break: normal;
 
-  width: 50%;
+  width: calc(55% + 10vw);
   z-index: 2;
 
-  max-width: 60%;
+  max-width: 750px;
   max-height: calc(100vw * 9 / 16);
-  overflow: hidden;
+  // overflow: hidden;
+  text-overflow: ellipsis;
   @media (max-width: 768px) {
     display: none;
   }
