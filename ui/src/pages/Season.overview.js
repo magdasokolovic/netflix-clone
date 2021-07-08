@@ -1,8 +1,9 @@
 import React from "react";
-import { useHistory } from "react-router-dom";
+import Carousel from "react-elastic-carousel";
+import {useHistory} from "react-router-dom";
+
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
-import Carousel from "react-elastic-carousel";
 import fallback from "../images/movie-bay-logo.png";
 
 function Season(props) {

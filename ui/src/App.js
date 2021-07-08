@@ -1,15 +1,15 @@
-import { BrowserRouter, Switch, Route } from "react-router-dom";
-
-import Home from "./pages/Home";
-import Season from "./pages/Season.overview";
-import Episode from "./pages/Episode.overview";
-import Search from "./pages/Search";
-import Player from "./pages/Player";
-import TvShow from "./pages/TvShows";
-import Movies from "./pages/Movies";
-
 ///// STYLING:
 import "./sass/main.scss";
+
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+
+import Episode from "./pages/Episode.overview";
+import Home from "./pages/Home";
+import Movies from "./pages/Movies";
+import Player from "./pages/Player";
+import Search from "./pages/Search";
+import Season from "./pages/Season.overview";
+import TvShow from "./pages/TvShows";
 
 function App() {
   // for the search function:
@@ -26,7 +26,8 @@ function App() {
           <Episode />
         </Route>
         <Route path="/search/">
-          <Search search={search} />
+          <Search search={
+    search} />
         </Route>
         <Route exact path="/">
           <Home />
