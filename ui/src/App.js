@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
+import Search from "./pages/Search";
 import Player from "./pages/Player";
 import TvShow from "./pages/TvShows";
 
