@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import {Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
-import {Add, Arrow, Dislike, Like, Play} from "../icons/icons";
+import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
 import fallback from "../images/movie-bay-logo.png";
 
 export default function Movies() {
@@ -17,16 +17,16 @@ export default function Movies() {
     setLoading(true);
 
     fetch("http://localhost:5000/api/films")
-        .then((res) => res.json())
-        .then((result) => {
-          if (result) {
-            setMovies(result);
-            setLoading(false);
-          } else {
-            console.log(result.message);
-          }
-        })
-        .catch((err) => console.log(err));
+      .then((res) => res.json())
+      .then((result) => {
+        if (result) {
+          setMovies(result);
+          setLoading(false);
+        } else {
+          console.log(result.message);
+        }
+      })
+      .catch((err) => console.log(err));
   }, []);
 
   return (
@@ -36,10 +36,9 @@ export default function Movies() {
 
         <Carousel itemsToShow={5} itemsToScroll={5}>
           {movies.map((movie) => {
-      return (
-          <div className = "movie" key = {movie._id}>
-          <div className = "rating">{movie.rating}<
-              /div>
+            return (
+              <div className="movie" key={movie._id}>
+                <div className="rating">{movie.rating}</div>
 
                 <div key={movie._id} className="front">
                   <picture className="thumbnail">
@@ -47,46 +46,53 @@ export default function Movies() {
                       srcSet={baseImageUrl + movie.image}
                       type="image/jpg
               "
-              /><img src = {fallback} alt = "Movie Bay Logo" />
-          </picture>
+                    />
+                    <img src={fallback} alt="Movie Bay Logo" />
+                  </picture>
                   <h3 className="title">{movie.name}</h3>
-          </div>
+                </div>
 
                 <div className="back">
                   <div className="streaming-info">
                     <p className="language">Language: {movie.languages[0]}</p>
-          </div>
+                  </div>
                   <div className="btn_container">
                     <div>
                       <button className="btn">
-                        <Link to="/player
-           ">
-           < Play /></Link>
+                        <Link
+                          to="/player
+           "
+                        >
+                          <Play />
+                        </Link>
                       </button>
-          <button className = "btn-add btn"><Add />
-          <p className = "tooltip-add">Add to the
-              list</p>
-                      </button><button className = "btn">
-          <Like />
-          </button>
+                      <button className="btn-add btn">
+                        <Add />
+                        <p className="tooltip-add">Add to the list</p>
+                      </button>
+                      <button className="btn">
+                        <Like />
+                      </button>
                       <button className="btn">
                         <Dislike />
-          </button>
+                      </button>
                     </div>
 
-          <button className = "btn-more btn"><Arrow /><p className = "tooltip">
-          <span className = "underline">Overview<
-              /span>:
+                    <button className="btn-more btn">
+                      <Arrow />
+                      <p className="tooltip">
+                        <span className="underline">Overview</span>:
                         {movie.overview}
                       </p>
-          </button>
+                    </button>
                   </div>
-          </div>
+                </div>
                 <div className="background"></div>
-          </div>
+              </div>
             );
           })}
         </Carousel>
-          </div>
-    </Layout>);
+      </div>
+    </Layout>
+  );
 }

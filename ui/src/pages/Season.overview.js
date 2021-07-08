@@ -1,6 +1,6 @@
 import React from "react";
 import Carousel from "react-elastic-carousel";
-import {useHistory} from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";

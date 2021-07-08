@@ -1,5 +1,5 @@
-import React, {useEffect, useState} from "react";
-import {useHistory} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
@@ -17,24 +17,24 @@ export default function Search(props) {
       setLoading(true);
       try {
         await fetch(requests.fetchMovies)
-            .then((res) => res.json())
-            .then((result) => {
-              const foundMovies =
-                  result.filter((movie) => movie.name.toLowerCase().includes(
-                                    props.search.toLowerCase()));
-              console.log(foundMovies);
-              setMovies(foundMovies);
-            });
+          .then((res) => res.json())
+          .then((result) => {
+            const foundMovies = result.filter((movie) =>
+              movie.name.toLowerCase().includes(props.search.toLowerCase())
+            );
+            console.log(foundMovies);
+            setMovies(foundMovies);
+          });
 
         await fetch(requests.fetchSeries)
-            .then((res) => res.json())
-            .then((result) => {
-              const foundSeries =
-                  result.filter((serie) => serie.name.toLowerCase().includes(
-                                    props.search.toLowerCase()));
-              console.log(foundSeries);
-              setSeries(foundSeries);
-            });
+          .then((res) => res.json())
+          .then((result) => {
+            const foundSeries = result.filter((serie) =>
+              serie.name.toLowerCase().includes(props.search.toLowerCase())
+            );
+            console.log(foundSeries);
+            setSeries(foundSeries);
+          });
 
         setLoading(false);
       } catch (err) {
@@ -48,9 +48,11 @@ export default function Search(props) {
     <Layout>
       {loading && <Loading />}
       <div
-  className = "search-row"
-  style = {{ paddingTop: "110px", minHeight: "80vh" }} >
-          {/* not working right now, it is only showing the movies  */} {(series && series.length > 0) || (movies && movies.length > 0) ? (
+        className="search-row"
+        style={{ paddingTop: "110px", minHeight: "80vh" }}
+      >
+        {/* not working right now, it is only showing the movies  */}{" "}
+        {(series && series.length > 0) || (movies && movies.length > 0) ? (
           <Row isLargeRow data={(series, movies)} />
         ) : (
           <div className="error-message">

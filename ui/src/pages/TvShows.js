@@ -1,10 +1,10 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import {Link, useHistory} from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 import Layout from "../components/Layout";
 import Loading from "../components/Loading";
-import {Add, Arrow, Dislike, Like, Play} from "../icons/icons";
+import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
 import fallback from "../images/movie-bay-logo.png";
 
 export default function Series() {
@@ -17,16 +17,16 @@ export default function Series() {
     setLoading(true);
 
     fetch("http://localhost:5000/api/series")
-        .then((res) => res.json())
-        .then((result) => {
-          if (result) {
-            setSeries(result);
-            setLoading(false);
-          } else {
-            console.log(result.message);
-          }
-        })
-        .catch((err) => console.log(err));
+      .then((res) => res.json())
+      .then((result) => {
+        if (result) {
+          setSeries(result);
+          setLoading(false);
+        } else {
+          console.log(result.message);
+        }
+      })
+      .catch((err) => console.log(err));
   }, []);
   const handleSerie = (serie) => {
     console.log(serie);
@@ -48,9 +48,8 @@ export default function Series() {
           {series.map((serie, index) => {
             return (
               <div
-            className = "movie"
-                style={
-        { marginTop: "110px" }}
+                className="movie"
+                style={{ marginTop: "110px" }}
                 key={index}
                 onClick={() => handleSerie(serie)}
               >
