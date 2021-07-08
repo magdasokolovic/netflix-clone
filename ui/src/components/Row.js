@@ -1,11 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-elastic-carousel";
-import fallback from "../images/movie-bay-logo.png";
-import { Arrow, Play, Add, Like, Dislike } from "../icons/icons";
 import { Link } from "react-router-dom";
 
-export default function Row({ title, isLargeRow, data }) {
+import { Add, Arrow, Dislike, Like, Play } from "../icons/icons";
+import fallback from "../images/movie-bay-logo.png";
+
+export default function Row({ title, data }) {
   const baseImageUrl = "https://image.tmdb.org/t/p/w500";
+
   const [num, setNum] = useState(5);
   const handleResize = () => {
     setNum(Math.floor(window.innerWidth / 250));
@@ -26,7 +28,13 @@ export default function Row({ title, isLargeRow, data }) {
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
-              <div className="rating">{movie.rating}</div>
+
+              <div className={"rating"}>
+                {movie.rating}
+              </div>
+
+
+
               <div key={index} className="front">
                 <picture className="thumbnail">
                   <source
@@ -35,14 +43,23 @@ export default function Row({ title, isLargeRow, data }) {
                   />
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
-                <h3 className="title">{movie.name}</h3>
+
+            
+                <h3 className={"title"}>
+                  {movie.name}
+                </h3>
+
+         
+
               </div>
 
               <div className="back">
                 <div className="streaming-info">
                   <p className="seasons">Voted: {movie.vote_count}</p>
 
-                  <p className="language">Languages: {movie.languages[0]}</p>
+                  <p className={"language"}>
+                    Languages available: {movie.languages.toString()}
+                  </p>
                 </div>
 
                 <div className="btn_container">
@@ -51,25 +68,30 @@ export default function Row({ title, isLargeRow, data }) {
                       <Link
                         to={{
                           pathname: "/player",
+
+
+
                           state: { data: movie }
+
                         }}
                       >
+                        {" "}
                         <Play />
                       </Link>
                     </button>
                     <button
-                      className={`btn-add ${isLargeRow ? "btn" : "btn-small"}`}
+                      className={"btn-add btn"}
                     >
+                      {" "}
                       <Add />
                       <p
                         className={
-                          isLargeRow ? "tooltip-add" : "tooltip-small-add"
+                          "tooltip-add"
                         }
                       >
                         Add to the list
                       </p>
                     </button>
-                    {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
                     <button className="btn">
                       <Like />
                     </button>
