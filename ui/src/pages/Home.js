@@ -19,7 +19,7 @@ function Home() {
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
-        setLatestMovies(latestData.results);
+        setLatestMovies(latestData);
         const trendingData = await fetch(requests.fetchTrending).then(
           (response) => response.json()
         );
