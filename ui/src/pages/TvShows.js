@@ -84,7 +84,6 @@ export default function Series() {
                         <Add />
                         <p className="tooltip-add">Add to the list</p>
                       </button>
-                      {/* <button className={isLargeRow ? "btn" : "btn-small"}> */}
                       <button className="btn">
                         <Like />
                       </button>

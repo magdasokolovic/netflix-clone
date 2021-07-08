@@ -38,15 +38,6 @@ function Home() {
       }
     };
     fetchdata();
-
-    //here will fetch the movies and here will update movies with "setMovies"
-    // fetch("http://localhost:5000/api/series")
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     console.log(result);
-    //     setLoading(false);
-    //     setMovies(result);
-    //   });
   }, []);
 
   return (
@@ -55,11 +46,15 @@ function Home() {
         {loading && <Loading />}
         <Banner />
         {trendingMovies && (
-          <Row title="POPULAR" isLargeRow data={trendingMovies} />
+          <Row title="Popular" isLargeRow data={trendingMovies} />
         )}
-        {latestMovies && <Row title="Latest" data={latestMovies} />}
-        {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
-        {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}
+        {latestMovies && <Row title="Latest" isLargeRow data={latestMovies} />}
+        {upcomingMovies && (
+          <Row title="Upcoming" isLargeRow data={upcomingMovies} />
+        )}
+        {topRatedMovies && (
+          <Row title="Top Rated" isLargeRow data={topRatedMovies} />
+        )}
       </Layout>
     </div>
   );

@@ -66,11 +66,11 @@ export default function Navbar() {
                 Movies
               </Link>
             </li>
-            <li className="nav__list-item">
+            {/* <li className="nav__list-item">
               <Link to="/" className="nav__link" onClick={closeMobileMenu}>
                 New & Popular
               </Link>
-            </li>
+            </li> */}
             {/* <li className="nav__list-item">
               <Link to="/" className="nav__link" onClick={closeMobileMenu}>
                 My List

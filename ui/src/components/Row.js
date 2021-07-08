@@ -21,7 +21,7 @@ export default function Row({ title, isLargeRow, data }) {
 
   return (
     <div className="row">
-      <h2>{title}</h2>
+      <h2 className="row-title">{title}</h2>
       <Carousel itemsToShow={num}>
         {data.map((movie, index) => {
           return (
@@ -85,7 +85,7 @@ export default function Row({ title, isLargeRow, data }) {
                   <button className={`btn-more btn`}>
                     <Arrow />
                     <p className="tooltip">
-                      <span className="underline">Overview</span>:{" "}
+                      <span className="underline">Overview</span>:
                       {movie.overview}
                     </p>
                   </button>

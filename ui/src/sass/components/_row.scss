@@ -1,5 +1,6 @@
 $border-radius: 0.25rem;
 $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
+
 .row {
   // changed margin top to 0, so navbar also stays on top
   margin: 0 20px 20px 20px;
@@ -8,6 +9,7 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
   /////////////////////////////////////////////
   // OVERRIDING "React Elastic Carousel" STYLING:
   //////////////////////////////////////////////
+
   .rec {
     // height: auto;
     .rec-arrow {
@@ -48,7 +50,6 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
 
   .movie {
     position: relative;
-    padding: 1em;
     cursor: pointer;
     border-radius: $border-radius;
     display: flex;

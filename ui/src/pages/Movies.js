@@ -32,7 +32,7 @@ export default function Movies() {
     <Layout>
       <div className="row movie-row">
         {loading && <Loading />}
-        <h2>all movies</h2>
+
         <Carousel itemsToShow={5} itemsToScroll={5}>
           {movies.map((movie) => {
             return (
@@ -52,33 +52,31 @@ export default function Movies() {
 
                 <div className="back">
                   <div className="streaming-info">
-                    {/* <p className="seasons-small">
-                      Number of seasons: {movie.seasons.length}
-                    </p> */}
-                    <p className="language">Languages: {movie.languages[0]}</p>
+                    <p className="language">Language: {movie.languages[0]}</p>
                   </div>
-                  <div className="btn-container">
+                  <div className="btn_container">
                     <div>
-                      <button className="btn-small">
-                        <Play />
-                        <Link to="./player"></Link>
+                      <button className="btn">
+                        <Link to="/player">
+                          <Play />
+                        </Link>
                       </button>
-                      <button className="btn-add btn-small">
+                      <button className="btn-add btn">
                         <Add />
-                        <p className="tooltip-small-add">Add to the list</p>
+                        <p className="tooltip-add">Add to the list</p>
                       </button>
-                      <button className="btn-small">
+                      <button className="btn">
                         <Like />
                       </button>
-                      <button className="btn-small">
+                      <button className="btn">
                         <Dislike />
                       </button>
                     </div>
 
-                    <button className="btn-more btn-small">
+                    <button className="btn-more btn">
                       <Arrow />
-                      <p className="tooltip-small">
-                        <span className="underline">Overview</span>:
+                      <p className="tooltip">
+                        <span className="underline">Overview </span>:
                         {movie.overview}
                       </p>
                     </button>
