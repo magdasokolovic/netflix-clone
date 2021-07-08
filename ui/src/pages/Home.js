@@ -7,81 +7,53 @@ import Footer from "../components/Footer";
 import Loading from "../components/Loading";
 
 function Home() {
-  const [loading, setLoading] = useState(false);
+  const [num, setNum] = useState(null);
+  const [loading, setLoading] = useState(true);
   const [latestMovies, setLatestMovies] = useState();
-  const [upcomingMovies, setUpcomingMovies] = useState();
-  const [topRatedMovies, setTopRatedMovies] = useState();
-  const [trendingMovies, setTrendingMovies] = useState();
+  const [upcomingMovies, setUpcomingMovies] = useState([]);
+  const [topRatedMovies, setTopRatedMovies] = useState([]);
+  const [trendingMovies, setTrendingMovies] = useState([]);
 
   useEffect(() => {
     const fetchdata = async () => {
-      setLoading(true);
       try {
-        const latestData = await fetch(requests.fetchLatest).then((response) =>
-          response.json()
-        );
-        setLatestMovies(latestData.results);
-        const trendingData = await fetch(requests.fetchTrending).then(
-          (response) => response.json()
-        );
-        setTrendingMovies(trendingData);
-        const upcomingData = await fetch(requests.fetchUpcoming).then(
-          (response) => response.json()
-        );
-        setUpcomingMovies(upcomingData);
         const topratedData = await fetch(requests.fetchTopRated).then(
           (response) => response.json()
         );
         setTopRatedMovies(topratedData);
+        setNum(Math.floor(Math.ceil(Math.random() * topratedData.length) - 1));
+        // Trending
+        const trendingData = await fetch(requests.fetchTrending).then(
+          (response) => response.json()
+        );
+        setTrendingMovies(trendingData);
+        /**
+         * We just NEEDED 2 of these data to show on
+         * viewable screen at the very first ( reduce loading time)
+         * */
         setLoading(false);
-        // console.log(latestData);
-        // .then((result) => {
-        //   console.log(result, "latest");
-        //   setLatestMovies(result.results);
-        // });
+        const upcomingData = await fetch(requests.fetchUpcoming).then(
+          (response) => response.json()
+        );
+        setUpcomingMovies(upcomingData);
 
-        // fetch(requests.fetchTrending)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "trending");
-        //     setTrendingMovies(result.results);
-        //   });
-
-        // fetch(requests.fetchUpcoming)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "upcoming");
-        //     setUpcomingMovies(result.results);
-        //   });
-
-        // fetch(requests.fetchTopRated)
-        //   .then((response) => response.json())
-        //   .then((result) => {
-        //     console.log(result, "top rated");
-        //     setTopRatedMovies(result.results);
-        //   });
-        // then set useState
+        const latestData = await fetch(requests.fetchLatest).then((response) =>
+          response.json()
+        );
+        setLatestMovies(latestData.results);
       } catch (error) {
+        setTimeout(() => setLoading(false), 3000);
         console.log(error);
       }
     };
     fetchdata();
-
-    //here will fetch the movies and here will update movies with "setMovies"
-    // fetch("http://localhost:5000/api/series")
-    //   .then((response) => response.json())
-    //   .then((result) => {
-    //     console.log(result);
-    //     setLoading(false);
-    //     setMovies(result);
-    //   });
   }, []);
+  if (loading) return <Loading />;
 
   return (
     <div>
-      {loading && <Loading />}
       <Navbar />
-      <Banner />
+      <Banner topRatedMovies={topRatedMovies[num]} />
       {trendingMovies && (
         <Row title="POPULAR" isLargeRow data={trendingMovies} />
       )}
