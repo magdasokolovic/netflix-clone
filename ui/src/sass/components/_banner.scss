@@ -1,6 +1,4 @@
 .banner {
-  // overflow: hidden;
-  /* need padding, otherwise it overlaps with the navbar */
   position: relative;
   height: auto;
   padding-top: 110px;
@@ -14,8 +12,6 @@
     z-index: 1;
     background-color: rgba($color: #000000, $alpha: 0.4);
   }
-
-  // background: linear-gradient(to right, #111 30%, transparent 70%);
 }
 
 .banner-backdrop {
@@ -24,10 +20,8 @@
   display: block;
   width: 100%;
   background-size: cover;
-
-  // background: linear-gradient(to right, #111 30%, transparent 70%);
-  // background-color: rgba(0, 0, 0, 0.03);
 }
+
 .banner-cta {
   // width: fit-content;
   // max-width: calc(95vw -70px);
@@ -35,6 +29,7 @@
   z-index: 2;
   top: calc(110px + 7vw);
   left: calc(50px + 5vw);
+
   @media (max-width: 768px) {
     font-size: 3rem;
   }
@@ -46,10 +41,9 @@
   font-weight: 800;
   word-break: normal;
   line-height: 1.1;
-
+  max-width: 70%;
   z-index: 2;
 
-  max-width: 70%;
   @media (max-width: 768px) {
     font-size: 3rem;
     max-width: 100%;
@@ -57,17 +51,19 @@
 }
 
 .banner-overview {
-  font-size: calc(0.3rem + 1.3vw);
+  display: -webkit-box;
+  -webkit-line-clamp: 10;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: calc(0.3rem + 1.5vw);
   font-weight: 700;
   word-break: normal;
-
   width: calc(55% + 10vw);
-  z-index: 2;
-
   max-width: 750px;
   max-height: calc(100vw * 9 / 16);
-  // overflow: hidden;
-  text-overflow: ellipsis;
+  z-index: 2;
+
   @media (max-width: 768px) {
     display: none;
   }
@@ -91,6 +87,7 @@
   background-color: rgba(51, 51, 51, 0.5);
   display: inline-block;
   z-index: 2;
+
   a {
     color: white;
     text-decoration: none;
@@ -103,18 +100,3 @@
   background-color: #e6e6e6;
   transition: all 0.28s ease;
 }
-
-// .mylist__btns {
-//   top: 24rem;
-//   left: 3rem;
-//   position: absolute;
-//   @media (max-width: 768px) {
-//     top: 18rem;
-//   }
-// }
-
-// .play__btns {
-//   top: 24rem;
-//   left: 3rem;
-//   position: absolute;
-// }
