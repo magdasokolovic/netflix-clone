@@ -4,6 +4,7 @@ import Layout from "../components/Layout";
 import Navbar from "../components/Navbar";
 import Carousel from "react-elastic-carousel";
 import fallback from "../images/movie-bay-logo.png";
+
 function Season(props) {
   const history = useHistory();
   const serieData = history.location.state.serie;

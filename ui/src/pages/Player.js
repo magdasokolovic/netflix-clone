@@ -17,9 +17,6 @@ const Player = () => {
           <ReactPlayer
             className="react-player"
             url={`https://www.youtube.com/watch?v=${id}`}
-            // key={id}
-            // width="100%"
-            // height="100%"
             controls={true}
           />
         )}
