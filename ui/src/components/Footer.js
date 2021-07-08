@@ -12,11 +12,6 @@ const Footer = () => {
         </li>
         <li>
           <Link to="/" className="footer-links">
-            Audio Description
-          </Link>
-        </li>
-        <li>
-          <Link to="/" className="footer-links">
             Help Center
           </Link>
         </li>

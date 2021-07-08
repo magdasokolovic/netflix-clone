@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import Banner from "../components/Banner";
 import Row from "../components/Row";
-import requests from "../Requests";
-import Navbar from "../components/Navbar";
-import Footer from "../components/Footer";
 import Loading from "../components/Loading";
+import Layout from "../components/Layout";
+import requests from "../Requests";
 
 function Home() {
   const [num, setNum] = useState(null);
@@ -56,6 +55,9 @@ function Home() {
   return (
     <div>
        <Layout>
+        // is this needed?
+        // {loading && <Loading />}
+
       <Banner topRatedMovies={topRatedMovies[num]} />
       {trendingMovies && <Row title="Popular" isLargeRow data={trendingMovies} />}
       {latestMovies && <Row title="Latest" data={latestMovies} />}

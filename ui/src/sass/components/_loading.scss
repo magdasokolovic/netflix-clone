@@ -1,12 +1,8 @@
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
+  position: fixed;
   inset: 0;
   //   background: rgba(0, 0, 0, 0.3);
-  background: black;
+  background: rgb(0, 0, 0);
   z-index: 2021;
 }
 

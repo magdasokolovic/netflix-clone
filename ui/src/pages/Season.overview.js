@@ -28,7 +28,7 @@ function Season(props) {
                       <img src={ep.image} alt="" />
 
                       <div className="ep-content">
-                        <h4>{ep.name}</h4>
+                        <h3>{ep.name}</h3>
                         <p>{ep.overview}</p>
                       </div>
                     </div>

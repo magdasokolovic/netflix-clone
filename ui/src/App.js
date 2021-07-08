@@ -6,6 +6,7 @@ import Episode from "./pages/Episode.overview";
 import Search from "./pages/Search";
 import Player from "./pages/Player";
 import TvShow from "./pages/TvShows";
+import Movies from "./pages/Movies";
 
 ///// STYLING:
 import "./sass/main.scss";
@@ -18,9 +19,6 @@ function App() {
   return (
     <BrowserRouter>
       <Switch>
-        <Route path="/tvshows">
-          <TvShow />
-        </Route>
         <Route path="/season">
           <Season />
         </Route>
@@ -32,6 +30,12 @@ function App() {
         </Route>
         <Route exact path="/">
           <Home />
+        </Route>
+        <Route path="/tvshows">
+          <TvShow />
+        </Route>
+        <Route path="/movies">
+          <Movies />
         </Route>
         <Route path="/player">
           <Player />
