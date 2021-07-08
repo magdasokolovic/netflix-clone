@@ -35,6 +35,10 @@ function Home() {
           (response) => response.json()
         );
         setUpcomingMovies(upcomingData);
+        // const topratedData = await fetch(requests.fetchTopRated).then(
+        //   (response) => response.json()
+        // );
+        // setTopRatedMovies(topratedData);
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
@@ -52,7 +56,6 @@ function Home() {
     <div>
       <Layout>
         {loading && <Loading />}
-
         <Banner topRatedMovies={topRatedMovies[num]} />
         {trendingMovies && (
           <Row title="Popular" isLargeRow data={trendingMovies} />
