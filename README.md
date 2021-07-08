@@ -1,6 +1,7 @@
-# NETFLIX CLONE
+# "MOVIE BAY" website - "NETFLIX" Clone Project
 
 This is a full-stack project based on React.
+**Task** - to create a website which would resemble "Netflix".
 
 ******
 
@@ -24,6 +25,15 @@ We used [GitHub Projects](https://github.com/magdasokolovic/netflix-clone/projec
 
 ****** 
 
+## DEPENDENCIES USED FOR THE PROJECT:
+- [axios](https://www.npmjs.com/package/axios) for data fetching
+- [react-router-dom](https://www.npmjs.com/package/react-router-dom) for routing
+- [react-player](https://www.npmjs.com/package/react-player) for playing a youtube video
+- [react-elastic-carousel](https://sag1v.github.io/react-elastic-carousel/) for a carousel component
+- [sass](https://sass-lang.com/) for styling
+
+****** 
+
 ## DEV NOTES:
 
 - [move all branches to master](https://stackoverflow.com/questions/2862590/how-to-replace-master-branch-in-git-entirely-from-another-branch)
@@ -34,9 +44,3 @@ We used [GitHub Projects](https://github.com/magdasokolovic/netflix-clone/projec
 
 ******
 
-## DEPENDENCIES USED FOR THE PROJECT:
-- [axios](https://www.npmjs.com/package/axios) for data fetching
-- [react-router-dom](https://www.npmjs.com/package/react-router-dom) for routing
-- [react-player](https://www.npmjs.com/package/react-player) for playing a youtube video
-- [react-elastic-carousel](https://sag1v.github.io/react-elastic-carousel/) for a carousel component
-- [sass](https://sass-lang.com/) for styling
