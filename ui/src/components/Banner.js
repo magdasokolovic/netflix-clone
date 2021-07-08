@@ -1,6 +1,3 @@
-// NO NEED TO IMPORT THIS CSS FILE HERE IF YOU USE SASS
-// import "../sass/components/Banner.css";
-
 import React from "react";
 import { Link } from "react-router-dom";
 
@@ -22,7 +19,7 @@ function Banner({ topRatedMovies }) {
                 to={{
                   pathname: "/player",
 
-                  state: { data: topRatedMovies }
+                  state: { data: topRatedMovies },
                 }}
               >
                 ▶ Play
