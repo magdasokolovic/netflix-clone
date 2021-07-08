@@ -57,7 +57,12 @@ export default function Movies() {
                   <div className="btn_container">
                     <div>
                       <button className="btn">
-                        <Link to="/player">
+                        <Link
+                          to={{
+                            pathname: "/player",
+                            state: { data: movie }
+                          }}
+                        >
                           <Play />
                         </Link>
                       </button>

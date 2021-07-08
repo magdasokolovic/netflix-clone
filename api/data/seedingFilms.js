@@ -58,6 +58,7 @@ async function getData() {
   } catch (error) {
     console.log(error);
   }
+  mongoose.connection.close();
 }
 
 module.exports = { Films };

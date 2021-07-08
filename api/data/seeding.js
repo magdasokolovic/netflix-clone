@@ -41,7 +41,7 @@ async function getData() {
 
         let tvShow = detailTV.data;
         // console.log(tvShow);
-        if (!tvShow.poster_path) continue;
+        if (!tvShow.poster_path || tvShow.vote_count <= 50) continue;
         const {
           name,
           languages,
@@ -52,9 +52,6 @@ async function getData() {
           vote_count,
           poster_path
         } = tvShow;
-
-        if (vote_count <= 50) continue;
-        console.log(vote_count);
 
         let tempSeasons = [];
 
@@ -96,6 +93,7 @@ async function getData() {
   } catch (error) {
     console.log(error);
   }
+  mongoose.connection.close();
 }
 
 module.exports = { Series };
