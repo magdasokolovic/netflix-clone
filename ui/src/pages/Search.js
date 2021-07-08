@@ -50,7 +50,7 @@ export default function Search(props) {
         className="search-row"
         style={{ paddingTop: "110px", minHeight: "80vh" }}
       >
-        {/* not working right now, it is only showing the movies  */}
+        {/* not working right now, it is only showing the movies, maybe because it fetches series too late?  */}
         {(series && series.length > 0) || (movies && movies.length > 0) ? (
           <Row isLargeRow data={(series, movies)} />
         ) : (

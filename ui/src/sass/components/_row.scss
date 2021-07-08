@@ -8,31 +8,31 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
   /////////////////////////////////////////////
   // OVERRIDING "React Elastic Carousel" STYLING:
   //////////////////////////////////////////////
-    .rec-arrow {
-      background-color: $highlight-color;
-      border-radius: 50%;
-      &:hover {
-        background-color: lighten($highlight-color, 10%);
-      }
+  .rec-arrow {
+    background-color: $highlight-color;
+    border-radius: 50%;
+    &:hover {
+      background-color: lighten($highlight-color, 10%);
     }
+  }
 
-    .ejXxNI {
-      background-color: $highlight-color;
-      box-shadow: 0 0 1px 3px $font-color;
+  .ejXxNI {
+    background-color: $highlight-color;
+    box-shadow: 0 0 1px 3px $font-color;
 
-      &:hover {
-        box-shadow: 0 0 1px 3px lighten($highlight-color, 10%);
-      }
+    &:hover {
+      box-shadow: 0 0 1px 3px lighten($highlight-color, 10%);
     }
+  }
 
-    .rec-item-wrapper {
-      height: 100%;
+  .rec-item-wrapper {
+    height: 100%;
+  }
+  .rec-pagination {
+    @media (max-width: 710px) {
+      display: none;
     }
-    .rec-pagination {
-      @media (max-width: 710px) {
-        display: none;
-      }
-    }
+  }
 
   //////////////////
   // MY OWN STYLING:
@@ -56,7 +56,6 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
 
     .btn,
     .btn-small {
-
       border: none;
       outline: none;
       background-color: transparent;
@@ -80,7 +79,6 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
       margin: 0.2em;
     }
 
-
     h3,
     p {
       margin: 0;
@@ -92,7 +90,7 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
     }
 
     .rating {
-       position: absolute;
+      position: absolute;
       font-weight: bold;
       z-index: 100;
       background: $highlight-color;
@@ -101,7 +99,6 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
       align-self: start;
       font-size: 1.125rem;
       padding: 0.3em 0.3em 0.85em;
-
     }
 
     .front {
@@ -136,20 +133,6 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
       justify-content: space-between;
       transition: $transition, opacity 150ms linear;
 
-      .seasons {
-        text-align: left;
-        margin-top: 0.75em;
-        font-size: 0.8rem;
-
-      }
-      .language {
-        text-align: left;
-        position: relative;
-        z-index: 10;
-        font-size: 0.7rem;
-
-      }
-
       .streaming-info {
         display: flex;
         flex-direction: column;
@@ -157,13 +140,24 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
         align-items: center;
         padding-left: 1em;
         width: 90%;
-
-        .rating {
+        .seasons {
+          text-align: left;
+          margin-top: 0.75em;
+          font-size: 0.8rem;
+        }
+        .language {
+          text-align: left;
+          position: relative;
+          z-index: 10;
           font-size: 0.7rem;
-          text-align: center;
+        }
       }
-      .tooltip
-      .tooltip-add {
+
+      .rating {
+        font-size: 0.7rem;
+        text-align: center;
+      }
+      .tooltip .tooltip-add {
         position: absolute;
         z-index: 1010;
         overflow: visible;
@@ -198,7 +192,7 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
         left: 3%;
         font-size: 0.5rem;
       }
-      .tooltip-add:before{
+      .tooltip-add:before {
         content: "";
         position: absolute;
         height: 8px;
@@ -236,65 +230,64 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
         }
       }
 
-      .btn_container {
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        width: 90%;
-        padding-bottom: 1em;
-      }
-    }
-
-    .background {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgb(37, 43, 49);
-      z-index: -1;
-      transform: scale(0.2, 0.9);
-      transition: transform 250ms;
-      opacity: 0;
-    }
-
-    ////////////////////////////////
-    // MOVIE CARD ON HOVER: ///////
-    ////////////////////////////////
-    &:hover {
-      .back {
-        opacity: 1;
-      }
-      .rating,
-      .rating-small {
-        align-self: end;
-        right: 3%;
-        top: 1%;
-      }
-
-      .front {
-        transform: translateY(-20%) scale(0.9);
-
-        .title {
-          animation: movieName 250ms forwards;
-        }
-        .thumbnail {
-          position: relative;
-          z-index: 1000;
-          overflow: visible;
-          transform: translateY(5%) scale(0.9);
-        }
-      }
+      // .btn_container {
+      //   display: flex;
+      //   justify-content: space-around;
+      //   align-items: center;
+      //   width: 90%;
+      //   padding-bottom: 1em;
+      // }
 
       .background {
-        transition: transform $transition, opacity 100ms linear;
-        opacity: 1;
-        transform: scale(1.35, 1.2) translateY(5%);
-        border-radius: $border-radius;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgb(37, 43, 49);
+        z-index: -1;
+        transform: scale(0.2, 0.9);
+        transition: transform 250ms;
+        opacity: 0;
+      }
+
+      ////////////////////////////////
+      // MOVIE CARD ON HOVER: ///////
+      ////////////////////////////////
+      &:hover {
+        .back {
+          opacity: 1;
+        }
+        .rating,
+        .rating-small {
+          align-self: end;
+          right: 3%;
+          top: 1%;
+        }
+
+        .front {
+          transform: translateY(-20%) scale(0.9);
+
+          .title {
+            animation: movieName 250ms forwards;
+          }
+          .thumbnail {
+            position: relative;
+            z-index: 1000;
+            overflow: visible;
+            transform: translateY(5%) scale(0.9);
+          }
+        }
+
+        .background {
+          transition: transform $transition, opacity 100ms linear;
+          opacity: 1;
+          transform: scale(1.35, 1.2) translateY(5%);
+          border-radius: $border-radius;
+        }
       }
     }
   }
-}
 }
 
 @keyframes movieName {

@@ -28,13 +28,7 @@ export default function Row({ title, data }) {
         {data.map((movie, index) => {
           return (
             <div className="movie" key={index}>
-
-              <div className={"rating"}>
-                {movie.rating}
-              </div>
-
-
-
+              <div className="rating">{movie.rating}</div>
               <div key={index} className="front">
                 <picture className="thumbnail">
                   <source
@@ -44,20 +38,12 @@ export default function Row({ title, data }) {
                   <img src={fallback} alt="Movie Bay Logo" />
                 </picture>
 
-            
-                <h3 className={"title"}>
-                  {movie.name}
-                </h3>
-
-         
-
+                <h3 className="title">{movie.name}</h3>
               </div>
-
               <div className="back">
                 <div className="streaming-info">
                   <p className="seasons">Voted: {movie.vote_count}</p>
-
-                  <p className={"language"}>
+                  <p className="language">
                     Languages available: {movie.languages.toString()}
                   </p>
                 </div>
@@ -71,22 +57,12 @@ export default function Row({ title, data }) {
                           state: { data: movie },
                         }}
                       >
-                        {" "}
                         <Play />
                       </Link>
                     </button>
-                    <button
-                      className={"btn-add btn"}
-                    >
-                      {" "}
+                    <button className="btn-add btn">
                       <Add />
-                      <p
-                        className={
-                          "tooltip-add"
-                        }
-                      >
-                        Add to the list
-                      </p>
+                      <p className="tooltip-add">Add to the list</p>
                     </button>
                     <button className="btn">
                       <Like />
