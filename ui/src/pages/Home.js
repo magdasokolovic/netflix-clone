@@ -40,7 +40,7 @@ function Home() {
         const latestData = await fetch(requests.fetchLatest).then((response) =>
           response.json()
         );
-        setLatestMovies(latestData.results);
+        setLatestMovies(latestData);
       } catch (error) {
         setTimeout(() => setLoading(false), 3000);
         console.log(error);
@@ -54,9 +54,7 @@ function Home() {
     <div>
       <Navbar />
       <Banner topRatedMovies={topRatedMovies[num]} />
-      {trendingMovies && (
-        <Row title="POPULAR" isLargeRow data={trendingMovies} />
-      )}
+      {trendingMovies && <Row title="POPULAR" isLargeRow data={trendingMovies} />}
       {latestMovies && <Row title="Latest" data={latestMovies} />}
       {upcomingMovies && <Row title="Upcoming" data={upcomingMovies} />}
       {topRatedMovies && <Row title="Top Rated" data={topRatedMovies} />}

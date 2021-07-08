@@ -3,10 +3,7 @@ import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import Season from "./pages/Season.overview";
 import Episode from "./pages/Episode.overview";
-import Search from "./pages/Search";
-// import Series from "./pages/Series";
 import Player from "./pages/Player";
-// import Footer from "./components/Footer";
 import TvShow from "./pages/TvShows";
 
 ///// STYLING:
@@ -19,7 +16,6 @@ function App() {
 
   return (
     <BrowserRouter>
-      {/* <Navbar /> */}
       <Switch>
         <Route path="/tvshows">
           <TvShow />
