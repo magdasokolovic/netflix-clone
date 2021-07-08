@@ -11,6 +11,7 @@ $transition: transform 250ms cubic-bezier(0.23, 1, 0.81, 1.01);
     // height: auto;
     .rec-arrow {
       background-color: $highlight-color;
+      border-radius: 50%;
       &:hover {
         background-color: lighten($highlight-color, 10%);
       }
